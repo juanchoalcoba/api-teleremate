@@ -2,13 +2,19 @@ const mongoose = require("mongoose");
 
 const connectDB = async () => {
   try {
-    const conn = await mongoose.connect(process.env.MONGODB_URI, {
-      serverSelectionTimeoutMS: 10000, // 10 segundos de espera antes de fallar
+    // Limpiamos la URI de posibles espacios invisibles que causan el error "option not supported"
+    const uri = process.env.MONGODB_URI ? process.env.MONGODB_URI.trim() : "";
+    
+    if (!uri) {
+      throw new Error("MONGODB_URI no está definida en las variables de entorno");
+    }
+
+    const conn = await mongoose.connect(uri, {
+      serverSelectionTimeoutMS: 10000,
     });
     console.log(`✅ Conectado a MongoDB Atlas: ${conn.connection.host}`);
   } catch (error) {
     console.error(`❌ Error conectando a MongoDB Atlas: ${error.message}`);
-    // No salimos del proceso inmediatamente para dejar que Railway vea los logs
     setTimeout(() => process.exit(1), 2000);
   }
 };
