@@ -1,8 +1,7 @@
 const Article = require("../models/Article");
 const Reservation = require("../models/Reservation");
 const Purchase = require("../models/Purchase");
-const path = require("path");
-const fs = require("fs");
+const cloudinary = require("../config/cloudinary");
 
 /**
  * GET /api/admin/articles
@@ -150,10 +149,15 @@ const deleteArticle = async (req, res) => {
   if (!article)
     return res.status(404).json({ message: "Artículo no encontrado." });
 
-  // Delete associated images from filesystem
-  for (const img of article.images) {
-    const imgPath = path.join(__dirname, "../../uploads", img.filename);
-    if (fs.existsSync(imgPath)) fs.unlinkSync(imgPath);
+  // Delete associated images from Cloudinary
+  try {
+    for (const img of article.images) {
+      if (img.filename) {
+        await cloudinary.uploader.destroy(img.filename).catch(err => console.error("Cloudinary delete error:", err));
+      }
+    }
+  } catch (err) {
+    console.error("Error al borrar imágenes en Cloudinary:", err);
   }
 
   await article.deleteOne();
@@ -172,9 +176,10 @@ const uploadImage = async (req, res) => {
     return res.status(400).json({ message: "No se subieron imágenes." });
   }
 
+  // Con multer-storage-cloudinary, req.file.path tiene la URL y req.file.filename el public_id
   const newImages = req.files.map((file) => ({
-    filename: file.filename,
-    url: `/uploads/${file.filename}`,
+    filename: file.filename, // public_id de Cloudinary
+    url: file.path,         // URL absoluta segura
   }));
 
   article.images.push(...newImages);
@@ -194,8 +199,12 @@ const deleteImage = async (req, res) => {
     return res.status(404).json({ message: "Artículo no encontrado." });
 
   const { filename } = req.params;
-  const imgPath = path.join(__dirname, "../../uploads", filename);
-  if (fs.existsSync(imgPath)) fs.unlinkSync(imgPath);
+  
+  try {
+    await cloudinary.uploader.destroy(filename);
+  } catch (err) {
+    console.error("Error al borrar imagen de Cloudinary:", err);
+  }
 
   article.images = article.images.filter((img) => img.filename !== filename);
   await article.save();

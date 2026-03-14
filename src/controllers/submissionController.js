@@ -169,7 +169,7 @@ const uploadPublicImages = async (req, res) => {
       return res.status(400).json({ message: "No se subieron imágenes." });
     }
 
-    const imageUrls = req.files.map((file) => `/uploads/${file.filename}`);
+    const imageUrls = req.files.map((file) => file.path);
 
     res.json({
       images: imageUrls,
