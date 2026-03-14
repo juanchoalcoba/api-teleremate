@@ -83,7 +83,7 @@ app.use((err, _req, res, _next) => {
 
 // Connect to MongoDB and start server
 connectDB().then(() => {
-  app.listen(PORT, () => {
+  app.listen(PORT, "0.0.0.0", () => {
     console.log(`🚀 Servidor corriendo en el puerto ${PORT}`);
     console.log(`   Health: /api/health`);
     console.log(`   Articles: /api/articles`);
