@@ -69,6 +69,7 @@ exports.createPurchase = asyncHandler(async (req, res) => {
   // mark article sold
   if (article) {
     article.status = "sold";
+    article.soldAt = new Date();
     await article.save();
   }
 
