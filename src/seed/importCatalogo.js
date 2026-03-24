@@ -48,8 +48,9 @@ async function importCatalogo() {
   console.log(`📦 ${catalog.length} artículos encontrados en catalogo.json`);
 
   // ── 2. Conectar a MongoDB ────────────────────────────────────────────────
-  await mongoose.connect(MONGODB_URI);
-  console.log("✅ Conectado a MongoDB");
+  await mongoose.connect(MONGODB_URI, { dbName: "teleremate-db" });
+  console.log("✅ Conectado a MongoDB (dbName: teleremate-db)");
+
 
   // ── 3. Importar con upsert ────────────────────────────────────────────────
   let upserted = 0;
