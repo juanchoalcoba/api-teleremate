@@ -11,7 +11,7 @@ const connectDB = require("../config/db");
  * Rules:
  * - Matching by JSON "id" -> Article "lotNumber"
  * - vendido: true -> DELETE article
- * - vendido: false -> Update status to "depot" (En Depósito)
+ * - vendido: false -> Update status to "depot" AND category to "deposito"
  */
 
 const syncCatalog = async () => {
@@ -76,7 +76,7 @@ const syncCatalog = async () => {
       return {
         updateOne: {
           filter: { lotNumber: item.id },
-          update: { $set: { status: "depot" } }
+          update: { $set: { status: "depot", category: "deposito" } }
         }
       };
     }
@@ -102,19 +102,27 @@ const syncCatalog = async () => {
     const notFoundUpdates = totalNoVendidos - matchedCount;
     const totalNotFound = notFoundDeletes + notFoundUpdates;
 
+    // 6. Final Cleanup (Optional but requested: Move any remaining 'remate' to 'deposito')
+    console.log("\nEjecutando limpieza final de categorías...");
+    const cleanupResult = await Article.updateMany(
+      { category: "remate" },
+      { $set: { category: "deposito", status: "depot" } }
+    );
+
     const summary = `
 --------------------------------------------------
 📊 RESUMEN DE OPERACIÓN:
 - ✅ Registros ELIMINADOS (Vendidos): ${deletedCount}
-- 🔄 Registros ACTUALIZADOS a 'En Depósito': ${updatedCount}
-- ⚠️ Registros NO ENCONTRADOS en BD: ${totalNotFound}
+- 🔄 Registros ACTUALIZADOS desde JSON: ${updatedCount}
+- 🧹 Registros LIMPIADOS (Remate -> Deposito): ${cleanupResult.modifiedCount}
+- ⚠️ Registros NO ENCONTRADOS en BD (del JSON): ${totalNotFound}
 --------------------------------------------------
 `;
     console.log(summary);
     fs.writeFileSync("sync_results.tmp", summary);
 
     mongoose.connection.close();
-    console.log("🚀 Sincronización completada con éxito.");
+    console.log("🚀 Sincronización y limpieza completadas con éxito.");
     process.exit(0);
   } catch (error) {
     console.error("❌ Error durante la operación masiva:", error.message);

@@ -8,19 +8,20 @@ const countArticles = async () => {
   try {
     await connectDB();
     const total = await Article.countDocuments();
-    const depot = await Article.countDocuments({ status: "depot" });
+    const depotStatus = await Article.countDocuments({ status: "depot" });
+    const depositoCategory = await Article.countDocuments({ category: "deposito" });
+    const remateCategory = await Article.countDocuments({ category: "remate" });
     const sold = await Article.countDocuments({ status: "sold" });
-    const upcoming = await Article.countDocuments({ status: "upcoming" });
     const reserved = await Article.countDocuments({ status: "reserved" });
 
     const results = `
 --------------------------------------------------
 📊 ESTADO ACTUAL DE LA BASE DE DATOS:
 - Total de artículos: ${total}
-- En Depósito: ${depot}
-- Próximos (Remate): ${upcoming}
-- Reservados: ${reserved}
-- Vendidos: ${sold}
+- Status 'depot': ${depotStatus}
+- Category 'deposito': ${depositoCategory}
+- Category 'remate': ${remateCategory}
+- Status 'sold': ${sold}
 --------------------------------------------------
 `;
     console.log(results);

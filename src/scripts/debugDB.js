@@ -6,8 +6,8 @@ const connectDB = require("../config/db");
 const debugDB = async () => {
   try {
     await connectDB();
-    const samples = await Article.find({ lotNumber: "55411" }).select("lotNumber title status");
-    console.log("Search for sold ID 55411:");
+    const samples = await Article.find({ category: "remate" }).select("lotNumber title status category");
+    console.log("Articles still in REMATE:");
     console.log(JSON.stringify(samples, null, 2));
     mongoose.connection.close();
     process.exit(0);

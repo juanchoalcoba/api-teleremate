@@ -2,8 +2,8 @@
 --------------------------------------------------
 📊 ESTADO ACTUAL DE LA BASE DE DATOS:
 - Total de artículos: 120
-- En Depósito: 110
-- Próximos (Remate): 10
-- Reservados: 0
-- Vendidos: 0
+- Status 'depot': 120
+- Category 'deposito': 119
+- Category 'remate': 0
+- Status 'sold': 0
 --------------------------------------------------

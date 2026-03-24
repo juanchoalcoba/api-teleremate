@@ -2,6 +2,7 @@
 --------------------------------------------------
 📊 RESUMEN DE OPERACIÓN:
 - ✅ Registros ELIMINADOS (Vendidos): 0
-- 🔄 Registros ACTUALIZADOS a 'En Depósito': 96
-- ⚠️ Registros NO ENCONTRADOS en BD: 128
+- 🔄 Registros ACTUALIZADOS desde JSON: 96
+- 🧹 Registros LIMPIADOS (Remate -> Deposito): 13
+- ⚠️ Registros NO ENCONTRADOS en BD (del JSON): 128
 --------------------------------------------------
