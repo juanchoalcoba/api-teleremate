@@ -1,6 +1,7 @@
 const Purchase = require("../models/Purchase");
 const Article = require("../models/Article");
 const asyncHandler = require("express-async-handler");
+const cloudinary = require("../config/cloudinary");
 
 // @desc    Create a new purchase
 // @route   POST /api/purchases
@@ -156,7 +157,7 @@ exports.updatePurchaseStatus = asyncHandler(async (req, res) => {
 // @route   DELETE /api/backoffice/purchases/:id
 // @access  Private (Admin only)
 exports.deletePurchase = asyncHandler(async (req, res) => {
-  const purchase = await Purchase.findByIdAndDelete(req.params.id);
+  const purchase = await Purchase.findById(req.params.id);
 
   if (!purchase) {
     return res.status(404).json({
@@ -164,12 +165,31 @@ exports.deletePurchase = asyncHandler(async (req, res) => {
     });
   }
 
-  // Reset article status to depot when purchase is deleted
   const article = await Article.findById(purchase.articleId);
-  if (article) {
-    article.status = "depot";
-    await article.save();
+
+  // If the purchase was already PROCESSED, we delete the article as well
+  if (purchase.status === "processed") {
+    if (article) {
+      // Delete associated images from Cloudinary
+      try {
+        for (const img of article.images) {
+          if (img.filename) {
+            await cloudinary.uploader.destroy(img.filename).catch(err => console.error("Cloudinary delete error:", err));
+          }
+        }
+      } catch (err) {
+        console.error("Error al borrar imágenes en Cloudinary:", err);
+      }
+      await article.deleteOne();
+    }
+  } else if (purchase.status === "pending") {
+    // If it was PENDING, we return the article to depot status
+    if (article) {
+      article.status = "depot";
+      await article.save();
+    }
   }
 
-  res.json({ message: "Compra eliminada" });
+  await purchase.deleteOne();
+  res.json({ message: "Compra eliminada y artículo actualizado/removido" });
 });

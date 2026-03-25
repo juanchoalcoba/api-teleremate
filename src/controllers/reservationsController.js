@@ -1,6 +1,7 @@
 const Reservation = require("../models/Reservation");
 const Article = require("../models/Article");
 const asyncHandler = require("express-async-handler");
+const cloudinary = require("../config/cloudinary");
 
 // @desc    Create a new reservation
 // @route   POST /api/reservations
@@ -148,7 +149,7 @@ exports.updateReservationStatus = asyncHandler(async (req, res) => {
 // @route   DELETE /api/backoffice/reservations/:id
 // @access  Private (Admin only)
 exports.deleteReservation = asyncHandler(async (req, res) => {
-  const reservation = await Reservation.findByIdAndDelete(req.params.id);
+  const reservation = await Reservation.findById(req.params.id);
 
   if (!reservation) {
     return res.status(404).json({
@@ -156,13 +157,32 @@ exports.deleteReservation = asyncHandler(async (req, res) => {
     });
   }
 
-  // Reset article status to depot when reservation is deleted
   const article = await Article.findById(reservation.articleId);
-  if (article) {
-    article.status = "depot";
-    article.reservedUntil = null;
-    await article.save();
+
+  // If the reservation was PROCESSED, we delete the article
+  if (reservation.status === "processed") {
+    if (article) {
+      // Delete associated images from Cloudinary
+      try {
+        for (const img of article.images) {
+          if (img.filename) {
+            await cloudinary.uploader.destroy(img.filename).catch(err => console.error("Cloudinary delete error:", err));
+          }
+        }
+      } catch (err) {
+        console.error("Error al borrar imágenes en Cloudinary:", err);
+      }
+      await article.deleteOne();
+    }
+  } else if (reservation.status === "pending") {
+    // If it was PENDING, return to depot
+    if (article) {
+      article.status = "depot";
+      article.reservedUntil = null;
+      await article.save();
+    }
   }
 
-  res.json({ message: "Reserva eliminada" });
+  await reservation.deleteOne();
+  res.json({ message: "Reserva eliminada y artículo actualizado/removido" });
 });
