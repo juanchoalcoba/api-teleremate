@@ -1,6 +1,7 @@
 const Article = require("../models/Article");
 const Reservation = require("../models/Reservation");
 const Purchase = require("../models/Purchase");
+const { getAccentInsensitiveRegex } = require("../utils/searchUtils");
 
 /**
  * GET /api/articles
@@ -29,10 +30,11 @@ const getArticles = async (req, res) => {
     if (maxPrice) filter.estimatedPrice.$lte = Number(maxPrice);
   }
   if (search) {
+    const searchRegex = getAccentInsensitiveRegex(search);
     filter.$or = [
-      { title: { $regex: search, $options: "i" } },
-      { description: { $regex: search, $options: "i" } },
-      { lotNumber: { $regex: search, $options: "i" } },
+      { title: { $regex: searchRegex, $options: "i" } },
+      { description: { $regex: searchRegex, $options: "i" } },
+      { lotNumber: { $regex: search, $options: "i" } }, // Keep lotNumber exact
     ];
   }
 

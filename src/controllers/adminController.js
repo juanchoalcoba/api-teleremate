@@ -2,6 +2,7 @@ const Article = require("../models/Article");
 const Reservation = require("../models/Reservation");
 const Purchase = require("../models/Purchase");
 const cloudinary = require("../config/cloudinary");
+const { getAccentInsensitiveRegex } = require("../utils/searchUtils");
 
 /**
  * GET /api/admin/articles
@@ -15,10 +16,11 @@ const getAllArticles = async (req, res) => {
   if (category) filter.category = category;
 
   if (search) {
+    const searchRegex = getAccentInsensitiveRegex(search);
     filter.$or = [
-      { title: { $regex: search, $options: "i" } },
-      { lotNumber: { $regex: search, $options: "i" } },
-      { description: { $regex: search, $options: "i" } },
+      { title: { $regex: searchRegex, $options: "i" } },
+      { lotNumber: { $regex: search, $options: "i" } }, // lotNumber stays exact (numeric)
+      { description: { $regex: searchRegex, $options: "i" } },
     ];
   }
 
