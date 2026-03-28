@@ -1,6 +1,7 @@
 require("dotenv").config();
 const express = require("express");
 const cors = require("cors");
+const helmet = require("helmet");
 const path = require("path");
 const rateLimit = require("express-rate-limit");
 const connectDB = require("./config/db");
@@ -38,12 +39,38 @@ const adminLogger = (req, res, next) => {
 };
 
 // Middleware
+app.use(helmet()); // Basic security headers
+
+// HTTPS enforcement for production (Railway proxy)
+app.use((req, res, next) => {
+  if (
+    process.env.NODE_ENV === "production" &&
+    req.headers["x-forwarded-proto"] !== "https"
+  ) {
+    return res.redirect("https://" + req.headers.host + req.url);
+  }
+  next();
+});
+
+const allowedOrigins = [
+  "http://localhost:5173",
+  "https://teleremate-front.vercel.app",
+  process.env.FRONTEND_URL,
+  process.env.FRONTEND_URL_WWW,
+].filter(Boolean);
+
 app.use(
   cors({
-    origin: [
-      "http://localhost:5173",
-      "https://teleremate-front.vercel.app"
-    ],
+    origin: (origin, callback) => {
+      // Allow requests with no origin (like mobile apps or curl) 
+      // but in production we might want to be more strict.
+      if (!origin || allowedOrigins.includes(origin)) {
+        callback(null, true);
+      } else {
+        console.warn(`[CORS BLOCKED] Origin: ${origin}`);
+        callback(new Error("No permitido por CORS"));
+      }
+    },
     credentials: true,
   })
 );

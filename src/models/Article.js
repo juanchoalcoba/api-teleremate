@@ -82,7 +82,7 @@ const articleSchema = new mongoose.Schema(
 // Virtual: label from status
 articleSchema.virtual("statusLabel").get(function () {
   const labels = {
-    depot: "En Depósito",
+    depot: "Venta Directa",
     upcoming: "Próximo Remate",
     reserved: "Reservado",
     sold: "Vendido",

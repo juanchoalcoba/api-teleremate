@@ -21,7 +21,10 @@ const getArticles = async (req, res) => {
 
   const filter = {};
 
-  if (category) filter.category = category;
+  if (category) {
+    const categories = category.split(",");
+    filter.category = categories.length > 1 ? { $in: categories } : categories[0];
+  }
   if (status) filter.status = status;
   if (featured === "true") filter.featured = true;
   if (minPrice || maxPrice) {
