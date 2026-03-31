@@ -40,6 +40,11 @@ const articleSchema = new mongoose.Schema(
       required: true,
       min: 0,
     },
+    currency: {
+      type: String,
+      enum: ["UYU", "USD"],
+      default: "UYU",
+    },
     salePrice: {
       type: Number,
       default: null,

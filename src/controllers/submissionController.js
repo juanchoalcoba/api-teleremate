@@ -17,6 +17,7 @@ const createSubmission = async (req, res) => {
       usageYears,
       conditionDetails,
       images,
+      currency,
     } = req.body;
 
     if (!sellerName || !sellerPhone || !title || !description || !estimatedPrice) {
@@ -34,6 +35,7 @@ const createSubmission = async (req, res) => {
       usageYears,
       conditionDetails,
       images: Array.isArray(images) ? images : [],
+      currency: currency || "UYU",
     });
 
     await submission.save();
@@ -115,6 +117,7 @@ const approveSubmission = async (req, res) => {
       status: category === "remate" ? "upcoming" : "depot",
       auctionDate: (category === "remate" && auctionDate) ? new Date(auctionDate) : null,
       estimatedPrice: submission.estimatedPrice,
+      currency: submission.currency || "UYU",
       images: transformedImages,
       metadata: {
         sellerSubmissionId: submission._id,

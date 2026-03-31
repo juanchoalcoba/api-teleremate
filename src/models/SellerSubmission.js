@@ -33,6 +33,11 @@ const sellerSubmissionSchema = new mongoose.Schema(
       required: true,
       min: 0,
     },
+    currency: {
+      type: String,
+      enum: ["UYU", "USD"],
+      default: "UYU",
+    },
     pickupLocation: {
       type: String,
       trim: true,

@@ -61,6 +61,7 @@ const createArticle = async (req, res) => {
     featured,
     auctionDate,
     reservedUntil,
+    currency,
   } = req.body;
 
   const exists = await Article.findOne({ lotNumber });
@@ -80,6 +81,7 @@ const createArticle = async (req, res) => {
     featured: featured === "true" || featured === true,
     auctionDate: auctionDate || null,
     reservedUntil: reservedUntil || null,
+    currency: currency || "UYU",
   });
 
   await article.save();
@@ -106,6 +108,7 @@ const updateArticle = async (req, res) => {
     featured,
     auctionDate,
     reservedUntil,
+    currency,
   } = req.body;
 
   if (lotNumber) article.lotNumber = lotNumber;
@@ -138,6 +141,7 @@ const updateArticle = async (req, res) => {
     article.featured = featured === "true" || featured === true;
   if (auctionDate !== undefined) article.auctionDate = auctionDate || null;
   if (reservedUntil !== undefined) article.reservedUntil = reservedUntil || null;
+  if (currency) article.currency = currency;
 
   await article.save();
   res.json(article);
