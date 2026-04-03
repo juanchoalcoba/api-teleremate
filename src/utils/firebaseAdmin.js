@@ -4,7 +4,7 @@ const initializeFirebase = () => {
   if (
     !process.env.FIREBASE_PROJECT_ID ||
     !process.env.FIREBASE_CLIENT_EMAIL ||
-    !process.env.FIREBASE_PRIVATE_KEY
+    !process.env.FIREBASE_PRIVATE_KEY_BASE64
   ) {
     console.warn(
       "Firebase Admin environment variables are missing. Notifications will not be sent."
@@ -13,8 +13,11 @@ const initializeFirebase = () => {
   }
 
   try {
-    // Ensure the private key is correctly formatted
-    const privateKey = process.env.FIREBASE_PRIVATE_KEY.replace(/\\n/g, "\n");
+    // Decode the private key from Base64
+    const privateKey = Buffer.from(
+      process.env.FIREBASE_PRIVATE_KEY_BASE64,
+      "base64"
+    ).toString("utf-8");
 
     if (admin.apps.length === 0) {
       admin.initializeApp({
