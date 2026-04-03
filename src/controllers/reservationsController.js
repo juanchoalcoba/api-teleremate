@@ -2,6 +2,7 @@ const Reservation = require("../models/Reservation");
 const Article = require("../models/Article");
 const asyncHandler = require("express-async-handler");
 const cloudinary = require("../config/cloudinary");
+const { sendPushNotification } = require("../utils/firebaseAdmin");
 
 // @desc    Create a new reservation
 // @route   POST /api/reservations
@@ -70,6 +71,13 @@ exports.createReservation = asyncHandler(async (req, res) => {
     message: "Reserva creada exitosamente",
     data: reservation,
   });
+
+  // Notify admin
+  await sendPushNotification(
+    "Nueva Reserva",
+    `${fullName} ha reservado el artículo: ${article.title}`,
+    { articleId: article._id.toString(), type: "reservation" }
+  );
 });
 
 // @desc    Get all reservations (admin)

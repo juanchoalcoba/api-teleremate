@@ -2,6 +2,7 @@ const Purchase = require("../models/Purchase");
 const Article = require("../models/Article");
 const asyncHandler = require("express-async-handler");
 const cloudinary = require("../config/cloudinary");
+const { sendPushNotification } = require("../utils/firebaseAdmin");
 
 // @desc    Create a new purchase
 // @route   POST /api/purchases
@@ -79,6 +80,13 @@ exports.createPurchase = asyncHandler(async (req, res) => {
     message: "Compra creada exitosamente",
     data: purchase,
   });
+
+  // Notify admin
+  await sendPushNotification(
+    "Nueva Compra",
+    `${fullName} ha comprado el artículo: ${article.title}`,
+    { articleId: article._id.toString(), type: "purchase" }
+  );
 });
 
 // @desc    Get all purchases (admin)

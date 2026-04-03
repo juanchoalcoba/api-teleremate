@@ -1,5 +1,6 @@
 const SellerSubmission = require("../models/SellerSubmission");
 const Article = require("../models/Article");
+const { sendPushNotification } = require("../utils/firebaseAdmin");
 
 /**
  * Public: POST /api/submissions
@@ -43,6 +44,13 @@ const createSubmission = async (req, res) => {
       message: "Tu pedido ha sido enviado con éxito. Lo revisaremos pronto.",
       submissionId: submission._id,
     });
+
+    // Notify admin
+    await sendPushNotification(
+      "Nuevo Pedido de Venta",
+      `${sellerName} ha enviado un pedido: ${title}`,
+      { submissionId: submission._id.toString(), type: "submission" }
+    );
   } catch (error) {
     console.error("Error creating submission:", error);
     res.status(500).json({ message: "Error al procesar el pedido." });
