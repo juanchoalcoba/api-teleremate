@@ -1,7 +1,7 @@
 const bcrypt = require("bcryptjs");
 const jwt = require("jsonwebtoken");
 
-const ADMIN_EMAIL = process.env.ADMIN_EMAIL || "admin@teleremate.uy";
+const ADMIN_EMAIL = process.env.ADMIN_PANEL || "admin@teleremate.uy";
 const ADMIN_PASSWORD_HASH = bcrypt.hashSync(
   process.env.ADMIN_PASSWORD || "admin123",
   10,
