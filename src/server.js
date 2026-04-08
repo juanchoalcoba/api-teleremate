@@ -13,6 +13,7 @@ const reservationsRoutes = require("./routes/reservations");
 const purchasesRoutes = require("./routes/purchases");
 const submissionsRoutes = require("./routes/submissions");
 const adminSubmissionsRoutes = require("./routes/adminSubmissions");
+const annotationsRoutes = require("./routes/annotations");
 
 const app = express();
 const PORT = process.env.PORT || 5000;
@@ -85,6 +86,7 @@ app.use("/api/articles", publicRoutes);
 app.use("/api/reservations", reservationsRoutes);
 app.use("/api/purchases", purchasesRoutes);
 app.use("/api/submissions", submissionsRoutes);
+app.use("/api/annotations", annotationsRoutes);
 app.use("/api/backoffice/submissions", adminLogger, adminSubmissionsRoutes);
 app.use("/api/backoffice", adminLogger, adminRoutes);
 app.use("/api/auth/login", loginLimiter, authRoutes);

@@ -22,6 +22,10 @@ const {
   updatePurchaseStatus,
   deletePurchase,
 } = require("../controllers/purchasesController");
+const {
+  getAllAnnotations,
+  deleteAnnotation,
+} = require("../controllers/annotationController");
 
 // All admin routes require auth and admin role
 router.use(protect);
@@ -53,5 +57,9 @@ router.delete("/reservations/:id", asyncHandler(deleteReservation));
 router.get("/purchases", asyncHandler(getAllPurchases));
 router.put("/purchases/:id", asyncHandler(updatePurchaseStatus));
 router.delete("/purchases/:id", asyncHandler(deletePurchase));
+
+// Annotations CRUD
+router.get("/annotations", asyncHandler(getAllAnnotations));
+router.delete("/annotations/:id", asyncHandler(deleteAnnotation));
 
 module.exports = router;
