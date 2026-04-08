@@ -6,52 +6,62 @@ const asyncHandler = require("express-async-handler");
 // @route   POST /api/annotations
 // @access  Public
 exports.createAnnotation = asyncHandler(async (req, res) => {
-  const { articleId, fullName, phone } = req.body;
+  try {
+    const { articleId, fullName, phone } = req.body;
+    
+    console.log(`[ANNOTATION] Iniciando registro: Artículo ${articleId}, Nombre: ${fullName}, Teléfono: ${phone}`);
 
-  // Validation
-  if (!articleId || !fullName || !phone) {
-    return res.status(400).json({
+    // Validation
+    if (!articleId || !fullName || !phone) {
+      return res.status(400).json({
+        success: false,
+        message: "Por favor, completa todos los campos obligatorios.",
+      });
+    }
+
+    // Check if article exists and is a "remate" item
+    const article = await Article.findById(articleId);
+    if (!article) {
+      return res.status(404).json({
+        success: false,
+        message: "Artículo no encontrado.",
+      });
+    }
+
+    if (article.category !== "remate") {
+      return res.status(400).json({
+        success: false,
+        message: "Este artículo no permite anotaciones.",
+      });
+    }
+
+    // Check for duplicate (same phone for same article)
+    const existingAnnotation = await Annotation.findOne({ articleId, phone: phone.trim() });
+    if (existingAnnotation) {
+      return res.status(400).json({
+        success: false,
+        message: "Ya te has anotado a este artículo con este número de teléfono.",
+      });
+    }
+
+    const annotation = await Annotation.create({
+      articleId,
+      fullName: fullName.trim(),
+      phone: phone.trim(),
+    });
+
+    res.status(201).json({
+      success: true,
+      message: "Te has anotado correctamente.",
+      data: annotation,
+    });
+  } catch (error) {
+    console.error("❌ Error al crear anotación:", error);
+    res.status(error.status || 500).json({
       success: false,
-      message: "Por favor, completa todos los campos obligatorios.",
+      message: error.message || "Error interno al procesar la anotación.",
     });
   }
-
-  // Check if article exists and is a "remate" item
-  const article = await Article.findById(articleId);
-  if (!article) {
-    return res.status(404).json({
-      success: false,
-      message: "Artículo no encontrado.",
-    });
-  }
-
-  if (article.category !== "remate") {
-    return res.status(400).json({
-      success: false,
-      message: "Este artículo no permite anotaciones.",
-    });
-  }
-
-  // Check for duplicate (same phone for same article)
-  const existingAnnotation = await Annotation.findOne({ articleId, phone: phone.trim() });
-  if (existingAnnotation) {
-    return res.status(400).json({
-      success: false,
-      message: "Ya te has anotado a este artículo con este número de teléfono.",
-    });
-  }
-
-  const annotation = await Annotation.create({
-    articleId,
-    fullName: fullName.trim(),
-    phone: phone.trim(),
-  });
-
-  res.status(201).json({
-    success: true,
-    message: "Te has anotado correctamente.",
-    data: annotation,
-  });
 });
 
 // @desc    Get all annotations (admin)
