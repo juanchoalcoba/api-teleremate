@@ -87,6 +87,7 @@ app.use("/api/reservations", reservationsRoutes);
 app.use("/api/purchases", purchasesRoutes);
 app.use("/api/submissions", submissionsRoutes);
 app.use("/api/annotations", annotationsRoutes);
+console.log("✅ Annotations routes loaded at /api/annotations");
 app.use("/api/backoffice/submissions", adminLogger, adminSubmissionsRoutes);
 app.use("/api/backoffice", adminLogger, adminRoutes);
 app.use("/api/auth/login", loginLimiter, authRoutes);
