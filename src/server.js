@@ -97,7 +97,7 @@ app.use("/api/auth", authRoutes); // Keep standard auth routes for other needs i
 // Health check
 app.get("/api/health", (_req, res) => {
   res.json({
-    status: "ok",
+    status: "ANOTACIONES_READY",
     timestamp: new Date().toISOString(),
     env: process.env.NODE_ENV,
   });
