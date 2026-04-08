@@ -13,7 +13,7 @@ const reservationsRoutes = require("./routes/reservations");
 const purchasesRoutes = require("./routes/purchases");
 const submissionsRoutes = require("./routes/submissions");
 const adminSubmissionsRoutes = require("./routes/adminSubmissions");
-const annotationsRoutes = require("./routes/annotations");
+const { createAnnotation } = require("./controllers/annotationController");
 
 const app = express();
 const PORT = process.env.PORT || 5000;
@@ -82,12 +82,13 @@ app.use(express.urlencoded({ extended: true, limit: "20mb" }));
 // (app.use("/uploads"...) removed)
 
 // Routes
+app.get("/api/annotations/test", (req, res) => res.json({ message: "Annotations route is ACTIVE from server.js" }));
+app.post("/api/annotations", asyncHandler(createAnnotation));
+
 app.use("/api/articles", publicRoutes);
 app.use("/api/reservations", reservationsRoutes);
 app.use("/api/purchases", purchasesRoutes);
 app.use("/api/submissions", submissionsRoutes);
-app.use("/api/annotations", annotationsRoutes);
-console.log("✅ Annotations routes loaded at /api/annotations");
 app.use("/api/backoffice/submissions", adminLogger, adminSubmissionsRoutes);
 app.use("/api/backoffice", adminLogger, adminRoutes);
 app.use("/api/auth/login", loginLimiter, authRoutes);
@@ -100,6 +101,12 @@ app.get("/api/health", (_req, res) => {
     timestamp: new Date().toISOString(),
     env: process.env.NODE_ENV,
   });
+});
+
+// Catch-all for 404s
+app.use((req, res, next) => {
+  console.log(`[404 DEBUG] Unmatched request: ${req.method} ${req.originalUrl}`);
+  res.status(404).json({ message: `Path ${req.originalUrl} not found on this server.` });
 });
 
 // Global error handler
