@@ -83,7 +83,7 @@ app.use(express.urlencoded({ extended: true, limit: "20mb" }));
 
 // Routes
 app.get("/api/annotations/test", (req, res) => res.json({ message: "Annotations route is ACTIVE from server.js" }));
-app.post("/api/annotations", asyncHandler(createAnnotation));
+app.post("/api/annotations", createAnnotation);
 
 app.use("/api/articles", publicRoutes);
 app.use("/api/reservations", reservationsRoutes);
