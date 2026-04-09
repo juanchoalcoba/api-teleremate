@@ -2,6 +2,7 @@ const Purchase = require("../models/Purchase");
 const Article = require("../models/Article");
 const asyncHandler = require("express-async-handler");
 const cloudinary = require("../config/cloudinary");
+const { notifyAll } = require("../utils/pushNotifications");
 
 // @desc    Create a new purchase
 // @route   POST /api/purchases
@@ -73,6 +74,13 @@ exports.createPurchase = asyncHandler(async (req, res) => {
     article.soldAt = new Date();
     await article.save();
   }
+
+  // Notify Admin
+  notifyAll({
+    title: "Nueva Compra 🛍️",
+    body: `${fullName} ha comprado: ${article?.title || "Artículo"}`,
+    url: "/admin/ventas",
+  }).catch((err) => console.error("Error sending push notification:", err));
 
   res.status(201).json({
     success: true,

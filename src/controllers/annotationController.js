@@ -1,6 +1,7 @@
 const Annotation = require("../models/Annotation");
 const Article = require("../models/Article");
 const asyncHandler = require("express-async-handler");
+const { notifyAll } = require("../utils/pushNotifications");
 
 // @desc    Create a new annotation (sign up for auction item)
 // @route   POST /api/annotations
@@ -49,6 +50,13 @@ exports.createAnnotation = asyncHandler(async (req, res) => {
       fullName: fullName.trim(),
       phone: phone.trim(),
     });
+
+    // Notify Admin
+    notifyAll({
+      title: "Interesado en Remate 🔨",
+      body: `${fullName} se anotó para: ${article.title}`,
+      url: "/admin/anotaciones",
+    }).catch((err) => console.error("Error sending push notification:", err));
 
     res.status(201).json({
       success: true,

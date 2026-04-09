@@ -13,6 +13,7 @@ const reservationsRoutes = require("./routes/reservations");
 const purchasesRoutes = require("./routes/purchases");
 const submissionsRoutes = require("./routes/submissions");
 const adminSubmissionsRoutes = require("./routes/adminSubmissions");
+const notificationRoutes = require("./routes/notifications");
 const { createAnnotation } = require("./controllers/annotationController");
 
 const app = express();
@@ -93,6 +94,7 @@ app.use("/api/backoffice/submissions", adminLogger, adminSubmissionsRoutes);
 app.use("/api/backoffice", adminLogger, adminRoutes);
 app.use("/api/auth/login", loginLimiter, authRoutes);
 app.use("/api/auth", authRoutes); // Keep standard auth routes for other needs if any
+app.use("/api/notifications", notificationRoutes);
 
 // Health check
 app.get("/api/health", (_req, res) => {
