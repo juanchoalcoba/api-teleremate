@@ -16,20 +16,20 @@ const notifyAll = async (payload) => {
   
   const notifications = subscriptions.map(async (subscription) => {
     try {
-      await webPush.sendNotification(
+      const response = await webPush.sendNotification(
         {
           endpoint: subscription.endpoint,
           keys: subscription.keys,
         },
         JSON.stringify(payload)
       );
+      console.log(`[PUSH] Sent successfully to ${subscription.endpoint.split('/').pop().substring(0, 10)}... Status: ${response.statusCode}`);
     } catch (error) {
       if (error.statusCode === 410 || error.statusCode === 404) {
-        // Subscription expired or no longer valid, remove it
         console.log(`[PUSH] Removing expired subscription: ${subscription._id}`);
         await PushSubscription.deleteOne({ _id: subscription._id });
       } else {
-        console.error("[PUSH] Error sending notification:", error.message);
+        console.error(`[PUSH] Error sending to ${subscription.endpoint.split('/').pop().substring(0, 10)}... Status: ${error.statusCode || 'unknown'}. Error: ${error.message}`);
       }
     }
   });
