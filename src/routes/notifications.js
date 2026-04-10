@@ -12,11 +12,19 @@ const router = express.Router();
 router.post(
   "/subscribe",
   asyncHandler(async (req, res) => {
-    const subscription = req.body;
+    const { subscription, email } = req.body;
+
+    if (!subscription || !subscription.endpoint) {
+       return res.status(400).json({ message: "Suscripción inválida." });
+    }
 
     // Check if subscription already exists
     const existing = await PushSubscription.findOne({ endpoint: subscription.endpoint });
     if (existing) {
+      if (email) {
+        existing.userEmail = email;
+        await existing.save();
+      }
       return res.status(200).json({ message: "Suscripción ya registrada anteriormente." });
     }
 
@@ -24,9 +32,23 @@ router.post(
     await PushSubscription.create({
       endpoint: subscription.endpoint,
       keys: subscription.keys,
+      userEmail: email,
     });
 
     res.status(201).json({ message: "Suscripción guardada exitosamente." });
+  })
+);
+
+/**
+ * @desc    Get subscription count
+ * @route   GET /api/notifications/count
+ * @access  Public (for diagnostic)
+ */
+router.get(
+  "/count",
+  asyncHandler(async (req, res) => {
+    const count = await PushSubscription.countDocuments();
+    res.json({ count });
   })
 );
 

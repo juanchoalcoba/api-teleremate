@@ -18,7 +18,11 @@ const PushSubscriptionSchema = new mongoose.Schema({
   },
   isAdmin: {
     type: Boolean,
-    default: true, // For now, we only care about admin notifications
+    default: true,
+  },
+  userEmail: {
+    type: String,
+    required: false, // Optional for now to avoid breaking existing ones
   },
   createdAt: {
     type: Date,
