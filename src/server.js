@@ -14,6 +14,7 @@ const purchasesRoutes = require("./routes/purchases");
 const submissionsRoutes = require("./routes/submissions");
 const adminSubmissionsRoutes = require("./routes/adminSubmissions");
 const notificationRoutes = require("./routes/notifications"); // Web Push Notifications
+const residencesRoutes = require("./routes/residencesRoutes");
 const { createAnnotation } = require("./controllers/annotationController");
 
 const app = express();
@@ -91,6 +92,7 @@ app.use("/api/reservations", reservationsRoutes);
 app.use("/api/purchases", purchasesRoutes);
 app.use("/api/submissions", submissionsRoutes);
 app.use("/api/backoffice/submissions", adminLogger, adminSubmissionsRoutes);
+app.use("/api/backoffice/residences", adminLogger, residencesRoutes);
 app.use("/api/backoffice", adminLogger, adminRoutes);
 app.use("/api/auth/login", loginLimiter, authRoutes);
 app.use("/api/auth", authRoutes); // Keep standard auth routes for other needs if any
