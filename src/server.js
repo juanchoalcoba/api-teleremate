@@ -13,7 +13,7 @@ const reservationsRoutes = require("./routes/reservations");
 const purchasesRoutes = require("./routes/purchases");
 const submissionsRoutes = require("./routes/submissions");
 const adminSubmissionsRoutes = require("./routes/adminSubmissions");
-const notificationRoutes = require("./routes/notifications");
+const notificationRoutes = require("./routes/notifications"); // Web Push Notifications
 const { createAnnotation } = require("./controllers/annotationController");
 
 const app = express();
