@@ -13,6 +13,7 @@ webPush.setVapidDetails(
  */
 const notifyAll = async (payload) => {
   const subscriptions = await PushSubscription.find({});
+  console.log(`[PUSH] Intentando notificar a ${subscriptions.length} dispositivos registrados.`);
   
   const notifications = subscriptions.map(async (subscription) => {
     try {
