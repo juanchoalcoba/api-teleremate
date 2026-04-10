@@ -22,9 +22,13 @@ const notifyAll = async (payload) => {
           endpoint: subscription.endpoint,
           keys: subscription.keys,
         },
-        JSON.stringify(payload)
+        JSON.stringify(payload),
+        {
+          urgency: 'high',   // Despierta el dispositivo aunque esté en Doze Mode
+          TTL: 86400,        // Mensaje válido por 24 horas si el dispositivo está offline
+        }
       );
-      console.log(`[PUSH] Sent successfully to ${subscription.endpoint.split('/').pop().substring(0, 10)}... Status: ${response.statusCode}`);
+      console.log(`[PUSH] Enviado OK a ${subscription.endpoint.split('/').pop().substring(0, 10)}... Status: ${response.statusCode}`);
     } catch (error) {
       if (error.statusCode === 410 || error.statusCode === 404) {
         console.log(`[PUSH] Removing expired subscription: ${subscription._id}`);
