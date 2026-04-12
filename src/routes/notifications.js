@@ -18,6 +18,10 @@ router.post(
        return res.status(400).json({ message: "Suscripción inválida." });
     }
 
+    if (!subscription.keys || !subscription.keys.p256dh || !subscription.keys.auth) {
+      return res.status(400).json({ message: "Suscripción inválida - faltan claves." });
+    }
+
     // Check if subscription already exists
     const existing = await PushSubscription.findOne({ endpoint: subscription.endpoint });
     if (existing) {
