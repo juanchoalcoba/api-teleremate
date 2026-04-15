@@ -15,17 +15,27 @@ router.post(
     const subscription = req.body;
 
     if (!subscription || !subscription.endpoint) {
-       return res.status(400).json({ message: "Suscripción inválida." });
+      return res.status(400).json({ message: "Suscripción inválida." });
     }
 
-    if (!subscription.keys || !subscription.keys.p256dh || !subscription.keys.auth) {
-      return res.status(400).json({ message: "Suscripción inválida - faltan claves." });
+    if (
+      !subscription.keys ||
+      !subscription.keys.p256dh ||
+      !subscription.keys.auth
+    ) {
+      return res
+        .status(400)
+        .json({ message: "Suscripción inválida - faltan claves." });
     }
 
     // Check if subscription already exists
-    const existing = await PushSubscription.findOne({ endpoint: subscription.endpoint });
+    const existing = await PushSubscription.findOne({
+      endpoint: subscription.endpoint,
+    });
     if (existing) {
-      return res.status(200).json({ message: "Suscripción ya registrada anteriormente." });
+      return res
+        .status(200)
+        .json({ message: "Suscripción ya registrada anteriormente." });
     }
 
     // Save new subscription
@@ -35,7 +45,7 @@ router.post(
     });
 
     res.status(201).json({ message: "Suscripción guardada exitosamente." });
-  })
+  }),
 );
 
 /**
@@ -48,7 +58,7 @@ router.get(
   asyncHandler(async (req, res) => {
     const count = await PushSubscription.countDocuments();
     res.json({ count });
-  })
+  }),
 );
 
 /**
@@ -60,7 +70,7 @@ router.post(
   "/test-notify",
   asyncHandler(async (req, res) => {
     const { title, body, url } = req.body;
-    
+
     await notifyAll({
       title: title || "Test de Notificación",
       body: body || "Esto es un mensaje de prueba desde Teleremate",
@@ -68,7 +78,7 @@ router.post(
     });
 
     res.json({ message: "Notificación de prueba enviada." });
-  })
+  }),
 );
 
 module.exports = router;
