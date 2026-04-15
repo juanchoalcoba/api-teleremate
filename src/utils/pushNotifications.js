@@ -8,41 +8,27 @@ webPush.setVapidDetails(
 );
 
 /**
- * Send a push notification to all stored subscriptions
- * @param {Object} payload { title, body, url }
+ * Internal helper to send push to an array of subscriptions
  */
-const notifyAll = async (payload) => {
-  const subscriptions = await PushSubscription.find({});
-  console.log(
-    `[PUSH] Intentando notificar a ${subscriptions.length} dispositivos registrados.`,
-  );
+const sendPushToSubscriptions = async (subscriptions, payload) => {
+  console.log(`[PUSH] Intentando notificar a ${subscriptions.length} dispositivos.`);
 
   const notifications = subscriptions.map(async (subscription) => {
     try {
-      const response = await webPush.sendNotification(
+      await webPush.sendNotification(
         {
           endpoint: subscription.endpoint,
           keys: subscription.keys,
         },
         JSON.stringify(payload),
         {
-          urgency: "high", // Despierta el dispositivo aunque esté en Doze Mode
-          TTL: 86400, // Mensaje válido por 24 horas si el dispositivo está offline
+          urgency: "high",
+          TTL: 86400,
         },
-      );
-      console.log(
-        `[PUSH] Enviado OK a ${subscription.endpoint.split("/").pop().substring(0, 10)}... Status: ${response.statusCode}`,
       );
     } catch (error) {
       if (error.statusCode === 410 || error.statusCode === 404) {
-        console.log(
-          `[PUSH] Removing expired subscription: ${subscription._id}`,
-        );
         await PushSubscription.deleteOne({ _id: subscription._id });
-      } else {
-        console.error(
-          `[PUSH] Error sending to ${subscription.endpoint.split("/").pop().substring(0, 10)}... Status: ${error.statusCode || "unknown"}. Error: ${error.message}`,
-        );
       }
     }
   });
@@ -50,4 +36,40 @@ const notifyAll = async (payload) => {
   return Promise.all(notifications);
 };
 
-module.exports = { notifyAll };
+const notifyAll = async (payload) => {
+  const subscriptions = await PushSubscription.find({});
+  return sendPushToSubscriptions(subscriptions, payload);
+};
+
+const notifyAdmin = async (payload) => {
+  const subscriptions = await PushSubscription.find({ isAdmin: true });
+  return sendPushToSubscriptions(subscriptions, payload);
+};
+
+const notifyPublic = async (payload) => {
+  const subscriptions = await PushSubscription.find({ isAdmin: false });
+  return sendPushToSubscriptions(subscriptions, payload);
+};
+
+const notifySpecific = async (subscriptionData, payload) => {
+  console.log(`[PUSH] Notificación a dispositivo específico.`);
+  try {
+    const response = await webPush.sendNotification(
+      {
+        endpoint: subscriptionData.endpoint,
+        keys: subscriptionData.keys,
+      },
+      JSON.stringify(payload),
+      {
+        urgency: "high",
+        TTL: 86400,
+      },
+    );
+    return response;
+  } catch (error) {
+    console.error(`[PUSH] Error en envío específico: ${error.message}`);
+    throw error;
+  }
+};
+
+module.exports = { notifyAll, notifyAdmin, notifyPublic, notifySpecific };
