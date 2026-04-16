@@ -18,11 +18,7 @@ const PushSubscriptionSchema = new mongoose.Schema({
   },
   isAdmin: {
     type: Boolean,
-    default: false,
-  },
-  userEmail: {
-    type: String,
-    required: false, // Optional for now to avoid breaking existing ones
+    default: true, // Reverting to Thursday behavior where all were treated as admin-capable
   },
   createdAt: {
     type: Date,

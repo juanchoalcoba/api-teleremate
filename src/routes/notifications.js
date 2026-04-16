@@ -5,7 +5,8 @@ const asyncHandler = require("express-async-handler");
 const router = express.Router();
 
 /**
- * @desc    Subscribe to push notifications (Public)
+ * @desc    Subscribe to push notifications (Thursday Style)
+ * Unified endpoint for all browsers.
  */
 router.post(
   "/subscribe",
@@ -17,27 +18,28 @@ router.post(
 
     const existing = await PushSubscription.findOne({ endpoint: subscription.endpoint });
     if (existing) {
-      existing.isAdmin = false; // Asegurar que sea público si se suscribe aquí
+      // Refresh current keys
+      existing.keys = subscription.keys;
       await existing.save();
-      return res.status(200).json({ message: "Suscripción actualizada (Público)." });
+      return res.status(200).json({ message: "Suscripción actualizada." });
     }
 
     await PushSubscription.create({
       endpoint: subscription.endpoint,
-      keys: subscription.keys,
-      isAdmin: false
+      keys: subscription.keys
     });
 
-    res.status(201).json({ message: "Suscripción (Público) guardada." });
+    res.status(201).json({ message: "Suscripción guardada exitosamente." });
   }),
 );
 
 /**
- * @desc    Subscribe to push notifications (Admin)
+ * @desc    Backward compatibility for admin endpoint
  */
 router.post(
   "/subscribe-admin",
   asyncHandler(async (req, res) => {
+    // Treat as a normal subscription but ensure we acknowledge it
     const subscription = req.body;
     if (!subscription || !subscription.endpoint) {
       return res.status(400).json({ message: "Suscripción inválida." });
@@ -45,40 +47,18 @@ router.post(
 
     const existing = await PushSubscription.findOne({ endpoint: subscription.endpoint });
     if (existing) {
-      existing.isAdmin = true; // Forzar estado Admin
+      existing.isAdmin = true;
+      existing.keys = subscription.keys;
       await existing.save();
-      return res.status(200).json({ message: "Suscripción actualizada (Admin)." });
+    } else {
+      await PushSubscription.create({
+        endpoint: subscription.endpoint,
+        keys: subscription.keys,
+        isAdmin: true
+      });
     }
 
-    await PushSubscription.create({
-      endpoint: subscription.endpoint,
-      keys: subscription.keys,
-      isAdmin: true
-    });
-
-    res.status(201).json({ message: "Suscripción (Admin) guardada." });
-  }),
-);
-
-/**
- * @desc    Send test notification to a SPECIFIC device
- */
-router.post(
-  "/test-notify-device",
-  asyncHandler(async (req, res) => {
-    const { subscription, title, body, url } = req.body;
-
-    if (!subscription || !subscription.endpoint) {
-      return res.status(400).json({ message: "Se requiere la suscripción del equipo." });
-    }
-
-    await notifySpecific(subscription, {
-      title: title || "Test Directo",
-      body: body || "Esta es una prueba solo para tu equipo",
-      url: url || "/backoffice/"
-    });
-
-    res.json({ message: "Notificación enviada al equipo." });
+    res.status(201).json({ message: "Suscripción Admin guardada." });
   }),
 );
 
@@ -90,8 +70,8 @@ router.post(
   asyncHandler(async (req, res) => {
     const { title, body, url } = req.body;
     await notifyAll({
-      title: title || "Alerta General",
-      body: body || "Este es un mensaje global",
+      title: title || "Teleremate Uruguay",
+      body: body || "Prueba de notificación establecida.",
       url: url || "/"
     });
     res.json({ message: "Notificación global enviada." });

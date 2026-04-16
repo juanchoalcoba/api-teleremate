@@ -65,7 +65,7 @@ const allowedOrigins = [
 app.use(
   cors({
     origin: (origin, callback) => {
-      // Allow requests with no origin (like mobile apps or curl) 
+      // Allow requests with no origin (like mobile apps or curl)
       // but in production we might want to be more strict.
       if (!origin || allowedOrigins.includes(origin)) {
         callback(null, true);
@@ -75,7 +75,7 @@ app.use(
       }
     },
     credentials: true,
-  })
+  }),
 );
 app.use(express.json({ limit: "20mb" }));
 app.use(express.urlencoded({ extended: true, limit: "20mb" }));
@@ -84,7 +84,9 @@ app.use(express.urlencoded({ extended: true, limit: "20mb" }));
 // (app.use("/uploads"...) removed)
 
 // Routes
-app.get("/api/annotations/test", (req, res) => res.json({ message: "Annotations route is ACTIVE from server.js" }));
+app.get("/api/annotations/test", (req, res) =>
+  res.json({ message: "Annotations route is ACTIVE from server.js" }),
+);
 app.post("/api/annotations", createAnnotation);
 
 app.use("/api/articles", publicRoutes);
@@ -109,8 +111,12 @@ app.get("/api/health", (_req, res) => {
 
 // Catch-all for 404s
 app.use((req, res, next) => {
-  console.log(`[404 DEBUG] Unmatched request: ${req.method} ${req.originalUrl}`);
-  res.status(404).json({ message: `Path ${req.originalUrl} not found on this server.` });
+  console.log(
+    `[404 DEBUG] Unmatched request: ${req.method} ${req.originalUrl}`,
+  );
+  res
+    .status(404)
+    .json({ message: `Path ${req.originalUrl} not found on this server.` });
 });
 
 // Global error handler
@@ -136,3 +142,5 @@ connectDB()
   });
 
 module.exports = app;
+
+// CAMIO
