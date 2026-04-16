@@ -10,7 +10,13 @@ const router = express.Router();
 router.post(
   "/subscribe",
   asyncHandler(async (req, res) => {
-    const { subscription, userEmail } = req.body;
+    let { subscription, userEmail } = req.body;
+    
+    // Si la suscripción no viene envuelta, el body es la suscripción
+    if (!subscription && req.body.endpoint) {
+      subscription = req.body;
+    }
+
     if (!subscription || !subscription.endpoint) {
       return res.status(400).json({ message: "Suscripción inválida." });
     }
@@ -41,7 +47,13 @@ router.post(
 router.post(
   "/subscribe-admin",
   asyncHandler(async (req, res) => {
-    const { subscription, userEmail } = req.body;
+    let { subscription, userEmail } = req.body;
+    
+    // Si la suscripción no viene envuelta, el body es la suscripción
+    if (!subscription && req.body.endpoint) {
+      subscription = req.body;
+    }
+
     if (!subscription || !subscription.endpoint) {
       return res.status(400).json({ message: "Suscripción inválida." });
     }
@@ -72,7 +84,12 @@ router.post(
 router.post(
   "/test-notify-device",
   asyncHandler(async (req, res) => {
-    const { subscription, title, body, url } = req.body;
+    let { subscription, title, body, url } = req.body;
+
+    // Soporte para envío directo (objeto plano)
+    if (!subscription && req.body.endpoint) {
+      subscription = req.body;
+    }
 
     if (!subscription || !subscription.endpoint) {
       return res.status(400).json({ message: "Se requiere la suscripción del equipo." });
