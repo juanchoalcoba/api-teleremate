@@ -96,9 +96,9 @@ router.post(
     }
 
     await notifySpecific(subscription, {
-      title: title || "Test Directo",
-      body: body || "Esta es una prueba solo para tu equipo",
-      url: url || "/backoffice/"
+      title: title || "TeleRemate Admin 🔔",
+      body: body || "¡Test Exitoso! Las notificaciones están activas al 100%.",
+      url: url || "/backoffice/compras"
     });
 
     res.json({ message: "Notificación enviada al equipo." });
