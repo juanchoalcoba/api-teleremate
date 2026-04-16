@@ -67,6 +67,28 @@ router.post(
 );
 
 /**
+ * @desc    Send test notification to a SPECIFIC device
+ */
+router.post(
+  "/test-notify-device",
+  asyncHandler(async (req, res) => {
+    const { subscription, title, body, url } = req.body;
+
+    if (!subscription || !subscription.endpoint) {
+      return res.status(400).json({ message: "Se requiere la suscripción del equipo." });
+    }
+
+    await notifySpecific(subscription, {
+      title: title || "Test Directo",
+      body: body || "Esta es una prueba solo para tu equipo",
+      url: url || "/backoffice/"
+    });
+
+    res.json({ message: "Notificación enviada al equipo." });
+  }),
+);
+
+/**
  * @desc    Send general test notification (All)
  */
 router.post(

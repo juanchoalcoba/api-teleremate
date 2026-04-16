@@ -1,6 +1,6 @@
 const SellerSubmission = require("../models/SellerSubmission");
 const Article = require("../models/Article");
-const { notifyAll } = require("../utils/pushNotifications");
+const { notifyAdmin } = require("../utils/pushNotifications");
 
 /**
  * Public: POST /api/submissions
@@ -42,10 +42,10 @@ const createSubmission = async (req, res) => {
     await submission.save();
 
     // Notify Admin
-    notifyAll({
+    notifyAdmin({
       title: "Nuevo Pedido de Ingreso 📥",
       body: `De: ${sellerName} - Artículo: ${title}`,
-      url: "/admin/pedidos",
+      url: "/backoffice/pedidos",
     }).catch((err) => console.error("Error sending push notification:", err));
 
     res.status(201).json({
