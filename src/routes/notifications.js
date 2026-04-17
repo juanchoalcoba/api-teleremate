@@ -4,42 +4,21 @@ const { notifyAll, notifySpecific } = require("../utils/pushNotifications");
 const asyncHandler = require("express-async-handler");
 const router = express.Router();
 
+/*
 /**
  * @desc    Subscribe to push notifications (Public)
+ * @deleted Desactivado por orden del usuario: solo notificaciones Admin.
  */
+/*
 router.post(
   "/subscribe",
   asyncHandler(async (req, res) => {
-    let { subscription, userEmail } = req.body;
-    
-    // Si la suscripción no viene envuelta, el body es la suscripción
-    if (!subscription && req.body.endpoint) {
-      subscription = req.body;
-    }
-
-    if (!subscription || !subscription.endpoint) {
-      return res.status(400).json({ message: "Suscripción inválida." });
-    }
-
-    const existing = await PushSubscription.findOne({ endpoint: subscription.endpoint });
-    if (existing) {
-      existing.isAdmin = false;
-      existing.userEmail = userEmail || existing.userEmail;
-      existing.keys = subscription.keys;
-      await existing.save();
-      return res.status(200).json({ message: "Suscripción actualizada (Público)." });
-    }
-
-    await PushSubscription.create({
-      endpoint: subscription.endpoint,
-      keys: subscription.keys,
-      isAdmin: false,
-      userEmail: userEmail
-    });
-
-    res.status(201).json({ message: "Suscripción (Público) guardada." });
+    // ... logic removed ...
+    res.status(410).json({ message: "Suscripciones públicas desactivadas." });
   }),
 );
+*/
+
 
 /**
  * @desc    Subscribe to push notifications (Admin)

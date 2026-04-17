@@ -37,7 +37,8 @@ const sendPushToSubscriptions = async (subscriptions, payload) => {
 };
 
 const notifyAll = async (payload) => {
-  const subscriptions = await PushSubscription.find({});
+  // Ahora notifyAll es un alias de notifyAdmin para seguridad
+  const subscriptions = await PushSubscription.find({ isAdmin: true });
   return sendPushToSubscriptions(subscriptions, payload);
 };
 
@@ -47,8 +48,9 @@ const notifyAdmin = async (payload) => {
 };
 
 const notifyPublic = async (payload) => {
-  const subscriptions = await PushSubscription.find({ isAdmin: false });
-  return sendPushToSubscriptions(subscriptions, payload);
+  // Desactivado por orden del usuario
+  console.log("[PUSH] Intento de notificación pública abortado.");
+  return Promise.resolve();
 };
 
 const notifySpecific = async (subscriptionData, payload) => {
