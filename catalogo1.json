@@ -1,25 +1,25 @@
 [
   {
     "numero": "1",
-    "id": "55533",
-    "descripcion": "4 CAÑOS TUBULARES DIFERENTES MEDIDAS",
-    "precio": 600,
+    "id": "48768",
+    "descripcion": "CORTINA DE ENROLLAR DE ALUMINIO CON CAJON DE MADERA CON GUIAS 81 ANCHO X 1.25",
+    "precio": 1000,
     "imagenes": [
-      "https://fotos.tele-remate.com.uy/55533_1.jpg",
-      "https://fotos.tele-remate.com.uy/55533_2.jpg",
-      "https://fotos.tele-remate.com.uy/55533_3.jpg"
+      "https://fotos.tele-remate.com.uy/48768_1.jpg",
+      "https://fotos.tele-remate.com.uy/48768_2.jpg",
+      "https://fotos.tele-remate.com.uy/48768_3.jpg"
     ],
     "vendido": false
   },
   {
     "numero": "2",
-    "id": "55489",
-    "descripcion": "LAGARTO PALETERO AZUL NO FUNCIONA (LARGO DE LOS SOPORTES 1.20 X ANCHO TOTAL 0.67)",
-    "precio": 2500,
+    "id": "54856",
+    "descripcion": "VENTANA DE HIERRO 2 HOJAS + 2 LATERALES C/VIDRIOS SANOS (140X1.20 ALTO)",
+    "precio": 600,
     "imagenes": [
-      "https://fotos.tele-remate.com.uy/55489_1.jpg",
-      "https://fotos.tele-remate.com.uy/55489_2.jpg",
-      "https://fotos.tele-remate.com.uy/55489_3.jpg"
+      "https://fotos.tele-remate.com.uy/54856_1.jpg",
+      "https://fotos.tele-remate.com.uy/54856_2.jpg",
+      "https://fotos.tele-remate.com.uy/54856_3.jpg"
     ],
     "vendido": false
   },
@@ -37,78 +37,30 @@
   },
   {
     "numero": "4",
-    "id": "53509",
-    "descripcion": "2 BARRAS DE HIERRO T 3.5 Y 4.5",
-    "precio": 500,
+    "id": "55636",
+    "descripcion": "VENTANA BANDEROLA 4 VIDRIOS 2 HOJAS 77 X 1.45",
+    "precio": 600,
     "imagenes": [
-      "https://fotos.tele-remate.com.uy/53509_1.jpg",
-      "https://fotos.tele-remate.com.uy/53509_2.jpg",
-      "https://fotos.tele-remate.com.uy/53509_3.jpg"
+      "https://fotos.tele-remate.com.uy/55636_1.jpg",
+      "https://fotos.tele-remate.com.uy/55636_2.jpg",
+      "https://fotos.tele-remate.com.uy/55636_3.jpg"
     ],
     "vendido": false
   },
   {
     "numero": "5",
-    "id": "53924",
-    "descripcion": "CHAPA ACANALADA 3.95X1.14 UNA CLAVADA CALIBRE 24 C/U",
-    "precio": 1200,
+    "id": "55637",
+    "descripcion": "REJA BALCONERA O SEPARADORA PARA DECORACION (PORTERA) 88 X 93",
+    "precio": 1000,
     "imagenes": [
-      "https://fotos.tele-remate.com.uy/53491_1.jpg",
-      "https://fotos.tele-remate.com.uy/53491_2.jpg",
-      "https://fotos.tele-remate.com.uy/53491_3.jpg"
+      "https://fotos.tele-remate.com.uy/55637_1.jpg",
+      "https://fotos.tele-remate.com.uy/55637_2.jpg",
+      "https://fotos.tele-remate.com.uy/55637_3.jpg"
     ],
     "vendido": false
   },
   {
     "numero": "6",
-    "id": "54723",
-    "descripcion": "2 MARCOS DE ALUMINIO 2.40 X 65",
-    "precio": 800,
-    "imagenes": [
-      "https://fotos.tele-remate.com.uy/54723_1.jpg",
-      "https://fotos.tele-remate.com.uy/54723_2.jpg",
-      "https://fotos.tele-remate.com.uy/54723_3.jpg"
-    ],
-    "vendido": false
-  },
-  {
-    "numero": "7",
-    "id": "54856",
-    "descripcion": "VENTANA DE HIERRO 2 HOJAS + 2 LATERALES C/VIDRIOS SANOS (140X1.20 ALTO)",
-    "precio": 800,
-    "imagenes": [
-      "https://fotos.tele-remate.com.uy/54856_1.jpg",
-      "https://fotos.tele-remate.com.uy/54856_2.jpg",
-      "https://fotos.tele-remate.com.uy/54856_3.jpg"
-    ],
-    "vendido": false
-  },
-  {
-    "numero": "8",
-    "id": "48768",
-    "descripcion": "CORTINA DE ENROLLAR DE ALUMINIO CON CAJON DE MADERA CON GUIAS 81 ANCHO X 1.25",
-    "precio": 1000,
-    "imagenes": [
-      "https://fotos.tele-remate.com.uy/48768_1.jpg",
-      "https://fotos.tele-remate.com.uy/48768_2.jpg",
-      "https://fotos.tele-remate.com.uy/48768_3.jpg"
-    ],
-    "vendido": false
-  },
-  {
-    "numero": "9",
-    "id": "55556",
-    "descripcion": "LOTE DE HIERROS/REJILLAS DE DESAGUE/BALANCIN/DESENLLANTADORA CAÑO CUADRADO",
-    "precio": 400,
-    "imagenes": [
-      "https://fotos.tele-remate.com.uy/55556_1.jpg",
-      "https://fotos.tele-remate.com.uy/55556_2.jpg",
-      "https://fotos.tele-remate.com.uy/55556_3.jpg"
-    ],
-    "vendido": false
-  },
-  {
-    "numero": "10",
     "id": "55485",
     "descripcion": "2 CHAPAS (0.70X2.10 C/U)",
     "precio": 700,
@@ -120,19 +72,7 @@
     "vendido": false
   },
   {
-    "numero": "11",
-    "id": "55558",
-    "descripcion": "LOTE DE 2 TABLONES + 1 MADERA DURA",
-    "precio": 500,
-    "imagenes": [
-      "https://fotos.tele-remate.com.uy/55558_1.jpg",
-      "https://fotos.tele-remate.com.uy/55558_2.jpg",
-      "https://fotos.tele-remate.com.uy/55558_3.jpg"
-    ],
-    "vendido": false
-  },
-  {
-    "numero": "12",
+    "numero": "7",
     "id": "54666",
     "descripcion": "ESTUFA DE CHAPA C/LADRILLOS REFRACTARIOS 60 X3 C/CAÑO DE CHAPA 3.4 MTS",
     "precio": 3000,
@@ -144,31 +84,19 @@
     "vendido": false
   },
   {
-    "numero": "13",
-    "id": "55557",
-    "descripcion": "LOTE DE MADERAS Y TABLAS",
-    "precio": 300,
+    "numero": "8",
+    "id": "55635",
+    "descripcion": "MESA DE PATIO DE HIERRO S/VIDRIO 50 X 65 X 63 ALTO",
+    "precio": 600,
     "imagenes": [
-      "https://fotos.tele-remate.com.uy/55557_1.jpg",
-      "https://fotos.tele-remate.com.uy/55557_2.jpg",
-      "https://fotos.tele-remate.com.uy/55557_3.jpg"
+      "https://fotos.tele-remate.com.uy/55635_1.jpg",
+      "https://fotos.tele-remate.com.uy/55635_2.jpg",
+      "https://fotos.tele-remate.com.uy/55635_3.jpg"
     ],
     "vendido": false
   },
   {
-    "numero": "14",
-    "id": "54825",
-    "descripcion": "VENTANA DE HIERRO 2 PUERTAS C/FALLEVA PARA 4 VIDRIOS (2 FIJOS) 2 X 1 MTS",
-    "precio": 1000,
-    "imagenes": [
-      "https://fotos.tele-remate.com.uy/54825_1.jpg",
-      "https://fotos.tele-remate.com.uy/54825_2.jpg",
-      "https://fotos.tele-remate.com.uy/54825_3.jpg"
-    ],
-    "vendido": false
-  },
-  {
-    "numero": "15",
+    "numero": "9",
     "id": "54883",
     "descripcion": "VENTANA CHAPA 2 HOJAS CORREDIZAS PARA 2 VIDRIOS COMPLETA C/CORTINA PVC + CAJON MADERA 1.80 X 1.20",
     "precio": 1000,
@@ -180,31 +108,31 @@
     "vendido": false
   },
   {
-    "numero": "16",
-    "id": "53178",
-    "descripcion": "TRAILER RODADO DE MOTO C/ENGANCHE BOLA",
-    "precio": 3500,
+    "numero": "10",
+    "id": "54825",
+    "descripcion": "VENTANA DE HIERRO 2 PUERTAS C/FALLEVA PARA 4 VIDRIOS (2 FIJOS) 2 X 1 MTS",
+    "precio": 1000,
     "imagenes": [
-      "https://fotos.tele-remate.com.uy/53178_1.jpg",
-      "https://fotos.tele-remate.com.uy/53178_2.jpg",
-      "https://fotos.tele-remate.com.uy/53178_3.jpg"
+      "https://fotos.tele-remate.com.uy/54825_1.jpg",
+      "https://fotos.tele-remate.com.uy/54825_2.jpg",
+      "https://fotos.tele-remate.com.uy/54825_3.jpg"
     ],
     "vendido": false
   },
   {
-    "numero": "17",
-    "id": "55490",
-    "descripcion": "LAGARTO PALETERO NO FUNCIONA (LARGO DE LOS SOPORTES 1.20 X ANCHO TOTAL 0.67)",
-    "precio": 2500,
+    "numero": "11",
+    "id": "49550",
+    "descripcion": "VENTANA DE HIERRO C/2 VIDRIOS (0.70 ALTO X 1.50)",
+    "precio": 250,
     "imagenes": [
-      "https://fotos.tele-remate.com.uy/55490_1.jpg",
-      "https://fotos.tele-remate.com.uy/55490_2.jpg",
-      "https://fotos.tele-remate.com.uy/55490_3.jpg"
+      "https://fotos.tele-remate.com.uy/49550_1.jpg",
+      "https://fotos.tele-remate.com.uy/49550_2.jpg",
+      "https://fotos.tele-remate.com.uy/49550_3.jpg"
     ],
     "vendido": false
   },
   {
-    "numero": "18",
+    "numero": "12",
     "id": "49200",
     "descripcion": "HOJA DE VENTANA C/VIDRIO Y REJAS 90 X 90",
     "precio": 150,
@@ -216,31 +144,43 @@
     "vendido": false
   },
   {
-    "numero": "19",
-    "id": "55520",
-    "descripcion": "2 BIDET 1 C/ GRIFERIA",
-    "precio": 600,
+    "numero": "13",
+    "id": "49546",
+    "descripcion": "2 BANDEROLAS DE HIERRO C/VIDRIOS (0.46X0.78 ** 0.50X0.80)",
+    "precio": 200,
     "imagenes": [
-      "https://fotos.tele-remate.com.uy/55520_1.jpg",
-      "https://fotos.tele-remate.com.uy/55520_2.jpg",
-      "https://fotos.tele-remate.com.uy/55520_3.jpg"
+      "https://fotos.tele-remate.com.uy/49546_1.jpg",
+      "https://fotos.tele-remate.com.uy/49546_2.jpg",
+      "https://fotos.tele-remate.com.uy/49546_3.jpg"
     ],
     "vendido": false
   },
   {
-    "numero": "20",
-    "id": "55263",
-    "descripcion": "PALANGANA C/PIE BLANCA 2 CANILLAS",
-    "precio": 400,
+    "numero": "14",
+    "id": "55784",
+    "descripcion": "ESTANTERIA PRONTO METAL EN L 6 ESTANTES 1.70 X 30PROFX 2.45 ALTO Y LA L TIENE 1.15",
+    "precio": 1500,
     "imagenes": [
-      "https://fotos.tele-remate.com.uy/55263_1.jpg",
-      "https://fotos.tele-remate.com.uy/55263_2.jpg",
-      "https://fotos.tele-remate.com.uy/55263_3.jpg"
+      "https://fotos.tele-remate.com.uy/55784_1.jpg",
+      "https://fotos.tele-remate.com.uy/55784_2.jpg",
+      "https://fotos.tele-remate.com.uy/55784_3.jpg"
     ],
     "vendido": false
   },
   {
-    "numero": "21",
+    "numero": "15",
+    "id": "55785",
+    "descripcion": "ESTANTERIA PRONTO METAL 2 TRAMOS ( 5 ESTANTES ) ( 6 ESTANTES) 1.60 X 40P X 2.45 ALTO",
+    "precio": 1500,
+    "imagenes": [
+      "https://fotos.tele-remate.com.uy/55785_1.jpg",
+      "https://fotos.tele-remate.com.uy/55785_2.jpg",
+      "https://fotos.tele-remate.com.uy/55785_3.jpg"
+    ],
+    "vendido": false
+  },
+  {
+    "numero": "16",
     "id": "43777",
     "descripcion": "BIDET + PALANGANA C/PIE CELESTE MARCADO",
     "precio": 400,
@@ -252,19 +192,7 @@
     "vendido": false
   },
   {
-    "numero": "22",
-    "id": "55528",
-    "descripcion": "BIDET BLANCO TIZA C/MONOCOMANDO",
-    "precio": 300,
-    "imagenes": [
-      "https://fotos.tele-remate.com.uy/55528_1.jpg",
-      "https://fotos.tele-remate.com.uy/55528_2.jpg",
-      "https://fotos.tele-remate.com.uy/55528_3.jpg"
-    ],
-    "vendido": false
-  },
-  {
-    "numero": "23",
+    "numero": "17",
     "id": "49545",
     "descripcion": "BACHA MARRON OVAL (0.48X0.36)",
     "precio": 300,
@@ -276,67 +204,55 @@
     "vendido": false
   },
   {
-    "numero": "24",
-    "id": "51391",
-    "descripcion": "PALANGANA ESMALTADA BLANCA DE HIERRO OVAL P/BAÑO",
-    "precio": 400,
-    "imagenes": [
-      "https://fotos.tele-remate.com.uy/51391_1.jpg",
-      "https://fotos.tele-remate.com.uy/51391_2.jpg",
-      "https://fotos.tele-remate.com.uy/51391_3.jpg"
-    ],
-    "vendido": false
-  },
-  {
-    "numero": "25",
-    "id": "55524",
-    "descripcion": "EJE HIERRO PARA ROD 12",
-    "precio": 500,
-    "imagenes": [
-      "https://fotos.tele-remate.com.uy/55524_1.jpg",
-      "https://fotos.tele-remate.com.uy/55524_2.jpg",
-      "https://fotos.tele-remate.com.uy/55524_3.jpg"
-    ],
-    "vendido": false
-  },
-  {
-    "numero": "26",
-    "id": "55486",
-    "descripcion": "8 CLAVADERAS P/CIELORRASO (2.85X2X2)",
-    "precio": 600,
-    "imagenes": [
-      "https://fotos.tele-remate.com.uy/55486_1.jpg",
-      "https://fotos.tele-remate.com.uy/55486_2.jpg",
-      "https://fotos.tele-remate.com.uy/55486_3.jpg"
-    ],
-    "vendido": false
-  },
-  {
-    "numero": "27",
-    "id": "55523",
-    "descripcion": "EJE PARA CARRO O TRAILER ROD 12 C/U C/ 2 LLANTAS",
+    "numero": "18",
+    "id": "55731",
+    "descripcion": "TANQUE DE HORMIGONERA",
     "precio": 1000,
     "imagenes": [
-      "https://fotos.tele-remate.com.uy/55523_1.jpg",
-      "https://fotos.tele-remate.com.uy/55523_2.jpg",
-      "https://fotos.tele-remate.com.uy/55523_3.jpg"
+      "https://fotos.tele-remate.com.uy/55731_1.jpg",
+      "https://fotos.tele-remate.com.uy/55731_2.jpg",
+      "https://fotos.tele-remate.com.uy/55731_3.jpg"
     ],
     "vendido": false
   },
   {
-    "numero": "28",
-    "id": "55355",
-    "descripcion": "VIDRIO MARCADO C/ MARCO DE ALUMINIO 1.0 X 1.25",
+    "numero": "19",
+    "id": "55730",
+    "descripcion": "FRAGUA (MESA 0.50X0.53 - ALTO 0.78)",
+    "precio": 3000,
+    "imagenes": [
+      "https://fotos.tele-remate.com.uy/55730_1.jpg",
+      "https://fotos.tele-remate.com.uy/55730_2.jpg",
+      "https://fotos.tele-remate.com.uy/55730_3.jpg"
+    ],
+    "vendido": false
+  },
+  {
+    "numero": "20",
+    "id": "55641",
+    "descripcion": "VENTANA DE HIERRO C/2 VIDRIOS SANOS 1 HOJA 70 X 1.30",
+    "precio": 500,
+    "imagenes": [
+      "https://fotos.tele-remate.com.uy/55641_1.jpg",
+      "https://fotos.tele-remate.com.uy/55641_2.jpg",
+      "https://fotos.tele-remate.com.uy/55641_3.jpg"
+    ],
+    "vendido": false
+  },
+  {
+    "numero": "21",
+    "id": "55728",
+    "descripcion": "LOTE (BARROTES DE CORTINA DE HIERRO/1 POSTIGO/2 ESTANTES MADERA)",
     "precio": 200,
     "imagenes": [
-      "https://fotos.tele-remate.com.uy/55355_1.jpg",
-      "https://fotos.tele-remate.com.uy/55355_2.jpg",
-      "https://fotos.tele-remate.com.uy/55355_3.jpg"
+      "https://fotos.tele-remate.com.uy/55728_1.jpg",
+      "https://fotos.tele-remate.com.uy/55728_2.jpg",
+      "https://fotos.tele-remate.com.uy/55728_3.jpg"
     ],
     "vendido": false
   },
   {
-    "numero": "29",
+    "numero": "22",
     "id": "55397",
     "descripcion": "2 CAMAS DE 1 PLAZA DE MADERA 1 C/DETALLE EN 1 PATA",
     "precio": 1000,
@@ -348,115 +264,7 @@
     "vendido": false
   },
   {
-    "numero": "30",
-    "id": "55431",
-    "descripcion": "LOTE DE TABLAS DE MADERA",
-    "precio": 400,
-    "imagenes": [
-      "https://fotos.tele-remate.com.uy/55431_1.jpg",
-      "https://fotos.tele-remate.com.uy/55431_2.jpg",
-      "https://fotos.tele-remate.com.uy/55431_3.jpg"
-    ],
-    "vendido": false
-  },
-  {
-    "numero": "32",
-    "id": "50891",
-    "descripcion": "2 RAMPAS DE MADERA COMO PARA AUTO 43 X 44 15 ALTO",
-    "precio": 300,
-    "imagenes": [
-      "https://fotos.tele-remate.com.uy/50891_1.jpg",
-      "https://fotos.tele-remate.com.uy/50891_2.jpg",
-      "https://fotos.tele-remate.com.uy/50891_3.jpg"
-    ],
-    "vendido": false
-  },
-  {
-    "numero": "33",
-    "id": "55246",
-    "descripcion": "MESA DE TRABAJO MADERA 1.50 X 60 X 80 ALTO",
-    "precio": 400,
-    "imagenes": [
-      "https://fotos.tele-remate.com.uy/55246_1.jpg",
-      "https://fotos.tele-remate.com.uy/55246_2.jpg",
-      "https://fotos.tele-remate.com.uy/55246_3.jpg"
-    ],
-    "vendido": false
-  },
-  {
-    "numero": "34",
-    "id": "55484",
-    "descripcion": "1 PEREZOSO EN MADERA C/LONA + ESTRUCTURA DE PEREZOSO",
-    "precio": 400,
-    "imagenes": [
-      "https://fotos.tele-remate.com.uy/55484_1.jpg",
-      "https://fotos.tele-remate.com.uy/55484_2.jpg",
-      "https://fotos.tele-remate.com.uy/55484_3.jpg"
-    ],
-    "vendido": false
-  },
-  {
-    "numero": "35",
-    "id": "55439",
-    "descripcion": "5 TIRANTES MADERA IMPORTADA 2.18 (8X6)",
-    "precio": 1100,
-    "imagenes": [
-      "https://fotos.tele-remate.com.uy/55439_1.jpg",
-      "https://fotos.tele-remate.com.uy/55439_2.jpg",
-      "https://fotos.tele-remate.com.uy/55439_3.jpg"
-    ],
-    "vendido": false
-  },
-  {
-    "numero": "36",
-    "id": "55493",
-    "descripcion": "CAMA 2 PLAZAS C/COLCHON 2 MESAS DE LUZ C/ CAJON (RESPALDOS C/POLILLA)",
-    "precio": 2000,
-    "imagenes": [
-      "https://fotos.tele-remate.com.uy/55493_1.jpg",
-      "https://fotos.tele-remate.com.uy/55493_2.jpg",
-      "https://fotos.tele-remate.com.uy/55493_3.jpg"
-    ],
-    "vendido": false
-  },
-  {
-    "numero": "37",
-    "id": "55459",
-    "descripcion": "4 LLANTAS DE VW SAVEIRO ROD 14 CON LAS TAZAS",
-    "precio": 6500,
-    "imagenes": [
-      "https://fotos.tele-remate.com.uy/55459_1.jpg",
-      "https://fotos.tele-remate.com.uy/55459_2.jpg",
-      "https://fotos.tele-remate.com.uy/55459_3.jpg"
-    ],
-    "vendido": false
-  },
-  {
-    "numero": "38",
-    "id": "55440",
-    "descripcion": "5 TIRANTES MADERA IMPORTADA 2.70 (8 X 6)",
-    "precio": 1400,
-    "imagenes": [
-      "https://fotos.tele-remate.com.uy/55440_1.jpg",
-      "https://fotos.tele-remate.com.uy/55440_2.jpg",
-      "https://fotos.tele-remate.com.uy/55440_3.jpg"
-    ],
-    "vendido": false
-  },
-  {
-    "numero": "39",
-    "id": "52864",
-    "descripcion": "TABLON DE MADERA C/CABALLETES 95 X 1.50 + BANCO ASIENTO TAPIZADO 75 CMS ALTO",
-    "precio": 1500,
-    "imagenes": [
-      "https://fotos.tele-remate.com.uy/52864_1.jpg",
-      "https://fotos.tele-remate.com.uy/52864_2.jpg",
-      "https://fotos.tele-remate.com.uy/52864_3.jpg"
-    ],
-    "vendido": false
-  },
-  {
-    "numero": "40",
+    "numero": "23",
     "id": "54836",
     "descripcion": "VITRINA EXHIBIDORA REFRIGERADA MARCA KUMA (FRENTE 1.45 - PROF- 0.65 - ALTO 1.12)",
     "precio": 60000,
@@ -468,7 +276,7 @@
     "vendido": false
   },
   {
-    "numero": "41",
+    "numero": "24",
     "id": "55379",
     "descripcion": "EXTINTOR RECARGABLE 8 KG C/U",
     "precio": 600,
@@ -480,55 +288,79 @@
     "vendido": false
   },
   {
-    "numero": "42",
-    "id": "55438",
-    "descripcion": "LAGARTO PALETERO AZUL NO FUNCIONA (LARGO DE LOS SOPORTES 1.15 X ANCHO TOTAL 0.52)",
-    "precio": 2500,
-    "imagenes": [
-      "https://fotos.tele-remate.com.uy/55438_1.jpg",
-      "https://fotos.tele-remate.com.uy/55438_2.jpg",
-      "https://fotos.tele-remate.com.uy/55438_3.jpg"
-    ],
-    "vendido": false
-  },
-  {
-    "numero": "43",
-    "id": "54897",
-    "descripcion": "BANDEROLA HIERRO 60 X 35",
+    "numero": "25",
+    "id": "55246",
+    "descripcion": "MESA DE TRABAJO MADERA 1.50 X 60 X 80 ALTO",
     "precio": 400,
     "imagenes": [
-      "https://fotos.tele-remate.com.uy/54897_1.jpg",
-      "https://fotos.tele-remate.com.uy/54897_2.jpg",
-      "https://fotos.tele-remate.com.uy/54897_3.jpg"
+      "https://fotos.tele-remate.com.uy/55246_1.jpg",
+      "https://fotos.tele-remate.com.uy/55246_2.jpg",
+      "https://fotos.tele-remate.com.uy/55246_3.jpg"
     ],
     "vendido": false
   },
   {
-    "numero": "44",
-    "id": "55466",
-    "descripcion": "PUERTA REJA 1.27 X 1.90",
-    "precio": 1200,
-    "imagenes": [
-      "https://fotos.tele-remate.com.uy/55466_1.jpg",
-      "https://fotos.tele-remate.com.uy/55466_2.jpg",
-      "https://fotos.tele-remate.com.uy/55466_3.jpg"
-    ],
-    "vendido": false
-  },
-  {
-    "numero": "45",
-    "id": "52894",
-    "descripcion": "POSTIGON DE MADERA DE 3 HOJAS 0.70 ANCHO X 3.20 ALTO C/U",
+    "numero": "26",
+    "id": "55585",
+    "descripcion": "-HOJA DE PUERTA INTERIOR DE MADERA C/POMELA 75 X 2 MTS",
     "precio": 800,
     "imagenes": [
-      "https://fotos.tele-remate.com.uy/52894_1.jpg",
-      "https://fotos.tele-remate.com.uy/52894_2.jpg",
-      "https://fotos.tele-remate.com.uy/52894_3.jpg"
+      "https://fotos.tele-remate.com.uy/55585_1.jpg",
+      "https://fotos.tele-remate.com.uy/55585_2.jpg",
+      "https://fotos.tele-remate.com.uy/55585_3.jpg"
     ],
     "vendido": false
   },
   {
-    "numero": "46",
+    "numero": "27",
+    "id": "55727",
+    "descripcion": "ESTERA DE MADERA (1.90X0.98 ALTO)",
+    "precio": 600,
+    "imagenes": [
+      "https://fotos.tele-remate.com.uy/55727_1.jpg",
+      "https://fotos.tele-remate.com.uy/55727_2.jpg",
+      "https://fotos.tele-remate.com.uy/55727_3.jpg"
+    ],
+    "vendido": false
+  },
+  {
+    "numero": "28",
+    "id": "55484",
+    "descripcion": "1 PEREZOSO EN MADERA C/LONA + ESTRUCTURA DE PEREZOSO",
+    "precio": 400,
+    "imagenes": [
+      "https://fotos.tele-remate.com.uy/55484_1.jpg",
+      "https://fotos.tele-remate.com.uy/55484_2.jpg",
+      "https://fotos.tele-remate.com.uy/55484_3.jpg"
+    ],
+    "vendido": false
+  },
+  {
+    "numero": "29",
+    "id": "55660",
+    "descripcion": "CAJON RUSTICO DE MADERA PINTADO C/ASAS PARA LEÑA C/RUEDAS (0.70X0.35 - ALTO 0.73)",
+    "precio": 600,
+    "imagenes": [
+      "https://fotos.tele-remate.com.uy/55660_1.jpg",
+      "https://fotos.tele-remate.com.uy/55660_2.jpg",
+      "https://fotos.tele-remate.com.uy/55660_3.jpg"
+    ],
+    "vendido": false
+  },
+  {
+    "numero": "30",
+    "id": "55459",
+    "descripcion": "4 LLANTAS DE VW SAVEIRO ROD 14 CON LAS TAZAS",
+    "precio": 6500,
+    "imagenes": [
+      "https://fotos.tele-remate.com.uy/55459_1.jpg",
+      "https://fotos.tele-remate.com.uy/55459_2.jpg",
+      "https://fotos.tele-remate.com.uy/55459_3.jpg"
+    ],
+    "vendido": false
+  },
+  {
+    "numero": "31",
     "id": "55309",
     "descripcion": "FRENTE DE PLACARD 4 PUERTAS DE MADERA 2.70 X 1.20",
     "precio": 1000,
@@ -540,19 +372,19 @@
     "vendido": false
   },
   {
-    "numero": "47",
-    "id": "54877",
-    "descripcion": "2 HOJAS DE VENTANA DE MADERA C/POSTIGOS (0.54X2.02)",
-    "precio": 1000,
+    "numero": "32",
+    "id": "54806",
+    "descripcion": "PUERTA MADERA C/MARCO DESARMADO 68 X 1.96",
+    "precio": 500,
     "imagenes": [
-      "https://fotos.tele-remate.com.uy/54877_1.jpg",
-      "https://fotos.tele-remate.com.uy/54877_2.jpg",
-      "https://fotos.tele-remate.com.uy/54877_3.jpg"
+      "https://fotos.tele-remate.com.uy/54806_1.jpg",
+      "https://fotos.tele-remate.com.uy/54806_2.jpg",
+      "https://fotos.tele-remate.com.uy/54806_3.jpg"
     ],
     "vendido": false
   },
   {
-    "numero": "48",
+    "numero": "33",
     "id": "54807",
     "descripcion": "HOJA DE ZAGUAN MADERA ENCHAPADO C/DETALLE 70 X 2.07",
     "precio": 400,
@@ -564,7 +396,7 @@
     "vendido": false
   },
   {
-    "numero": "49",
+    "numero": "34",
     "id": "54724",
     "descripcion": "HOJA DE PUERTA DE MADERA C/VIDRIO 2.30 X 94",
     "precio": 800,
@@ -576,31 +408,31 @@
     "vendido": false
   },
   {
-    "numero": "50",
-    "id": "55488",
-    "descripcion": "LAGARTO PALETERO ROJO LEVANTA EL GATO ESTA ZAFADO (LARGO DE LOS SOPORTES 1.20 X ANCHO TOTAL 0.67)",
-    "precio": 2500,
-    "imagenes": [
-      "https://fotos.tele-remate.com.uy/55488_1.jpg",
-      "https://fotos.tele-remate.com.uy/55488_2.jpg",
-      "https://fotos.tele-remate.com.uy/55488_3.jpg"
-    ],
-    "vendido": false
-  },
-  {
-    "numero": "51",
-    "id": "55354",
-    "descripcion": "HOJA DE PUERTA VAIVEN DE PINOTEA 2 VIDRIOS 2.25 X 82",
+    "numero": "35",
+    "id": "52579",
+    "descripcion": "REJA DE HIERRO 1.20 X 80",
     "precio": 500,
     "imagenes": [
-      "https://fotos.tele-remate.com.uy/55354_1.jpg",
-      "https://fotos.tele-remate.com.uy/55354_2.jpg",
-      "https://fotos.tele-remate.com.uy/55354_3.jpg"
+      "https://fotos.tele-remate.com.uy/52579_1.jpg",
+      "https://fotos.tele-remate.com.uy/52579_2.jpg",
+      "https://fotos.tele-remate.com.uy/52579_3.jpg"
     ],
     "vendido": false
   },
   {
-    "numero": "52",
+    "numero": "36",
+    "id": "55787",
+    "descripcion": "LONA DE CAMION AMARILLA APROXIMADAMENTE 11 X 4",
+    "precio": 2000,
+    "imagenes": [
+      "https://fotos.tele-remate.com.uy/55787_1.jpg",
+      "https://fotos.tele-remate.com.uy/55787_2.jpg",
+      "https://fotos.tele-remate.com.uy/55787_3.jpg"
+    ],
+    "vendido": false
+  },
+  {
+    "numero": "37",
     "id": "55506",
     "descripcion": "LOTE (BIDET FALTA LASCA EN EL PIE C/GRIFERIA + FRENTE DE PLACARD 90 X 54 X 80)",
     "precio": 400,
@@ -612,19 +444,7 @@
     "vendido": false
   },
   {
-    "numero": "53",
-    "id": "55312",
-    "descripcion": "PALANGANA DE LOZA BLANCA SIN GRIFERIA",
-    "precio": 300,
-    "imagenes": [
-      "https://fotos.tele-remate.com.uy/55312_1.jpg",
-      "https://fotos.tele-remate.com.uy/55312_2.jpg",
-      "https://fotos.tele-remate.com.uy/55312_3.jpg"
-    ],
-    "vendido": false
-  },
-  {
-    "numero": "54",
+    "numero": "38",
     "id": "49536",
     "descripcion": "HOJA DE PUERTA S/VIDRIO (0.87X2.10)",
     "precio": 300,
@@ -636,58 +456,10 @@
     "vendido": false
   },
   {
-    "numero": "55",
-    "id": "53935",
-    "descripcion": "2 PERSIANAS DE PVC 1.69 X 1 ALTO",
-    "precio": 1000,
-    "imagenes": [
-      "https://fotos.tele-remate.com.uy/53935_1.jpg",
-      "https://fotos.tele-remate.com.uy/53935_2.jpg",
-      "https://fotos.tele-remate.com.uy/53935_3.jpg"
-    ],
-    "vendido": false
-  },
-  {
-    "numero": "56",
-    "id": "55432",
-    "descripcion": "CAJON C/VARILLAS + LOTE DE AUTOROSCANTES C/TUERCAS",
-    "precio": 500,
-    "imagenes": [
-      "https://fotos.tele-remate.com.uy/55432_1.jpg",
-      "https://fotos.tele-remate.com.uy/55432_2.jpg",
-      "https://fotos.tele-remate.com.uy/55432_3.jpg"
-    ],
-    "vendido": false
-  },
-  {
-    "numero": "57",
-    "id": "55522",
-    "descripcion": "SILLA PLEGABLE + SILLA DE MADERA C/ LONA",
-    "precio": 600,
-    "imagenes": [
-      "https://fotos.tele-remate.com.uy/55522_1.jpg",
-      "https://fotos.tele-remate.com.uy/55522_2.jpg",
-      "https://fotos.tele-remate.com.uy/55522_3.jpg"
-    ],
-    "vendido": false
-  },
-  {
-    "numero": "58",
-    "id": "55481",
-    "descripcion": "TANQUE DE CHAPA DE 200LTS. C/TAPA",
-    "precio": 400,
-    "imagenes": [
-      "https://fotos.tele-remate.com.uy/55481_1.jpg",
-      "https://fotos.tele-remate.com.uy/55481_2.jpg",
-      "https://fotos.tele-remate.com.uy/55481_3.jpg"
-    ],
-    "vendido": false
-  },
-  {
-    "numero": "59",
+    "numero": "39",
     "id": "55283",
     "descripcion": "MESA C/ MOTOR PIEDRA DE ESMERIL Y CEPILLO",
-    "precio": 3500,
+    "precio": 2500,
     "imagenes": [
       "https://fotos.tele-remate.com.uy/55283_1.jpg",
       "https://fotos.tele-remate.com.uy/55283_2.jpg",
@@ -696,31 +468,43 @@
     "vendido": false
   },
   {
-    "numero": "60",
-    "id": "55482",
-    "descripcion": "LOTE (3 BUTACAS DE PVC GRIS 2 C/DETALLE + BUTACA EN CAÑO C/ASIENTO Y RESPALDO DE LONA)",
+    "numero": "40",
+    "id": "54789",
+    "descripcion": "LOTE HERRAMIENTAS PARRILLA /ASADA/SAPA/SERRUCHO ATIZADOR",
+    "precio": 300,
+    "imagenes": [
+      "https://fotos.tele-remate.com.uy/54789_1.jpg",
+      "https://fotos.tele-remate.com.uy/54789_2.jpg",
+      "https://fotos.tele-remate.com.uy/54789_3.jpg"
+    ],
+    "vendido": false
+  },
+  {
+    "numero": "41",
+    "id": "55659",
+    "descripcion": "2 SILLONES MIAMI UNO DE MADERA UNO DE PVC GRISES",
     "precio": 800,
     "imagenes": [
-      "https://fotos.tele-remate.com.uy/55482_1.jpg",
-      "https://fotos.tele-remate.com.uy/55482_2.jpg",
-      "https://fotos.tele-remate.com.uy/55482_3.jpg"
+      "https://fotos.tele-remate.com.uy/55659_1.jpg",
+      "https://fotos.tele-remate.com.uy/55659_2.jpg",
+      "https://fotos.tele-remate.com.uy/55659_3.jpg"
     ],
     "vendido": false
   },
   {
-    "numero": "61",
-    "id": "55378",
-    "descripcion": "3 EXTINTORES MEDIANOS RECARGABLES DE 1 - 2 Y 4 KG.",
-    "precio": 700,
+    "numero": "42",
+    "id": "55674",
+    "descripcion": "ARBOLITO DE NAVIDAD DE VARILLAS HIERRO C/ESTRELLA (1.55 ALTO)",
+    "precio": 400,
     "imagenes": [
-      "https://fotos.tele-remate.com.uy/55378_1.jpg",
-      "https://fotos.tele-remate.com.uy/55378_2.jpg",
-      "https://fotos.tele-remate.com.uy/55378_3.jpg"
+      "https://fotos.tele-remate.com.uy/55674_1.jpg",
+      "https://fotos.tele-remate.com.uy/55674_2.jpg",
+      "https://fotos.tele-remate.com.uy/55674_3.jpg"
     ],
     "vendido": false
   },
   {
-    "numero": "62",
+    "numero": "43",
     "id": "55420",
     "descripcion": "MESA DE PALETS PATAS DE HIERRO 66 X 1 X 83 ALTO",
     "precio": 1200,
@@ -732,31 +516,67 @@
     "vendido": false
   },
   {
-    "numero": "63",
-    "id": "55568",
-    "descripcion": "BICICLETA GT PALOMAR 21 CAMBIOS LLANTAS ALUMINIO ROD 27.5 CUADRO ACERO",
-    "precio": 13000,
+    "numero": "44",
+    "id": "55729",
+    "descripcion": "2 SILLAS PLEGABLES DE MADERA COLOR VERDE",
+    "precio": 500,
     "imagenes": [
-      "https://fotos.tele-remate.com.uy/55568_1.jpg",
-      "https://fotos.tele-remate.com.uy/55568_2.jpg",
-      "https://fotos.tele-remate.com.uy/55568_3.jpg"
+      "https://fotos.tele-remate.com.uy/55729_1.jpg",
+      "https://fotos.tele-remate.com.uy/55729_2.jpg",
+      "https://fotos.tele-remate.com.uy/55729_3.jpg"
     ],
     "vendido": false
   },
   {
-    "numero": "64",
-    "id": "53474",
-    "descripcion": "BICICLETA DE NIÑA ROD 20 C/CANASTO Y SILLITA",
-    "precio": 1000,
+    "numero": "45",
+    "id": "55662",
+    "descripcion": "ARTEFACTO DE HIERRO P/EXTERIOR S/VIDRIOS (FALTA EN PIE) (0.47X0.47 - ALTO 0.40)",
+    "precio": 600,
     "imagenes": [
-      "https://fotos.tele-remate.com.uy/53474_1.jpg",
-      "https://fotos.tele-remate.com.uy/53474_2.jpg",
-      "https://fotos.tele-remate.com.uy/53474_3.jpg"
+      "https://fotos.tele-remate.com.uy/55662_1.jpg",
+      "https://fotos.tele-remate.com.uy/55662_2.jpg",
+      "https://fotos.tele-remate.com.uy/55662_3.jpg"
     ],
     "vendido": false
   },
   {
-    "numero": "65",
+    "numero": "46",
+    "id": "55483",
+    "descripcion": "ESTERA DE JUNCO 1.85 X 1.50",
+    "precio": 500,
+    "imagenes": [
+      "https://fotos.tele-remate.com.uy/55483_1.jpg",
+      "https://fotos.tele-remate.com.uy/55483_2.jpg",
+      "https://fotos.tele-remate.com.uy/55483_3.jpg"
+    ],
+    "vendido": false
+  },
+  {
+    "numero": "47",
+    "id": "55780",
+    "descripcion": "CAJON LEÑERO MADERA DURA 1.36 X 40 X 64",
+    "precio": 600,
+    "imagenes": [
+      "https://fotos.tele-remate.com.uy/55780_1.jpg",
+      "https://fotos.tele-remate.com.uy/55780_2.jpg",
+      "https://fotos.tele-remate.com.uy/55780_3.jpg"
+    ],
+    "vendido": false
+  },
+  {
+    "numero": "48",
+    "id": "55779",
+    "descripcion": "CAJON LEÑERO MADERA DURA 70 X 40 X 50",
+    "precio": 500,
+    "imagenes": [
+      "https://fotos.tele-remate.com.uy/55779_1.jpg",
+      "https://fotos.tele-remate.com.uy/55779_2.jpg",
+      "https://fotos.tele-remate.com.uy/55779_3.jpg"
+    ],
+    "vendido": false
+  },
+  {
+    "numero": "49",
     "id": "54781",
     "descripcion": "MOTO TANGO 110 2024 C/11700 KM. AL DIA",
     "precio": 25000,
@@ -768,127 +588,211 @@
     "vendido": false
   },
   {
-    "numero": "66",
-    "id": "51171",
-    "descripcion": "SALAMANDRA DE CALEFON S/CAÑOS",
+    "numero": "50",
+    "id": "55746",
+    "descripcion": "MOTO YUMBO ECO 70 2009 5600KM. PATENTE PAGA TODO EL 2026",
+    "precio": 25000,
+    "imagenes": [
+      "https://fotos.tele-remate.com.uy/55746_1.jpg",
+      "https://fotos.tele-remate.com.uy/55746_2.jpg",
+      "https://fotos.tele-remate.com.uy/55746_3.jpg"
+    ],
+    "vendido": false
+  },
+  {
+    "numero": "51",
+    "id": "55781",
+    "descripcion": "CAJON LEÑERO MADERA DURA 78 X 56 X 40",
+    "precio": 500,
+    "imagenes": [
+      "https://fotos.tele-remate.com.uy/55781_1.jpg",
+      "https://fotos.tele-remate.com.uy/55781_2.jpg",
+      "https://fotos.tele-remate.com.uy/55781_3.jpg"
+    ],
+    "vendido": false
+  },
+  {
+    "numero": "52",
+    "id": "55778",
+    "descripcion": "CAJON LEÑERO MADERA DURA 74 X 1.08 X 43 ALTO",
+    "precio": 500,
+    "imagenes": [
+      "https://fotos.tele-remate.com.uy/55778_1.jpg",
+      "https://fotos.tele-remate.com.uy/55778_2.jpg",
+      "https://fotos.tele-remate.com.uy/55778_3.jpg"
+    ],
+    "vendido": false
+  },
+  {
+    "numero": "53",
+    "id": "55568",
+    "descripcion": "BICICLETA GT PALOMAR 21 CAMBIOS LLANTAS ALUMINIO ROD 27.5 CUADRO ACERO",
+    "precio": 10000,
+    "imagenes": [
+      "https://fotos.tele-remate.com.uy/55568_1.jpg",
+      "https://fotos.tele-remate.com.uy/55568_2.jpg",
+      "https://fotos.tele-remate.com.uy/55568_3.jpg"
+    ],
+    "vendido": false
+  },
+  {
+    "numero": "54",
+    "id": "53474",
+    "descripcion": "BICICLETA DE NIÑA ROD 20 C/CANASTO Y SILLITA",
     "precio": 1000,
     "imagenes": [
-      "https://fotos.tele-remate.com.uy/51171_1.jpg",
-      "https://fotos.tele-remate.com.uy/51171_2.jpg",
-      "https://fotos.tele-remate.com.uy/51171_3.jpg"
+      "https://fotos.tele-remate.com.uy/53474_1.jpg",
+      "https://fotos.tele-remate.com.uy/53474_2.jpg",
+      "https://fotos.tele-remate.com.uy/53474_3.jpg"
+    ],
+    "vendido": false
+  },
+  {
+    "numero": "55",
+    "id": "55724",
+    "descripcion": "BICICLETA ROD 26 LIBERTY C/CANASTEO DE DAMA",
+    "precio": 1000,
+    "imagenes": [
+      "https://fotos.tele-remate.com.uy/55724_1.jpg",
+      "https://fotos.tele-remate.com.uy/55724_2.jpg",
+      "https://fotos.tele-remate.com.uy/55724_3.jpg"
+    ],
+    "vendido": false
+  },
+  {
+    "numero": "56",
+    "id": "54751",
+    "descripcion": "BICICLETA DE NIÑA/NIÑO ROSADA ROD. 16",
+    "precio": 400,
+    "imagenes": [
+      "https://fotos.tele-remate.com.uy/54751_1.jpg",
+      "https://fotos.tele-remate.com.uy/54751_2.jpg",
+      "https://fotos.tele-remate.com.uy/54751_3.jpg"
+    ],
+    "vendido": false
+  },
+  {
+    "numero": "57",
+    "id": "55734",
+    "descripcion": "BICICLETA DE DAMA C/CANASTO IPANEMA ROD 26",
+    "precio": 3500,
+    "imagenes": [
+      "https://fotos.tele-remate.com.uy/55734_1.jpg",
+      "https://fotos.tele-remate.com.uy/55734_2.jpg",
+      "https://fotos.tele-remate.com.uy/55734_3.jpg"
+    ],
+    "vendido": false
+  },
+  {
+    "numero": "58",
+    "id": "55592",
+    "descripcion": "BICICLETA SCOTT DE DAMA ROD 26 C/CAMBIOS",
+    "precio": 1500,
+    "imagenes": [
+      "https://fotos.tele-remate.com.uy/55592_1.jpg",
+      "https://fotos.tele-remate.com.uy/55592_2.jpg",
+      "https://fotos.tele-remate.com.uy/55592_3.jpg"
+    ],
+    "vendido": false
+  },
+  {
+    "numero": "59",
+    "id": "55656",
+    "descripcion": "JUEGO DE PATIO DE MADERA (2 DE 2 CUERPOS + 2 INDIVIDUALES TODOS C/ALMOHADONES) + MESA RATONA REDONDA EN PVC VERDE",
+    "precio": 5000,
+    "imagenes": [
+      "https://fotos.tele-remate.com.uy/55656_1.jpg",
+      "https://fotos.tele-remate.com.uy/55656_2.jpg",
+      "https://fotos.tele-remate.com.uy/55656_3.jpg"
+    ],
+    "vendido": false
+  },
+  {
+    "numero": "60",
+    "id": "55799",
+    "descripcion": "BICICLETA ANTIGUA INGLESA ROD 28 FRENO VARILLA",
+    "precio": 1700,
+    "imagenes": [
+      "https://fotos.tele-remate.com.uy/55799_1.jpg",
+      "https://fotos.tele-remate.com.uy/55799_2.jpg",
+      "https://fotos.tele-remate.com.uy/55799_3.jpg"
+    ],
+    "vendido": false
+  },
+  {
+    "numero": "61",
+    "id": "55819",
+    "descripcion": "ESTANTERIA PRONTO METAL C/ALGUNOS ESTANTES OXIDADOS (2.50 X 45 X 2.40 ALTO) C/U NO ESTA EN EL SALON",
+    "precio": 2000,
+    "imagenes": [
+      "https://fotos.tele-remate.com.uy/55819_1.jpg",
+      "https://fotos.tele-remate.com.uy/55819_2.jpg",
+      "https://fotos.tele-remate.com.uy/55819_3.jpg"
+    ],
+    "vendido": false
+  },
+  {
+    "numero": "62",
+    "id": "55820",
+    "descripcion": "PUERTA VENTANA DE MADERA C/HOJAS CORREDIZAS SIN VIDRIOS SIN USO (3 X 2.05 ALTO) NO ESTA EN EL SALON",
+    "precio": 2500,
+    "imagenes": [
+      "https://fotos.tele-remate.com.uy/55820_1.jpg",
+      "https://fotos.tele-remate.com.uy/55820_2.jpg",
+      "https://fotos.tele-remate.com.uy/55820_3.jpg"
+    ],
+    "vendido": false
+  },
+  {
+    "numero": "63",
+    "id": "55683",
+    "descripcion": "SOLDADORA MIG 210 HESSEN C/ROLLO ALAMBRE",
+    "precio": 9000,
+    "imagenes": [
+      "https://fotos.tele-remate.com.uy/55683_1.jpg",
+      "https://fotos.tele-remate.com.uy/55683_2.jpg",
+      "https://fotos.tele-remate.com.uy/55683_3.jpg"
+    ],
+    "vendido": false
+  },
+  {
+    "numero": "64",
+    "id": "55282",
+    "descripcion": "2 TIJERAS DE CORTAR CHAPA 1 GRANDE 1 CHICA USA",
+    "precio": 400,
+    "imagenes": [
+      "https://fotos.tele-remate.com.uy/55282_1.jpg",
+      "https://fotos.tele-remate.com.uy/55282_2.jpg",
+      "https://fotos.tele-remate.com.uy/55282_3.jpg"
+    ],
+    "vendido": false
+  },
+  {
+    "numero": "65",
+    "id": "55682",
+    "descripcion": "MICROONDAS ZERWATT",
+    "precio": 1400,
+    "imagenes": [
+      "https://fotos.tele-remate.com.uy/55682_1.jpg",
+      "https://fotos.tele-remate.com.uy/55682_2.jpg",
+      "https://fotos.tele-remate.com.uy/55682_3.jpg"
+    ],
+    "vendido": false
+  },
+  {
+    "numero": "66",
+    "id": "55624",
+    "descripcion": "OLLA ESSEN DIAM. 25",
+    "precio": 1500,
+    "imagenes": [
+      "https://fotos.tele-remate.com.uy/55624_1.jpg",
+      "https://fotos.tele-remate.com.uy/55624_2.jpg",
+      "https://fotos.tele-remate.com.uy/55624_3.jpg"
     ],
     "vendido": false
   },
   {
     "numero": "67",
-    "id": "55461",
-    "descripcion": "CHISPERO DE HIERRO 1.30 X 75 ENTERO",
-    "precio": 800,
-    "imagenes": [
-      "https://fotos.tele-remate.com.uy/55461_1.jpg",
-      "https://fotos.tele-remate.com.uy/55461_2.jpg",
-      "https://fotos.tele-remate.com.uy/55461_3.jpg"
-    ],
-    "vendido": false
-  },
-  {
-    "numero": "68",
-    "id": "55512",
-    "descripcion": "2 TARROS LECHEROS DECORATIVOS PINTADOS",
-    "precio": 400,
-    "imagenes": [
-      "https://fotos.tele-remate.com.uy/55512_1.jpg",
-      "https://fotos.tele-remate.com.uy/55512_2.jpg",
-      "https://fotos.tele-remate.com.uy/55512_3.jpg"
-    ],
-    "vendido": false
-  },
-  {
-    "numero": "69",
-    "id": "53842",
-    "descripcion": "PULVERIZADOR GUARANY",
-    "precio": 500,
-    "imagenes": [
-      "https://fotos.tele-remate.com.uy/53842_1.jpg",
-      "https://fotos.tele-remate.com.uy/53842_2.jpg",
-      "https://fotos.tele-remate.com.uy/53842_3.jpg"
-    ],
-    "vendido": false
-  },
-  {
-    "numero": "70",
-    "id": "53787",
-    "descripcion": "OLLA HIERRO C/ESTREBE Y ASAS",
-    "precio": 1000,
-    "imagenes": [
-      "https://fotos.tele-remate.com.uy/53787_1.jpg",
-      "https://fotos.tele-remate.com.uy/53787_2.jpg",
-      "https://fotos.tele-remate.com.uy/53787_3.jpg"
-    ],
-    "vendido": false
-  },
-  {
-    "numero": "71",
-    "id": "55364",
-    "descripcion": "BANDEJA DE PVC C/PIOLA",
-    "precio": 300,
-    "imagenes": [
-      "https://fotos.tele-remate.com.uy/55364_1.jpg",
-      "https://fotos.tele-remate.com.uy/55364_2.jpg",
-      "https://fotos.tele-remate.com.uy/55364_3.jpg"
-    ],
-    "vendido": false
-  },
-  {
-    "numero": "72",
-    "id": "55559",
-    "descripcion": "LOTE PALANGANA ANTIGUA ESMALTADA C/PIE Y REGADERA DE CHAPA",
-    "precio": 400,
-    "imagenes": [
-      "https://fotos.tele-remate.com.uy/55559_1.jpg",
-      "https://fotos.tele-remate.com.uy/55559_2.jpg",
-      "https://fotos.tele-remate.com.uy/55559_3.jpg"
-    ],
-    "vendido": false
-  },
-  {
-    "numero": "73",
-    "id": "51386",
-    "descripcion": "SOLDADORA ELECTRICA NORDIKA 2160",
-    "precio": 1500,
-    "imagenes": [
-      "https://fotos.tele-remate.com.uy/51386_1.jpg",
-      "https://fotos.tele-remate.com.uy/51386_2.jpg",
-      "https://fotos.tele-remate.com.uy/51386_3.jpg"
-    ],
-    "vendido": false
-  },
-  {
-    "numero": "74",
-    "id": "55562",
-    "descripcion": "CAJA C/VARIOS (TAPAS DE PUERTAS DE COCINA ESMALTADAS C/2 POSA PLANCHAS + SOPORTE DE ATIZADORES)",
-    "precio": 400,
-    "imagenes": [
-      "https://fotos.tele-remate.com.uy/55562_1.jpg",
-      "https://fotos.tele-remate.com.uy/55562_2.jpg",
-      "https://fotos.tele-remate.com.uy/55562_3.jpg"
-    ],
-    "vendido": false
-  },
-  {
-    "numero": "75",
-    "id": "55561",
-    "descripcion": "LOTE DE CAJAS DE MADERA 3 C/TAPA - 1 CHIQUITA C/MANIJA",
-    "precio": 400,
-    "imagenes": [
-      "https://fotos.tele-remate.com.uy/55561_1.jpg",
-      "https://fotos.tele-remate.com.uy/55561_2.jpg",
-      "https://fotos.tele-remate.com.uy/55561_3.jpg"
-    ],
-    "vendido": false
-  },
-  {
-    "numero": "76",
     "id": "55543",
     "descripcion": "PARLANTE XION 8¨ SIN USO",
     "precio": 1000,
@@ -900,187 +804,7 @@
     "vendido": false
   },
   {
-    "numero": "77",
-    "id": "55261",
-    "descripcion": "EXHIBIDOR DE TORTA",
-    "precio": 250,
-    "imagenes": [
-      "https://fotos.tele-remate.com.uy/55261_1.jpg",
-      "https://fotos.tele-remate.com.uy/55261_2.jpg",
-      "https://fotos.tele-remate.com.uy/55261_3.jpg"
-    ],
-    "vendido": false
-  },
-  {
-    "numero": "78",
-    "id": "54846",
-    "descripcion": "CAJA C/VARIOS (FONDEAU/ RALLADOR Y CORTADOR DE VERDURA)",
-    "precio": 400,
-    "imagenes": [
-      "https://fotos.tele-remate.com.uy/54846_1.jpg",
-      "https://fotos.tele-remate.com.uy/54846_2.jpg",
-      "https://fotos.tele-remate.com.uy/54846_3.jpg"
-    ],
-    "vendido": false
-  },
-  {
-    "numero": "79",
-    "id": "54026",
-    "descripcion": "2 PRIMUS C/FALTANTE",
-    "precio": 400,
-    "imagenes": [
-      "https://fotos.tele-remate.com.uy/54026_1.jpg",
-      "https://fotos.tele-remate.com.uy/54026_2.jpg",
-      "https://fotos.tele-remate.com.uy/54026_3.jpg"
-    ],
-    "vendido": false
-  },
-  {
-    "numero": "80",
-    "id": "55197",
-    "descripcion": "LOTE (2 BOLSOS DE COMPUTADORA/CALIENTA PIE/2 SACA PELUSA/CORTINA ROLLER/CORTINA VENECIANA)",
-    "precio": 500,
-    "imagenes": [
-      "https://fotos.tele-remate.com.uy/55197_1.jpg",
-      "https://fotos.tele-remate.com.uy/55197_2.jpg",
-      "https://fotos.tele-remate.com.uy/55197_3.jpg"
-    ],
-    "vendido": false
-  },
-  {
-    "numero": "81",
-    "id": "55423",
-    "descripcion": "CAJA C/CEPILLOS NUEVOS DE AMOLADORAS",
-    "precio": 400,
-    "imagenes": [
-      "https://fotos.tele-remate.com.uy/55423_1.jpg",
-      "https://fotos.tele-remate.com.uy/55423_2.jpg",
-      "https://fotos.tele-remate.com.uy/55423_3.jpg"
-    ],
-    "vendido": false
-  },
-  {
-    "numero": "82",
-    "id": "54879",
-    "descripcion": "2 PORTATILES C/TULIPA UNA C/DETALLE",
-    "precio": 500,
-    "imagenes": [
-      "https://fotos.tele-remate.com.uy/54879_1.jpg",
-      "https://fotos.tele-remate.com.uy/54879_2.jpg",
-      "https://fotos.tele-remate.com.uy/54879_3.jpg"
-    ],
-    "vendido": false
-  },
-  {
-    "numero": "83",
-    "id": "55282",
-    "descripcion": "2 TIJERAS DE CORTAR CHAPA 1 GRANDE 1 CHICA USA",
-    "precio": 800,
-    "imagenes": [
-      "https://fotos.tele-remate.com.uy/55282_1.jpg",
-      "https://fotos.tele-remate.com.uy/55282_2.jpg",
-      "https://fotos.tele-remate.com.uy/55282_3.jpg"
-    ],
-    "vendido": false
-  },
-  {
-    "numero": "84",
-    "id": "55463",
-    "descripcion": "PORTATIL DE MESA C/PANTALLA",
-    "precio": 400,
-    "imagenes": [
-      "https://fotos.tele-remate.com.uy/55463_1.jpg",
-      "https://fotos.tele-remate.com.uy/55463_2.jpg",
-      "https://fotos.tele-remate.com.uy/55463_3.jpg"
-    ],
-    "vendido": false
-  },
-  {
-    "numero": "85",
-    "id": "40606",
-    "descripcion": "LOTE (2 SARTENES + 2 ESCUPIDERAS DE CHAPA ESMALTADA)",
-    "precio": 400,
-    "imagenes": [
-      "https://fotos.tele-remate.com.uy/40606_1.jpg",
-      "https://fotos.tele-remate.com.uy/40606_2.jpg",
-      "https://fotos.tele-remate.com.uy/40606_3.jpg"
-    ],
-    "vendido": false
-  },
-  {
-    "numero": "86",
-    "id": "54675",
-    "descripcion": "CAJA C/11 PIEZAS (MATES/ TAZAS/ JARRAS)",
-    "precio": 400,
-    "imagenes": [
-      "https://fotos.tele-remate.com.uy/54675_1.jpg",
-      "https://fotos.tele-remate.com.uy/54675_2.jpg",
-      "https://fotos.tele-remate.com.uy/54675_3.jpg"
-    ],
-    "vendido": false
-  },
-  {
-    "numero": "87",
-    "id": "55221",
-    "descripcion": "CAJA C/FRASCOS VARIOS",
-    "precio": 200,
-    "imagenes": [
-      "https://fotos.tele-remate.com.uy/55221_1.jpg",
-      "https://fotos.tele-remate.com.uy/55221_2.jpg",
-      "https://fotos.tele-remate.com.uy/55221_3.jpg"
-    ],
-    "vendido": false
-  },
-  {
-    "numero": "88",
-    "id": "55333",
-    "descripcion": "ROCKOLA NEGRA",
-    "precio": 500,
-    "imagenes": [
-      "https://fotos.tele-remate.com.uy/55333_1.jpg",
-      "https://fotos.tele-remate.com.uy/55333_2.jpg",
-      "https://fotos.tele-remate.com.uy/55333_3.jpg"
-    ],
-    "vendido": false
-  },
-  {
-    "numero": "89",
-    "id": "52924",
-    "descripcion": "PIE DE LAMPARA DE LOZA EN RELIEVE C/2 PICOS ALTO TOTAL 60",
-    "precio": 400,
-    "imagenes": [
-      "https://fotos.tele-remate.com.uy/52924_1.jpg",
-      "https://fotos.tele-remate.com.uy/52924_2.jpg",
-      "https://fotos.tele-remate.com.uy/52924_3.jpg"
-    ],
-    "vendido": false
-  },
-  {
-    "numero": "90",
-    "id": "54660",
-    "descripcion": "2 ESPEJOS DE CAMION ANTIGUOS",
-    "precio": 500,
-    "imagenes": [
-      "https://fotos.tele-remate.com.uy/54660_1.jpg",
-      "https://fotos.tele-remate.com.uy/54660_2.jpg",
-      "https://fotos.tele-remate.com.uy/54660_3.jpg"
-    ],
-    "vendido": false
-  },
-  {
-    "numero": "91",
-    "id": "55323",
-    "descripcion": "2 PORTATILES BASE MADERA /BASE LOZA C/PANTALLAS",
-    "precio": 500,
-    "imagenes": [
-      "https://fotos.tele-remate.com.uy/55323_1.jpg",
-      "https://fotos.tele-remate.com.uy/55323_2.jpg",
-      "https://fotos.tele-remate.com.uy/55323_3.jpg"
-    ],
-    "vendido": false
-  },
-  {
-    "numero": "92",
+    "numero": "68",
     "id": "55464",
     "descripcion": "BALDE O HIELERA DE CHAPA",
     "precio": 300,
@@ -1092,79 +816,127 @@
     "vendido": false
   },
   {
-    "numero": "93",
-    "id": "55465",
-    "descripcion": "REPISA DE MADERA 44X7 - 46 ALTO)",
-    "precio": 300,
+    "numero": "69",
+    "id": "55333",
+    "descripcion": "ROCKOLA NEGRA",
+    "precio": 500,
     "imagenes": [
-      "https://fotos.tele-remate.com.uy/55465_1.jpg",
-      "https://fotos.tele-remate.com.uy/55465_2.jpg",
-      "https://fotos.tele-remate.com.uy/55465_3.jpg"
+      "https://fotos.tele-remate.com.uy/55333_1.jpg",
+      "https://fotos.tele-remate.com.uy/55333_2.jpg",
+      "https://fotos.tele-remate.com.uy/55333_3.jpg"
     ],
     "vendido": false
   },
   {
-    "numero": "94",
-    "id": "54872",
-    "descripcion": "MAQUINA DE PICAR CARNE NO.10",
-    "precio": 800,
-    "imagenes": [
-      "https://fotos.tele-remate.com.uy/54872_1.jpg",
-      "https://fotos.tele-remate.com.uy/54872_2.jpg",
-      "https://fotos.tele-remate.com.uy/54872_3.jpg"
-    ],
-    "vendido": false
-  },
-  {
-    "numero": "95",
-    "id": "54643",
-    "descripcion": "2 LICUADORAS ANTIGUAS S/TAPA ( 1 TODA DE ALUMINIO + 1 C/VASO DE VIDRIO) NO FUNCIONAN",
+    "numero": "70",
+    "id": "55463",
+    "descripcion": "PORTATIL DE MESA C/PANTALLA",
     "precio": 400,
     "imagenes": [
-      "https://fotos.tele-remate.com.uy/54643_1.jpg",
-      "https://fotos.tele-remate.com.uy/54643_2.jpg",
-      "https://fotos.tele-remate.com.uy/54643_3.jpg"
+      "https://fotos.tele-remate.com.uy/55463_1.jpg",
+      "https://fotos.tele-remate.com.uy/55463_2.jpg",
+      "https://fotos.tele-remate.com.uy/55463_3.jpg"
     ],
     "vendido": false
   },
   {
-    "numero": "96",
-    "id": "54118",
-    "descripcion": "6 LIBROS DE: GOYA / GAUGUIN /3 DE MIGUEL ANGEL / BOTTICELLI",
-    "precio": 600,
+    "numero": "71",
+    "id": "54846",
+    "descripcion": "CAJA C/VARIOS (FONDEAU/ RALLADOR Y CORTADOR DE VERDURA)",
+    "precio": 400,
     "imagenes": [
-      "https://fotos.tele-remate.com.uy/54118_1.jpg",
-      "https://fotos.tele-remate.com.uy/54118_2.jpg",
-      "https://fotos.tele-remate.com.uy/54118_3.jpg"
+      "https://fotos.tele-remate.com.uy/54846_1.jpg",
+      "https://fotos.tele-remate.com.uy/54846_2.jpg",
+      "https://fotos.tele-remate.com.uy/54846_3.jpg"
     ],
     "vendido": false
   },
   {
-    "numero": "97",
-    "id": "54116",
-    "descripcion": "LA REVOLUCION DE FRANCOIS FURET ¨LA RÉVOLUTION¨1770 - 1880 (LIBRO EN FRANCES)",
+    "numero": "72",
+    "id": "55668",
+    "descripcion": "2 CANDELABROS DE PELTRE C/VIDRIO (ALTURA 0.34)",
+    "precio": 400,
+    "imagenes": [
+      "https://fotos.tele-remate.com.uy/55668_1.jpg",
+      "https://fotos.tele-remate.com.uy/55668_2.jpg",
+      "https://fotos.tele-remate.com.uy/55668_3.jpg"
+    ],
+    "vendido": false
+  },
+  {
+    "numero": "73",
+    "id": "55623",
+    "descripcion": "SARTEN ESSEN DIAM. 28",
+    "precio": 1000,
+    "imagenes": [
+      "https://fotos.tele-remate.com.uy/55623_1.jpg",
+      "https://fotos.tele-remate.com.uy/55623_2.jpg",
+      "https://fotos.tele-remate.com.uy/55623_3.jpg"
+    ],
+    "vendido": false
+  },
+  {
+    "numero": "74",
+    "id": "55260",
+    "descripcion": "MIXER CUORI COMPLETO COLOR NEGRO",
+    "precio": 800,
+    "imagenes": [
+      "https://fotos.tele-remate.com.uy/55260_1.jpg",
+      "https://fotos.tele-remate.com.uy/55260_2.jpg",
+      "https://fotos.tele-remate.com.uy/55260_3.jpg"
+    ],
+    "vendido": false
+  },
+  {
+    "numero": "75",
+    "id": "54879",
+    "descripcion": "2 PORTATILES C/TULIPA UNA C/DETALLE FALTAN 2 VIDRIOS A UNA DE ELLAS",
     "precio": 500,
     "imagenes": [
-      "https://fotos.tele-remate.com.uy/54116_1.jpg",
-      "https://fotos.tele-remate.com.uy/54116_2.jpg",
-      "https://fotos.tele-remate.com.uy/54116_3.jpg"
+      "https://fotos.tele-remate.com.uy/54879_1.jpg",
+      "https://fotos.tele-remate.com.uy/54879_2.jpg",
+      "https://fotos.tele-remate.com.uy/54879_3.jpg"
     ],
     "vendido": false
   },
   {
-    "numero": "98",
-    "id": "54085",
-    "descripcion": "4 PORTARETRATOS (2 MARCO DE PLATA/1 MARCO DE PIQUE /1 P/3 FOTOS)",
+    "numero": "76",
+    "id": "54675",
+    "descripcion": "CAJA C/11 PIEZAS (MATES/ TAZAS/ JARRAS)",
+    "precio": 400,
+    "imagenes": [
+      "https://fotos.tele-remate.com.uy/54675_1.jpg",
+      "https://fotos.tele-remate.com.uy/54675_2.jpg",
+      "https://fotos.tele-remate.com.uy/54675_3.jpg"
+    ],
+    "vendido": false
+  },
+  {
+    "numero": "77",
+    "id": "55742",
+    "descripcion": "ASPIRADORA DE AUTO DE MANO CUORI POCO USO FUNCIONANDO",
+    "precio": 300,
+    "imagenes": [
+      "https://fotos.tele-remate.com.uy/55742_1.jpg",
+      "https://fotos.tele-remate.com.uy/55742_2.jpg",
+      "https://fotos.tele-remate.com.uy/55742_3.jpg"
+    ],
+    "vendido": false
+  },
+  {
+    "numero": "78",
+    "id": "55323",
+    "descripcion": "2 PORTATILES BASE MADERA /BASE LOZA C/PANTALLAS",
     "precio": 500,
     "imagenes": [
-      "https://fotos.tele-remate.com.uy/54085_1.jpg",
-      "https://fotos.tele-remate.com.uy/54085_2.jpg",
-      "https://fotos.tele-remate.com.uy/54085_3.jpg"
+      "https://fotos.tele-remate.com.uy/55323_1.jpg",
+      "https://fotos.tele-remate.com.uy/55323_2.jpg",
+      "https://fotos.tele-remate.com.uy/55323_3.jpg"
     ],
     "vendido": false
   },
   {
-    "numero": "99",
+    "numero": "79",
     "id": "55542",
     "descripcion": "JUEGO DE ALFOMBRAS PARA CAMIONETA S/USO",
     "precio": 1000,
@@ -1176,31 +948,7 @@
     "vendido": false
   },
   {
-    "numero": "100",
-    "id": "55517",
-    "descripcion": "PERCHERO DE MADERA PLEGABLE (ABIERTO 0.82 - ALTO 0.30)",
-    "precio": 300,
-    "imagenes": [
-      "https://fotos.tele-remate.com.uy/55517_1.jpg",
-      "https://fotos.tele-remate.com.uy/55517_2.jpg",
-      "https://fotos.tele-remate.com.uy/55517_3.jpg"
-    ],
-    "vendido": false
-  },
-  {
-    "numero": "101",
-    "id": "55521",
-    "descripcion": "FAROL A MANTILLA A QUEROSENO",
-    "precio": 500,
-    "imagenes": [
-      "https://fotos.tele-remate.com.uy/55521_1.jpg",
-      "https://fotos.tele-remate.com.uy/55521_2.jpg",
-      "https://fotos.tele-remate.com.uy/55521_3.jpg"
-    ],
-    "vendido": false
-  },
-  {
-    "numero": "102",
+    "numero": "80",
     "id": "55363",
     "descripcion": "PLANCHA ELECTRICA",
     "precio": 400,
@@ -1212,67 +960,31 @@
     "vendido": false
   },
   {
-    "numero": "103",
-    "id": "55462",
-    "descripcion": "MOCHILA DE PESCA COLOR VERDE",
-    "precio": 400,
+    "numero": "81",
+    "id": "55465",
+    "descripcion": "REPISA DE MADERA 44X7 - 46 ALTO)",
+    "precio": 300,
     "imagenes": [
-      "https://fotos.tele-remate.com.uy/55462_1.jpg",
-      "https://fotos.tele-remate.com.uy/55462_2.jpg",
-      "https://fotos.tele-remate.com.uy/55462_3.jpg"
+      "https://fotos.tele-remate.com.uy/55465_1.jpg",
+      "https://fotos.tele-remate.com.uy/55465_2.jpg",
+      "https://fotos.tele-remate.com.uy/55465_3.jpg"
     ],
     "vendido": false
   },
   {
-    "numero": "104",
-    "id": "55299",
-    "descripcion": "PORTATIL ANTIGUA DE BRONCE S/TULIPA",
-    "precio": 400,
-    "imagenes": [
-      "https://fotos.tele-remate.com.uy/55299_1.jpg",
-      "https://fotos.tele-remate.com.uy/55299_2.jpg",
-      "https://fotos.tele-remate.com.uy/55299_3.jpg"
-    ],
-    "vendido": false
-  },
-  {
-    "numero": "105",
-    "id": "55516",
-    "descripcion": "EQUIPO DE AUDIO AIWA C/CONTROL FUNCIONA RADIO AM/FM",
+    "numero": "82",
+    "id": "55678",
+    "descripcion": "2 APLIQUES DE PARED DE BRONCE DIFERENTE DISEÑO + 3 PANTALLAS",
     "precio": 500,
     "imagenes": [
-      "https://fotos.tele-remate.com.uy/55516_1.jpg",
-      "https://fotos.tele-remate.com.uy/55516_2.jpg",
-      "https://fotos.tele-remate.com.uy/55516_3.jpg"
+      "https://fotos.tele-remate.com.uy/55678_1.jpg",
+      "https://fotos.tele-remate.com.uy/55678_2.jpg",
+      "https://fotos.tele-remate.com.uy/55678_3.jpg"
     ],
     "vendido": false
   },
   {
-    "numero": "106",
-    "id": "55469",
-    "descripcion": "CAJA C/ VARIOS FLOREROS DECORACION",
-    "precio": 400,
-    "imagenes": [
-      "https://fotos.tele-remate.com.uy/55469_1.jpg",
-      "https://fotos.tele-remate.com.uy/55469_2.jpg",
-      "https://fotos.tele-remate.com.uy/55469_3.jpg"
-    ],
-    "vendido": false
-  },
-  {
-    "numero": "107",
-    "id": "55510",
-    "descripcion": "RADIO ANTIGUA A VALVULA GENERAL ELECTRIC",
-    "precio": 500,
-    "imagenes": [
-      "https://fotos.tele-remate.com.uy/55510_1.jpg",
-      "https://fotos.tele-remate.com.uy/55510_2.jpg",
-      "https://fotos.tele-remate.com.uy/55510_3.jpg"
-    ],
-    "vendido": false
-  },
-  {
-    "numero": "108",
+    "numero": "83",
     "id": "55549",
     "descripcion": "ARTEFACTO DE METAL DE 4 LUCES",
     "precio": 500,
@@ -1284,67 +996,247 @@
     "vendido": false
   },
   {
-    "numero": "109",
-    "id": "55511",
-    "descripcion": "ARTEFACTO COLGANTE DE HIERRO C/PANTALLA",
-    "precio": 400,
-    "imagenes": [
-      "https://fotos.tele-remate.com.uy/55511_1.jpg",
-      "https://fotos.tele-remate.com.uy/55511_2.jpg",
-      "https://fotos.tele-remate.com.uy/55511_3.jpg"
-    ],
-    "vendido": false
-  },
-  {
-    "numero": "110",
-    "id": "55499",
-    "descripcion": "2 PORTATILES BASE DE MADERA C/PANTALLA",
-    "precio": 400,
-    "imagenes": [
-      "https://fotos.tele-remate.com.uy/55499_1.jpg",
-      "https://fotos.tele-remate.com.uy/55499_2.jpg",
-      "https://fotos.tele-remate.com.uy/55499_3.jpg"
-    ],
-    "vendido": false
-  },
-  {
-    "numero": "111",
-    "id": "55551",
-    "descripcion": "LOTE (OLLA Y TACHO S/TAPA /COLADOR/ JARRA /2 TAPAS) TODO DE ALUMINIO",
+    "numero": "84",
+    "id": "55418",
+    "descripcion": "2 PORTATILES C/PANTALLA",
     "precio": 500,
     "imagenes": [
-      "https://fotos.tele-remate.com.uy/55551_1.jpg",
-      "https://fotos.tele-remate.com.uy/55551_2.jpg",
-      "https://fotos.tele-remate.com.uy/55551_3.jpg"
+      "https://fotos.tele-remate.com.uy/55418_1.jpg",
+      "https://fotos.tele-remate.com.uy/55418_2.jpg",
+      "https://fotos.tele-remate.com.uy/55418_3.jpg"
     ],
     "vendido": false
   },
   {
-    "numero": "112",
-    "id": "55560",
-    "descripcion": "CAJA C/VARIOS (3 VIANDAS ANTIGUAS + HORNO DE PRIMUS TODO EN ALUMINIO)",
+    "numero": "85",
+    "id": "55745",
+    "descripcion": "SUBWOOFER MICROLAB C/2 PARLANTES P/COMPUTADORA",
+    "precio": 500,
+    "imagenes": [
+      "https://fotos.tele-remate.com.uy/55745_1.jpg",
+      "https://fotos.tele-remate.com.uy/55745_2.jpg",
+      "https://fotos.tele-remate.com.uy/55745_3.jpg"
+    ],
+    "vendido": false
+  },
+  {
+    "numero": "86",
+    "id": "55712",
+    "descripcion": "CAJA C/VARIOS TAZAS VASOS FRASCOS",
+    "precio": 300,
+    "imagenes": [
+      "https://fotos.tele-remate.com.uy/55712_1.jpg",
+      "https://fotos.tele-remate.com.uy/55712_2.jpg",
+      "https://fotos.tele-remate.com.uy/55712_3.jpg"
+    ],
+    "vendido": false
+  },
+  {
+    "numero": "87",
+    "id": "54910",
+    "descripcion": "2 CORTINAS DE BAMBU (1.50 X 1.40) ( 90 X 2.15)",
+    "precio": 700,
+    "imagenes": [
+      "https://fotos.tele-remate.com.uy/54910_1.jpg",
+      "https://fotos.tele-remate.com.uy/54910_2.jpg",
+      "https://fotos.tele-remate.com.uy/54910_3.jpg"
+    ],
+    "vendido": false
+  },
+  {
+    "numero": "88",
+    "id": "55747",
+    "descripcion": "2 ARTEFACTOS COLGANTES PLATEADOS P/5 LAMPARAS",
+    "precio": 700,
+    "imagenes": [
+      "https://fotos.tele-remate.com.uy/55747_1.jpg",
+      "https://fotos.tele-remate.com.uy/55747_2.jpg",
+      "https://fotos.tele-remate.com.uy/55747_3.jpg"
+    ],
+    "vendido": false
+  },
+  {
+    "numero": "89",
+    "id": "55667",
+    "descripcion": "2 ARAÑAS COLGANTES DE HIERRO NEGRO 3 LUCES C/UNA",
+    "precio": 1000,
+    "imagenes": [
+      "https://fotos.tele-remate.com.uy/55667_1.jpg",
+      "https://fotos.tele-remate.com.uy/55667_2.jpg",
+      "https://fotos.tele-remate.com.uy/55667_3.jpg"
+    ],
+    "vendido": false
+  },
+  {
+    "numero": "90",
+    "id": "55677",
+    "descripcion": "LOTE (ARTEFACTO S/TULIPA + PANTALLA ENTRAMADO HIERRO Y MADERA)",
+    "precio": 300,
+    "imagenes": [
+      "https://fotos.tele-remate.com.uy/55677_1.jpg",
+      "https://fotos.tele-remate.com.uy/55677_2.jpg",
+      "https://fotos.tele-remate.com.uy/55677_3.jpg"
+    ],
+    "vendido": false
+  },
+  {
+    "numero": "91",
+    "id": "55410",
+    "descripcion": "PLANCHA A VAPOR CUORI RASO",
+    "precio": 500,
+    "imagenes": [
+      "https://fotos.tele-remate.com.uy/55410_1.jpg",
+      "https://fotos.tele-remate.com.uy/55410_2.jpg",
+      "https://fotos.tele-remate.com.uy/55410_3.jpg"
+    ],
+    "vendido": false
+  },
+  {
+    "numero": "92",
+    "id": "55786",
+    "descripcion": "LOTE DE TROFEOS VARIOS EN CANASTO",
+    "precio": 500,
+    "imagenes": [
+      "https://fotos.tele-remate.com.uy/55786_1.jpg",
+      "https://fotos.tele-remate.com.uy/55786_2.jpg",
+      "https://fotos.tele-remate.com.uy/55786_3.jpg"
+    ],
+    "vendido": false
+  },
+  {
+    "numero": "93",
+    "id": "55708",
+    "descripcion": "CAJA C/VARIOS (RADIO (FUNCIONA FALTA CABLE)/JARRA /TOSTADORA /TERMO)",
+    "precio": 300,
+    "imagenes": [
+      "https://fotos.tele-remate.com.uy/55708_1.jpg",
+      "https://fotos.tele-remate.com.uy/55708_2.jpg",
+      "https://fotos.tele-remate.com.uy/55708_3.jpg"
+    ],
+    "vendido": false
+  },
+  {
+    "numero": "94",
+    "id": "55714",
+    "descripcion": "CAJA C/ELECTRODOMESTICOS (DESCONOCEMOS ESTADO)",
     "precio": 400,
     "imagenes": [
-      "https://fotos.tele-remate.com.uy/55560_1.jpg",
-      "https://fotos.tele-remate.com.uy/55560_2.jpg",
-      "https://fotos.tele-remate.com.uy/55560_3.jpg"
+      "https://fotos.tele-remate.com.uy/55714_1.jpg",
+      "https://fotos.tele-remate.com.uy/55714_2.jpg",
+      "https://fotos.tele-remate.com.uy/55714_3.jpg"
     ],
     "vendido": false
   },
   {
-    "numero": "113",
-    "id": "55426",
-    "descripcion": "CAJA C/ 6 PIEDRAS DE AFILAR PARA TORNOS",
+    "numero": "95",
+    "id": "55703",
+    "descripcion": "COLCHON 2 PLAZAS INFLABLE DOITE C/INFLADOR INCLUIDO (SEGUN EL DUEÑO ESTA BIEN)",
+    "precio": 700,
+    "imagenes": [
+      "https://fotos.tele-remate.com.uy/55703_1.jpg",
+      "https://fotos.tele-remate.com.uy/55703_2.jpg",
+      "https://fotos.tele-remate.com.uy/55703_3.jpg"
+    ],
+    "vendido": false
+  },
+  {
+    "numero": "96",
+    "id": "55469",
+    "descripcion": "CAJA C/ VARIOS FLOREROS DECORACION",
     "precio": 400,
     "imagenes": [
-      "https://fotos.tele-remate.com.uy/55426_1.jpg",
-      "https://fotos.tele-remate.com.uy/55426_2.jpg",
-      "https://fotos.tele-remate.com.uy/55426_3.jpg"
+      "https://fotos.tele-remate.com.uy/55469_1.jpg",
+      "https://fotos.tele-remate.com.uy/55469_2.jpg",
+      "https://fotos.tele-remate.com.uy/55469_3.jpg"
     ],
     "vendido": false
   },
   {
-    "numero": "114",
+    "numero": "97",
+    "id": "55704",
+    "descripcion": "COLCHON DE 1 PLAZA INFLABLE S/INFLADOR (SEGUN EL DUEÑO ESTA SANO)",
+    "precio": 400,
+    "imagenes": [
+      "https://fotos.tele-remate.com.uy/55704_1.jpg",
+      "https://fotos.tele-remate.com.uy/55704_2.jpg",
+      "https://fotos.tele-remate.com.uy/55704_3.jpg"
+    ],
+    "vendido": false
+  },
+  {
+    "numero": "98",
+    "id": "55773",
+    "descripcion": "CALOVENTILADOR PUNKTAL",
+    "precio": 400,
+    "imagenes": [
+      "https://fotos.tele-remate.com.uy/55773_1.jpg",
+      "https://fotos.tele-remate.com.uy/55773_2.jpg",
+      "https://fotos.tele-remate.com.uy/55773_3.jpg"
+    ],
+    "vendido": false
+  },
+  {
+    "numero": "99",
+    "id": "55737",
+    "descripcion": "ATORNILLADOR LUMAX C/MECHAS, PUNTEROS Y CARGADOR EN VALIJA NEGRA",
+    "precio": 1000,
+    "imagenes": [
+      "https://fotos.tele-remate.com.uy/55737_1.jpg",
+      "https://fotos.tele-remate.com.uy/55737_2.jpg",
+      "https://fotos.tele-remate.com.uy/55737_3.jpg"
+    ],
+    "vendido": false
+  },
+  {
+    "numero": "100",
+    "id": "55798",
+    "descripcion": "MAQUINA DE CORTAR FIAMBRE (DIAM. DISCO 25 CMS)",
+    "precio": 2000,
+    "imagenes": [
+      "https://fotos.tele-remate.com.uy/55798_1.jpg",
+      "https://fotos.tele-remate.com.uy/55798_2.jpg",
+      "https://fotos.tele-remate.com.uy/55798_3.jpg"
+    ],
+    "vendido": false
+  },
+  {
+    "numero": "101",
+    "id": "55732",
+    "descripcion": "PRIMUS COMPLETO Y FUNCIONANDO",
+    "precio": 400,
+    "imagenes": [
+      "https://fotos.tele-remate.com.uy/55732_1.jpg",
+      "https://fotos.tele-remate.com.uy/55732_2.jpg",
+      "https://fotos.tele-remate.com.uy/55732_3.jpg"
+    ],
+    "vendido": false
+  },
+  {
+    "numero": "102",
+    "id": "55629",
+    "descripcion": "LOTE (BOLSO C/MASAJEADOR/MONEDEROS S/USO/ + CAJA C/TAZAS / POSILLO + JABONERA DE PELTRE)",
+    "precio": 400,
+    "imagenes": [
+      "https://fotos.tele-remate.com.uy/55629_1.jpg",
+      "https://fotos.tele-remate.com.uy/55629_2.jpg",
+      "https://fotos.tele-remate.com.uy/55629_3.jpg"
+    ],
+    "vendido": false
+  },
+  {
+    "numero": "103",
+    "id": "54975",
+    "descripcion": "TALADRO GOLDEX C/ACCESORIOS",
+    "precio": 500,
+    "imagenes": [
+      "https://fotos.tele-remate.com.uy/54975_1.jpg",
+      "https://fotos.tele-remate.com.uy/54975_2.jpg",
+      "https://fotos.tele-remate.com.uy/54975_3.jpg"
+    ],
+    "vendido": false
+  },
+  {
+    "numero": "104",
     "id": "55552",
     "descripcion": "CUADRO C/ESPEJO Y DECORADO 50 X 28",
     "precio": 300,
@@ -1356,650 +1248,770 @@
     "vendido": false
   },
   {
-    "numero": "115",
-    "id": "55424",
-    "descripcion": "PIEDRA DE AFILAR 40 CM DIAMETRO 8 CMS ANCHO",
-    "precio": 600,
+    "numero": "105",
+    "id": "55626",
+    "descripcion": "CANASTO C/VARIOS (TAZAS/POSAVASOS/PORTATIL)",
+    "precio": 400,
     "imagenes": [
-      "https://fotos.tele-remate.com.uy/55424_1.jpg",
-      "https://fotos.tele-remate.com.uy/55424_2.jpg",
-      "https://fotos.tele-remate.com.uy/55424_3.jpg"
+      "https://fotos.tele-remate.com.uy/55626_1.jpg",
+      "https://fotos.tele-remate.com.uy/55626_2.jpg",
+      "https://fotos.tele-remate.com.uy/55626_3.jpg"
+    ],
+    "vendido": false
+  },
+  {
+    "numero": "106",
+    "id": "55645",
+    "descripcion": "ESPEJO OVAL MARCO PLASTICO SIMIL MIMBRE (0.64X0.55)",
+    "precio": 400,
+    "imagenes": [
+      "https://fotos.tele-remate.com.uy/55645_1.jpg",
+      "https://fotos.tele-remate.com.uy/55645_2.jpg",
+      "https://fotos.tele-remate.com.uy/55645_3.jpg"
+    ],
+    "vendido": false
+  },
+  {
+    "numero": "107",
+    "id": "55680",
+    "descripcion": "CUADRO DE BRONCE GRABADO MAYA (0.47X0.47)",
+    "precio": 200,
+    "imagenes": [
+      "https://fotos.tele-remate.com.uy/55680_1.jpg",
+      "https://fotos.tele-remate.com.uy/55680_2.jpg",
+      "https://fotos.tele-remate.com.uy/55680_3.jpg"
+    ],
+    "vendido": false
+  },
+  {
+    "numero": "108",
+    "id": "55370",
+    "descripcion": "ARTEFACTO ESTILO HOLANDES 5 PICOS C/LAMPARAS",
+    "precio": 1000,
+    "imagenes": [
+      "https://fotos.tele-remate.com.uy/55370_1.jpg",
+      "https://fotos.tele-remate.com.uy/55370_2.jpg",
+      "https://fotos.tele-remate.com.uy/55370_3.jpg"
+    ],
+    "vendido": false
+  },
+  {
+    "numero": "109",
+    "id": "55630",
+    "descripcion": "CANASTO ROJO INSTRUMENTO MUSICAL BATIDORA BUDINERA BANDEJAS",
+    "precio": 500,
+    "imagenes": [
+      "https://fotos.tele-remate.com.uy/55630_1.jpg",
+      "https://fotos.tele-remate.com.uy/55630_2.jpg",
+      "https://fotos.tele-remate.com.uy/55630_3.jpg"
+    ],
+    "vendido": false
+  },
+  {
+    "numero": "110",
+    "id": "55744",
+    "descripcion": "BLISTER C/LUCES LED 5MT. C/TRANSFORMADOR",
+    "precio": 800,
+    "imagenes": [
+      "https://fotos.tele-remate.com.uy/55744_1.jpg",
+      "https://fotos.tele-remate.com.uy/55744_2.jpg",
+      "https://fotos.tele-remate.com.uy/55744_3.jpg"
+    ],
+    "vendido": false
+  },
+  {
+    "numero": "111",
+    "id": "55639",
+    "descripcion": "CAJA C/ VARIOS VASOS PORTATIL FLORERO",
+    "precio": 400,
+    "imagenes": [
+      "https://fotos.tele-remate.com.uy/55639_1.jpg",
+      "https://fotos.tele-remate.com.uy/55639_2.jpg",
+      "https://fotos.tele-remate.com.uy/55639_3.jpg"
+    ],
+    "vendido": false
+  },
+  {
+    "numero": "112",
+    "id": "55699",
+    "descripcion": "ANAFE A GAS AZUL 2 HORNALLAS S/USO",
+    "precio": 400,
+    "imagenes": [
+      "https://fotos.tele-remate.com.uy/55699_1.jpg",
+      "https://fotos.tele-remate.com.uy/55699_2.jpg",
+      "https://fotos.tele-remate.com.uy/55699_3.jpg"
+    ],
+    "vendido": false
+  },
+  {
+    "numero": "113",
+    "id": "55694",
+    "descripcion": "HORNO ELECTRICO CUORI C/BANDEJA",
+    "precio": 300,
+    "imagenes": [
+      "https://fotos.tele-remate.com.uy/55694_1.jpg",
+      "https://fotos.tele-remate.com.uy/55694_2.jpg",
+      "https://fotos.tele-remate.com.uy/55694_3.jpg"
+    ],
+    "vendido": false
+  },
+  {
+    "numero": "114",
+    "id": "55711",
+    "descripcion": "MAQUINA DE COSER ELECTRICA PANAVOX FUNCIONANDO",
+    "precio": 1000,
+    "imagenes": [
+      "https://fotos.tele-remate.com.uy/55711_1.jpg",
+      "https://fotos.tele-remate.com.uy/55711_2.jpg",
+      "https://fotos.tele-remate.com.uy/55711_3.jpg"
+    ],
+    "vendido": false
+  },
+  {
+    "numero": "115",
+    "id": "55625",
+    "descripcion": "CAJA C/VARIOS (MONOCOMANDO/CAJA C/CUBIERTOS)",
+    "precio": 400,
+    "imagenes": [
+      "https://fotos.tele-remate.com.uy/55625_1.jpg",
+      "https://fotos.tele-remate.com.uy/55625_2.jpg",
+      "https://fotos.tele-remate.com.uy/55625_3.jpg"
     ],
     "vendido": false
   },
   {
     "numero": "116",
-    "id": "55421",
-    "descripcion": "CAJA C/CLAVOS VARIOS TAMAÑOS",
-    "precio": 400,
+    "id": "55707",
+    "descripcion": "CAJA C/ OLLA C/TAPA ALUMINIO BANDEJAS ACERO INOX",
+    "precio": 500,
     "imagenes": [
-      "https://fotos.tele-remate.com.uy/55421_1.jpg",
-      "https://fotos.tele-remate.com.uy/55421_2.jpg",
-      "https://fotos.tele-remate.com.uy/55421_3.jpg"
+      "https://fotos.tele-remate.com.uy/55707_1.jpg",
+      "https://fotos.tele-remate.com.uy/55707_2.jpg",
+      "https://fotos.tele-remate.com.uy/55707_3.jpg"
     ],
     "vendido": false
   },
   {
     "numero": "117",
-    "id": "55422",
-    "descripcion": "CAJA C/ESMALTADOS PLATOS JARROS EMBUDOS",
-    "precio": 400,
+    "id": "55700",
+    "descripcion": "CAFETERA ELECTRICA EN CAJA",
+    "precio": 300,
     "imagenes": [
-      "https://fotos.tele-remate.com.uy/55422_1.jpg",
-      "https://fotos.tele-remate.com.uy/55422_2.jpg",
-      "https://fotos.tele-remate.com.uy/55422_3.jpg"
+      "https://fotos.tele-remate.com.uy/55700_1.jpg",
+      "https://fotos.tele-remate.com.uy/55700_2.jpg",
+      "https://fotos.tele-remate.com.uy/55700_3.jpg"
     ],
     "vendido": false
   },
   {
     "numero": "118",
-    "id": "55425",
-    "descripcion": "CAJA C/ 9 PIEDRAS DE BANCO VARIAS MEDIDAS",
+    "id": "54986",
+    "descripcion": "CAJA C/VARIOS 2 RELOJES TELEFONO INHALAMBRICO CARTAS",
     "precio": 500,
     "imagenes": [
-      "https://fotos.tele-remate.com.uy/55425_1.jpg",
-      "https://fotos.tele-remate.com.uy/55425_2.jpg",
-      "https://fotos.tele-remate.com.uy/55425_3.jpg"
+      "https://fotos.tele-remate.com.uy/54986_1.jpg",
+      "https://fotos.tele-remate.com.uy/54986_2.jpg",
+      "https://fotos.tele-remate.com.uy/54986_3.jpg"
     ],
     "vendido": false
   },
   {
     "numero": "119",
-    "id": "55317",
-    "descripcion": "CAJON C/COPAS Y VASOS",
-    "precio": 400,
+    "id": "55634",
+    "descripcion": "CAJA CON 2 MATES + 4 BOMBILLAS",
+    "precio": 500,
     "imagenes": [
-      "https://fotos.tele-remate.com.uy/55317_1.jpg",
-      "https://fotos.tele-remate.com.uy/55317_2.jpg",
-      "https://fotos.tele-remate.com.uy/55317_3.jpg"
+      "https://fotos.tele-remate.com.uy/55634_1.jpg",
+      "https://fotos.tele-remate.com.uy/55634_2.jpg",
+      "https://fotos.tele-remate.com.uy/55634_3.jpg"
     ],
     "vendido": false
   },
   {
     "numero": "120",
-    "id": "55324",
-    "descripcion": "LOTE DE MURALES 5 UNIDADES",
-    "precio": 500,
+    "id": "55709",
+    "descripcion": "RADIO HUEVITO PUNKTAL SOLO RADIO AM/FM",
+    "precio": 400,
     "imagenes": [
-      "https://fotos.tele-remate.com.uy/55324_1.jpg",
-      "https://fotos.tele-remate.com.uy/55324_2.jpg",
-      "https://fotos.tele-remate.com.uy/55324_3.jpg"
+      "https://fotos.tele-remate.com.uy/55709_1.jpg",
+      "https://fotos.tele-remate.com.uy/55709_2.jpg",
+      "https://fotos.tele-remate.com.uy/55709_3.jpg"
     ],
     "vendido": false
   },
   {
     "numero": "121",
-    "id": "55566",
-    "descripcion": "CHISPERO PLEGABLE EN 4 TRAMOS (1.05X0.63 ALTO)",
-    "precio": 600,
+    "id": "55631",
+    "descripcion": "ROCKOLA EQUIPO DE AUDIO 2 PARLANTES + SUBWOOFER =+CAMARA DE FOTOS DIGITAL",
+    "precio": 1000,
     "imagenes": [
-      "https://fotos.tele-remate.com.uy/55566_1.jpg",
-      "https://fotos.tele-remate.com.uy/55566_2.jpg",
-      "https://fotos.tele-remate.com.uy/55566_3.jpg"
+      "https://fotos.tele-remate.com.uy/55631_1.jpg",
+      "https://fotos.tele-remate.com.uy/55631_2.jpg",
+      "https://fotos.tele-remate.com.uy/55631_3.jpg"
     ],
     "vendido": false
   },
   {
     "numero": "122",
-    "id": "55567",
-    "descripcion": "SIERRA DE MANO",
-    "precio": 250,
+    "id": "55710",
+    "descripcion": "PLANCHA CHIVETERA + PLANCHA ELECTRICA (LAS 2 FUNCIONANDO)",
+    "precio": 600,
     "imagenes": [
-      "https://fotos.tele-remate.com.uy/55567_1.jpg",
-      "https://fotos.tele-remate.com.uy/55567_2.jpg",
-      "https://fotos.tele-remate.com.uy/55567_3.jpg"
+      "https://fotos.tele-remate.com.uy/55710_1.jpg",
+      "https://fotos.tele-remate.com.uy/55710_2.jpg",
+      "https://fotos.tele-remate.com.uy/55710_3.jpg"
     ],
     "vendido": false
   },
   {
     "numero": "123",
-    "id": "55534",
-    "descripcion": "2 CAJONES ANTIGUOS DE MAQUINA",
-    "precio": 500,
+    "id": "55666",
+    "descripcion": "6 CUADROS ESTRELLAS DE FUTBOL RETRO C/VIDRIO",
+    "precio": 600,
     "imagenes": [
-      "https://fotos.tele-remate.com.uy/55534_1.jpg",
-      "https://fotos.tele-remate.com.uy/55534_2.jpg",
-      "https://fotos.tele-remate.com.uy/55534_3.jpg"
+      "https://fotos.tele-remate.com.uy/55666_1.jpg",
+      "https://fotos.tele-remate.com.uy/55666_2.jpg",
+      "https://fotos.tele-remate.com.uy/55666_3.jpg"
     ],
     "vendido": false
   },
   {
     "numero": "124",
-    "id": "55483",
-    "descripcion": "ESTERA DE JUNCO",
-    "precio": 500,
+    "id": "55743",
+    "descripcion": "SOPORTE DE BICICLETA P/AUTO S/USO",
+    "precio": 800,
     "imagenes": [
-      "https://fotos.tele-remate.com.uy/55483_1.jpg",
-      "https://fotos.tele-remate.com.uy/55483_2.jpg",
-      "https://fotos.tele-remate.com.uy/55483_3.jpg"
+      "https://fotos.tele-remate.com.uy/55743_1.jpg",
+      "https://fotos.tele-remate.com.uy/55743_2.jpg",
+      "https://fotos.tele-remate.com.uy/55743_3.jpg"
     ],
     "vendido": false
   },
   {
     "numero": "125",
-    "id": "55430",
-    "descripcion": "LOTE DE VARILLAS AUTOROSCANTES",
-    "precio": 400,
+    "id": "55644",
+    "descripcion": "PORTA MACETA DE MADERA (0.27X0.27 - ALTO 0.35)",
+    "precio": 300,
     "imagenes": [
-      "https://fotos.tele-remate.com.uy/55430_1.jpg",
-      "https://fotos.tele-remate.com.uy/55430_2.jpg",
-      "https://fotos.tele-remate.com.uy/55430_3.jpg"
+      "https://fotos.tele-remate.com.uy/55644_1.jpg",
+      "https://fotos.tele-remate.com.uy/55644_2.jpg",
+      "https://fotos.tele-remate.com.uy/55644_3.jpg"
     ],
     "vendido": false
   },
   {
     "numero": "126",
-    "id": "55473",
-    "descripcion": "CARRITO MESA DE ALUMINIO / CARGA SILLAS",
-    "precio": 600,
+    "id": "55768",
+    "descripcion": "AMPLIFICADOR PARA BAJO IBAÑEZ DE 10 WATT NUEVO",
+    "precio": 2000,
     "imagenes": [
-      "https://fotos.tele-remate.com.uy/55473_1.jpg",
-      "https://fotos.tele-remate.com.uy/55473_2.jpg",
-      "https://fotos.tele-remate.com.uy/55473_3.jpg"
+      "https://fotos.tele-remate.com.uy/55768_1.jpg",
+      "https://fotos.tele-remate.com.uy/55768_2.jpg",
+      "https://fotos.tele-remate.com.uy/55768_3.jpg"
     ],
     "vendido": false
   },
   {
     "numero": "127",
-    "id": "55427",
-    "descripcion": "BANDEJA DE CHAPA C/16 DISCOS DE SIERRA + SOPORTE DE DISCO",
-    "precio": 700,
+    "id": "55738",
+    "descripcion": "QUEMADOR DE HIERRO 2 HORNALLAS C/VALVULA DE 13 Y CAÑO (0.48X0.25 - ALTO 0.30)",
+    "precio": 1200,
     "imagenes": [
-      "https://fotos.tele-remate.com.uy/55427_1.jpg",
-      "https://fotos.tele-remate.com.uy/55427_2.jpg",
-      "https://fotos.tele-remate.com.uy/55427_3.jpg"
+      "https://fotos.tele-remate.com.uy/55738_1.jpg",
+      "https://fotos.tele-remate.com.uy/55738_2.jpg",
+      "https://fotos.tele-remate.com.uy/55738_3.jpg"
     ],
     "vendido": false
   },
   {
     "numero": "128",
-    "id": "55569",
-    "descripcion": "MATERA DE CUERO MARRON",
-    "precio": 400,
+    "id": "55646",
+    "descripcion": "3 PORTATILES C/PANTALLA 1 DE BASE DE MADERA 2 DE BASE DE BRONCE",
+    "precio": 600,
     "imagenes": [
-      "https://fotos.tele-remate.com.uy/55569_1.jpg",
-      "https://fotos.tele-remate.com.uy/55569_2.jpg",
-      "https://fotos.tele-remate.com.uy/55569_3.jpg"
+      "https://fotos.tele-remate.com.uy/55646_1.jpg",
+      "https://fotos.tele-remate.com.uy/55646_2.jpg",
+      "https://fotos.tele-remate.com.uy/55646_3.jpg"
     ],
     "vendido": false
   },
   {
     "numero": "129",
-    "id": "55570",
-    "descripcion": "PATINETA VISION AGGRESSOR",
-    "precio": 1000,
+    "id": "55749",
+    "descripcion": "CAJA C/VARIOS (BANDEJA PIZZERA/SARTEN ALUMINIO/PLATOS/CUBIERTOS)",
+    "precio": 500,
     "imagenes": [
-      "https://fotos.tele-remate.com.uy/55570_1.jpg",
-      "https://fotos.tele-remate.com.uy/55570_2.jpg",
-      "https://fotos.tele-remate.com.uy/55570_3.jpg"
+      "https://fotos.tele-remate.com.uy/55749_1.jpg",
+      "https://fotos.tele-remate.com.uy/55749_2.jpg",
+      "https://fotos.tele-remate.com.uy/55749_3.jpg"
     ],
     "vendido": false
   },
   {
     "numero": "130",
-    "id": "55501",
-    "descripcion": "PATINETA REEF QUIKSILVER",
-    "precio": 1500,
+    "id": "55748",
+    "descripcion": "ARAÑA 3 PICOS C/CAIRELES Y PANTALLAS + APLIQUE 2 PICOS C/PANTALLAS TODO EN BRONCE PINTADO DE BLANCO",
+    "precio": 700,
     "imagenes": [
-      "https://fotos.tele-remate.com.uy/55501_1.jpg",
-      "https://fotos.tele-remate.com.uy/55501_2.jpg",
-      "https://fotos.tele-remate.com.uy/55501_3.jpg"
+      "https://fotos.tele-remate.com.uy/55748_1.jpg",
+      "https://fotos.tele-remate.com.uy/55748_2.jpg",
+      "https://fotos.tele-remate.com.uy/55748_3.jpg"
     ],
     "vendido": false
   },
   {
     "numero": "131",
-    "id": "55571",
-    "descripcion": "BANDEJA AMARILLA + CAJA C/COPAS VARIAS Y 2 JARRAS",
-    "precio": 600,
+    "id": "55757",
+    "descripcion": "CAJA C/VARIOS (ADORNOS/ESPEJO SOL Y LUNA)",
+    "precio": 500,
     "imagenes": [
-      "https://fotos.tele-remate.com.uy/55571_1.jpg",
-      "https://fotos.tele-remate.com.uy/55571_2.jpg",
-      "https://fotos.tele-remate.com.uy/55571_3.jpg"
+      "https://fotos.tele-remate.com.uy/55757_1.jpg",
+      "https://fotos.tele-remate.com.uy/55757_2.jpg",
+      "https://fotos.tele-remate.com.uy/55757_3.jpg"
     ],
     "vendido": false
   },
   {
     "numero": "132",
-    "id": "55572",
-    "descripcion": "CAJA C/VARIOS (PLATOS + JARRAS DE CERVEZA)",
-    "precio": 400,
+    "id": "55693",
+    "descripcion": "REVISTERO DE VARILLA /ALAMBRE",
+    "precio": 100,
     "imagenes": [
-      "https://fotos.tele-remate.com.uy/55572_1.jpg",
-      "https://fotos.tele-remate.com.uy/55572_2.jpg",
-      "https://fotos.tele-remate.com.uy/55572_3.jpg"
+      "https://fotos.tele-remate.com.uy/55693_1.jpg",
+      "https://fotos.tele-remate.com.uy/55693_2.jpg",
+      "https://fotos.tele-remate.com.uy/55693_3.jpg"
     ],
     "vendido": false
   },
   {
     "numero": "133",
-    "id": "55573",
-    "descripcion": "CAJA C/PORRONES",
-    "precio": 700,
+    "id": "55713",
+    "descripcion": "LATON C/VARIOS BUDINERA OLLA A PRESION S/TAPA TERMO",
+    "precio": 400,
     "imagenes": [
-      "https://fotos.tele-remate.com.uy/55573_1.jpg",
-      "https://fotos.tele-remate.com.uy/55573_2.jpg",
-      "https://fotos.tele-remate.com.uy/55573_3.jpg"
+      "https://fotos.tele-remate.com.uy/55713_1.jpg",
+      "https://fotos.tele-remate.com.uy/55713_2.jpg",
+      "https://fotos.tele-remate.com.uy/55713_3.jpg"
     ],
     "vendido": false
   },
   {
     "numero": "134",
-    "id": "55574",
-    "descripcion": "CAJA C/COPAS VARIAS DE COLORES",
-    "precio": 500,
+    "id": "55809",
+    "descripcion": "LOTE DE PIOLA GRUESA 5.5 MTS + PIOLA FINA EN LAZO ARGOLLA Y PRESILLA 10 MTS",
+    "precio": 400,
     "imagenes": [
-      "https://fotos.tele-remate.com.uy/55574_1.jpg",
-      "https://fotos.tele-remate.com.uy/55574_2.jpg",
-      "https://fotos.tele-remate.com.uy/55574_3.jpg"
+      "https://fotos.tele-remate.com.uy/55809_1.jpg",
+      "https://fotos.tele-remate.com.uy/55809_2.jpg",
+      "https://fotos.tele-remate.com.uy/55809_3.jpg"
     ],
     "vendido": false
   },
   {
     "numero": "135",
-    "id": "55575",
-    "descripcion": "CAJA C/VARIOS (JARRA Y BOTELLONES C/TAPON + 2 HIELERAS DE VIDRIO)",
-    "precio": 400,
+    "id": "55733",
+    "descripcion": "EJE PARA MESA DE TALADRO Y PIEDRA 60 CMS",
+    "precio": 1000,
     "imagenes": [
-      "https://fotos.tele-remate.com.uy/55575_1.jpg",
-      "https://fotos.tele-remate.com.uy/55575_2.jpg",
-      "https://fotos.tele-remate.com.uy/55575_3.jpg"
+      "https://fotos.tele-remate.com.uy/55733_1.jpg",
+      "https://fotos.tele-remate.com.uy/55733_2.jpg",
+      "https://fotos.tele-remate.com.uy/55733_3.jpg"
     ],
     "vendido": false
   },
   {
     "numero": "136",
-    "id": "55576",
-    "descripcion": "CAJA C/VARIOS (PLATOS/MATE DE LOZA/TAZAS C/PLATILLOS/ADORNOS)",
-    "precio": 300,
+    "id": "55812",
+    "descripcion": "4 PIEDRAS DE AFILAR",
+    "precio": 400,
     "imagenes": [
-      "https://fotos.tele-remate.com.uy/55576_1.jpg",
-      "https://fotos.tele-remate.com.uy/55576_2.jpg",
-      "https://fotos.tele-remate.com.uy/55576_3.jpg"
+      "https://fotos.tele-remate.com.uy/55812_1.jpg",
+      "https://fotos.tele-remate.com.uy/55812_2.jpg",
+      "https://fotos.tele-remate.com.uy/55812_3.jpg"
     ],
     "vendido": false
   },
   {
     "numero": "137",
-    "id": "55577",
-    "descripcion": "CAJA C/PLATERIA",
-    "precio": 800,
+    "id": "55810",
+    "descripcion": "LOTE PIOLA FINA 5 MTS + OTRO DE 8.50 + OTRO DE 5 MTS",
+    "precio": 500,
     "imagenes": [
-      "https://fotos.tele-remate.com.uy/55577_1.jpg",
-      "https://fotos.tele-remate.com.uy/55577_2.jpg",
-      "https://fotos.tele-remate.com.uy/55577_3.jpg"
+      "https://fotos.tele-remate.com.uy/55810_1.jpg",
+      "https://fotos.tele-remate.com.uy/55810_2.jpg",
+      "https://fotos.tele-remate.com.uy/55810_3.jpg"
     ],
     "vendido": false
   },
   {
     "numero": "138",
-    "id": "55578",
-    "descripcion": "MANTEQUERA ANTIGUA",
+    "id": "55804",
+    "descripcion": "LOTE (1 SARGENTO + SIERRA DE CARNICERO)",
     "precio": 400,
     "imagenes": [
-      "https://fotos.tele-remate.com.uy/55578_1.jpg",
-      "https://fotos.tele-remate.com.uy/55578_2.jpg",
-      "https://fotos.tele-remate.com.uy/55578_3.jpg"
+      "https://fotos.tele-remate.com.uy/55804_1.jpg",
+      "https://fotos.tele-remate.com.uy/55804_2.jpg",
+      "https://fotos.tele-remate.com.uy/55804_3.jpg"
     ],
     "vendido": false
   },
   {
     "numero": "139",
-    "id": "55579",
-    "descripcion": "BANDEJA CALADA C/VARIOS (QUESERA/COPON C/TAPA/CENTRO DE MESA FRUTERO)",
-    "precio": 600,
+    "id": "55817",
+    "descripcion": "ASPIRADORA JAMES 1400 WATTS FUNCIONANDO (NO TIENE LOS PUNTEROS)",
+    "precio": 700,
     "imagenes": [
-      "https://fotos.tele-remate.com.uy/55579_1.jpg",
-      "https://fotos.tele-remate.com.uy/55579_2.jpg",
-      "https://fotos.tele-remate.com.uy/55579_3.jpg"
+      "https://fotos.tele-remate.com.uy/55817_1.jpg",
+      "https://fotos.tele-remate.com.uy/55817_2.jpg",
+      "https://fotos.tele-remate.com.uy/55817_3.jpg"
     ],
     "vendido": false
   },
   {
     "numero": "140",
-    "id": "54390",
-    "descripcion": "SET DE 3 MALETAS DE VIAJE VERDE",
-    "precio": 3400,
+    "id": "55801",
+    "descripcion": "3 SARGENTOS MEDIANOS 38 // 18 // 70 CMS",
+    "precio": 1000,
     "imagenes": [
-      "https://fotos.tele-remate.com.uy/54390_1.jpg",
-      "https://fotos.tele-remate.com.uy/54390_2.jpg",
-      "https://fotos.tele-remate.com.uy/54390_3.jpg"
+      "https://fotos.tele-remate.com.uy/55801_1.jpg",
+      "https://fotos.tele-remate.com.uy/55801_2.jpg",
+      "https://fotos.tele-remate.com.uy/55801_3.jpg"
     ],
     "vendido": false
   },
   {
     "numero": "141",
-    "id": "50141",
-    "descripcion": "MONOCOMANDO DAYUAN PICO BAJO C/U",
-    "precio": 450,
+    "id": "55816",
+    "descripcion": "(LOTE (BANDEJA REDONDA ESMALTADA BLANCA + 4 BANDEJAS ESMALTADAS OVAL VERDE)",
+    "precio": 500,
     "imagenes": [
-      "https://fotos.tele-remate.com.uy/50141_1.jpg",
-      "https://fotos.tele-remate.com.uy/50141_2.jpg",
-      "https://fotos.tele-remate.com.uy/50141_3.jpg"
+      "https://fotos.tele-remate.com.uy/55816_1.jpg",
+      "https://fotos.tele-remate.com.uy/55816_2.jpg",
+      "https://fotos.tele-remate.com.uy/55816_3.jpg"
     ],
     "vendido": false
   },
   {
     "numero": "142",
-    "id": "52981",
-    "descripcion": "CERRADURA COLONIAL C/PESTILLO",
-    "precio": 550,
+    "id": "55815",
+    "descripcion": "6 PLATOS ESMALTADOS AMARILLOS (3 HONDOS + 3 SEMI HONDOS) SIN USO",
+    "precio": 1000,
     "imagenes": [
-      "https://fotos.tele-remate.com.uy/50110_1.jpg",
-      "https://fotos.tele-remate.com.uy/50110_2.jpg",
-      "https://fotos.tele-remate.com.uy/50110_3.jpg"
+      "https://fotos.tele-remate.com.uy/55815_1.jpg",
+      "https://fotos.tele-remate.com.uy/55815_2.jpg",
+      "https://fotos.tele-remate.com.uy/55815_3.jpg"
     ],
     "vendido": false
   },
   {
     "numero": "143",
-    "id": "54402",
-    "descripcion": "SET DE 6 CACEROLAS GRUNHOF 12 PIEZAS",
-    "precio": 3000,
+    "id": "55814",
+    "descripcion": "5 PLATOS LLANOS ESMALTADOS SANOS BEIGE SIN USO",
+    "precio": 1000,
     "imagenes": [
-      "https://fotos.tele-remate.com.uy/54402_1.jpg",
-      "https://fotos.tele-remate.com.uy/54402_2.jpg",
-      "https://fotos.tele-remate.com.uy/54402_3.jpg"
+      "https://fotos.tele-remate.com.uy/55814_1.jpg",
+      "https://fotos.tele-remate.com.uy/55814_2.jpg",
+      "https://fotos.tele-remate.com.uy/55814_3.jpg"
     ],
     "vendido": false
   },
   {
     "numero": "144",
-    "id": "50151",
-    "descripcion": "LOTE DE 5 PORTARETRATOS DIF. TAMAÑO Y DIF. DISEÑO",
-    "precio": 550,
+    "id": "55808",
+    "descripcion": "CAJA C/VARIOS ESMALTADOS (OLLA C/TAPA / COLADOR PLATO JARRA AZUCARERO)",
+    "precio": 600,
     "imagenes": [
-      "https://fotos.tele-remate.com.uy/50151_1.jpg",
-      "https://fotos.tele-remate.com.uy/50151_2.jpg",
-      "https://fotos.tele-remate.com.uy/50151_3.jpg"
+      "https://fotos.tele-remate.com.uy/55808_1.jpg",
+      "https://fotos.tele-remate.com.uy/55808_2.jpg",
+      "https://fotos.tele-remate.com.uy/55808_3.jpg"
     ],
     "vendido": false
   },
   {
     "numero": "145",
-    "id": "55103",
-    "descripcion": "CAÑA TELESCOPICA DE 3.60",
-    "precio": 350,
+    "id": "55772",
+    "descripcion": "CARRO DE FERIA C/LONA",
+    "precio": 500,
     "imagenes": [
-      "https://fotos.tele-remate.com.uy/54164_1.jpg",
-      "https://fotos.tele-remate.com.uy/54164_2.jpg",
-      "https://fotos.tele-remate.com.uy/54164_3.jpg"
+      "https://fotos.tele-remate.com.uy/55772_1.jpg",
+      "https://fotos.tele-remate.com.uy/55772_2.jpg",
+      "https://fotos.tele-remate.com.uy/55772_3.jpg"
     ],
     "vendido": false
   },
   {
     "numero": "146",
-    "id": "54160",
-    "descripcion": "CAJA C/SET DE 5 CUCHILLOS Y PELAPAPA C/CAJA",
+    "id": "55803",
+    "descripcion": "PALA DE POZO DE HIERRO",
     "precio": 500,
     "imagenes": [
-      "https://fotos.tele-remate.com.uy/54160_1.jpg",
-      "https://fotos.tele-remate.com.uy/54160_2.jpg",
-      "https://fotos.tele-remate.com.uy/54160_3.jpg"
+      "https://fotos.tele-remate.com.uy/55803_1.jpg",
+      "https://fotos.tele-remate.com.uy/55803_2.jpg",
+      "https://fotos.tele-remate.com.uy/55803_3.jpg"
     ],
     "vendido": false
   },
   {
     "numero": "147",
-    "id": "54406",
-    "descripcion": "CUCHILLA PIZZERA CABO BLANCO",
-    "precio": 350,
+    "id": "55800",
+    "descripcion": "2 SARGENTOS 1.10 Y 1.20 INGLESES RECORD",
+    "precio": 1000,
     "imagenes": [
-      "https://fotos.tele-remate.com.uy/54406_1.jpg",
-      "https://fotos.tele-remate.com.uy/54406_2.jpg",
-      "https://fotos.tele-remate.com.uy/54406_3.jpg"
+      "https://fotos.tele-remate.com.uy/55800_1.jpg",
+      "https://fotos.tele-remate.com.uy/55800_2.jpg",
+      "https://fotos.tele-remate.com.uy/55800_3.jpg"
     ],
     "vendido": false
   },
   {
     "numero": "148",
-    "id": "54358",
-    "descripcion": "ESCURRIDOR DE PLATOS C/BANDEJA",
-    "precio": 250,
+    "id": "55628",
+    "descripcion": "LOTE (MANGUERA + 3 ESTANTES DE MADERA QUE MIDEN 83 X45)",
+    "precio": 400,
     "imagenes": [
-      "https://fotos.tele-remate.com.uy/54358_1.jpg",
-      "https://fotos.tele-remate.com.uy/54358_2.jpg",
-      "https://fotos.tele-remate.com.uy/54358_3.jpg"
+      "https://fotos.tele-remate.com.uy/55628_1.jpg",
+      "https://fotos.tele-remate.com.uy/55628_2.jpg",
+      "https://fotos.tele-remate.com.uy/55628_3.jpg"
     ],
     "vendido": false
   },
   {
     "numero": "149",
-    "id": "53210",
-    "descripcion": "CEPILLO DE MOPA INDUSTRIAL CABO AMARILLO C/U",
-    "precio": 120,
+    "id": "55621",
+    "descripcion": "CARRO DE FERIA FIJO",
+    "precio": 300,
     "imagenes": [
-      "https://fotos.tele-remate.com.uy/53210_1.jpg",
-      "https://fotos.tele-remate.com.uy/53210_2.jpg",
-      "https://fotos.tele-remate.com.uy/53210_3.jpg"
+      "https://fotos.tele-remate.com.uy/55621_1.jpg",
+      "https://fotos.tele-remate.com.uy/55621_2.jpg",
+      "https://fotos.tele-remate.com.uy/55621_3.jpg"
     ],
     "vendido": false
   },
   {
     "numero": "150",
-    "id": "50084",
-    "descripcion": "4 JARDINERAS 50 CMS 3 GRIS - 1 CELESTE",
+    "id": "55679",
+    "descripcion": "MACETON NARANJA C/VARIOS (BOTELLITAS/ MANGUERA)",
     "precio": 400,
     "imagenes": [
-      "https://fotos.tele-remate.com.uy/50084_1.jpg",
-      "https://fotos.tele-remate.com.uy/50084_2.jpg",
-      "https://fotos.tele-remate.com.uy/50084_3.jpg"
+      "https://fotos.tele-remate.com.uy/55679_1.jpg",
+      "https://fotos.tele-remate.com.uy/55679_2.jpg",
+      "https://fotos.tele-remate.com.uy/55679_3.jpg"
     ],
     "vendido": false
   },
   {
     "numero": "151",
-    "id": "51732",
-    "descripcion": "ESTANTERIA P/ARMAR C/U",
+    "id": "55651",
+    "descripcion": "LUSTRASPIRADORA PHILIPS CRISTAL FUNCIONANDO",
     "precio": 500,
     "imagenes": [
-      "https://fotos.tele-remate.com.uy/51732_1.jpg",
-      "https://fotos.tele-remate.com.uy/51732_2.jpg",
-      "https://fotos.tele-remate.com.uy/51732_3.jpg"
+      "https://fotos.tele-remate.com.uy/55651_1.jpg",
+      "https://fotos.tele-remate.com.uy/55651_2.jpg",
+      "https://fotos.tele-remate.com.uy/55651_3.jpg"
     ],
     "vendido": false
   },
   {
     "numero": "152",
-    "id": "53104",
-    "descripcion": "10 CANASTOS REDONDOS CALADOS DIF. COLORES DIAM. 0.26 / ALTO 0.13",
+    "id": "55788",
+    "descripcion": "PIE DE LAMPARA DE MADERA TORNEADA S/PANTALLA 1.40 ALTO REGULABLE",
     "precio": 400,
     "imagenes": [
-      "https://fotos.tele-remate.com.uy/53104_1.jpg",
-      "https://fotos.tele-remate.com.uy/53104_2.jpg",
-      "https://fotos.tele-remate.com.uy/53104_3.jpg"
+      "https://fotos.tele-remate.com.uy/55788_1.jpg",
+      "https://fotos.tele-remate.com.uy/55788_2.jpg",
+      "https://fotos.tele-remate.com.uy/55788_3.jpg"
     ],
     "vendido": false
   },
   {
     "numero": "153",
-    "id": "54296",
-    "descripcion": "MACETON NEGRO 35CM C/U",
-    "precio": 250,
+    "id": "55807",
+    "descripcion": "LATON DE ALUMINIO 36 CMS DIAMETRO 16 ALTO GRUMA",
+    "precio": 500,
     "imagenes": [
-      "https://fotos.tele-remate.com.uy/54296_1.jpg",
-      "https://fotos.tele-remate.com.uy/54296_2.jpg",
-      "https://fotos.tele-remate.com.uy/54296_3.jpg"
+      "https://fotos.tele-remate.com.uy/55807_1.jpg",
+      "https://fotos.tele-remate.com.uy/55807_2.jpg",
+      "https://fotos.tele-remate.com.uy/55807_3.jpg"
     ],
     "vendido": false
   },
   {
     "numero": "154",
-    "id": "53117",
-    "descripcion": "2 ESCOBAS MANGO FLOREADO C/LOTE",
-    "precio": 450,
+    "id": "55762",
+    "descripcion": "HORNO ELECTRICO THOMPSON 25 LTS SIN USO",
+    "precio": 1000,
     "imagenes": [
-      "https://fotos.tele-remate.com.uy/53117_1.jpg",
-      "https://fotos.tele-remate.com.uy/53117_2.jpg",
-      "https://fotos.tele-remate.com.uy/53117_3.jpg"
+      "https://fotos.tele-remate.com.uy/55762_1.jpg",
+      "https://fotos.tele-remate.com.uy/55762_2.jpg",
+      "https://fotos.tele-remate.com.uy/55762_3.jpg"
     ],
     "vendido": false
   },
   {
     "numero": "155",
-    "id": "51736",
-    "descripcion": "BANDEJA C/SET DE HERRAMIENTAS",
-    "precio": 800,
+    "id": "55756",
+    "descripcion": "CAJA C/VARIOS (LICUADORA PUNKTAL/OLLA A PRESION MARMICOC/PANQUEQUERA ELECTRICA)",
+    "precio": 500,
     "imagenes": [
-      "https://fotos.tele-remate.com.uy/51736_1.jpg",
-      "https://fotos.tele-remate.com.uy/51736_2.jpg",
-      "https://fotos.tele-remate.com.uy/51736_3.jpg"
+      "https://fotos.tele-remate.com.uy/55756_1.jpg",
+      "https://fotos.tele-remate.com.uy/55756_2.jpg",
+      "https://fotos.tele-remate.com.uy/55756_3.jpg"
     ],
     "vendido": false
   },
   {
     "numero": "156",
-    "id": "50170",
-    "descripcion": "MINISIERRA STRAUS A BATERIA 28V - 2 BATERIAS ST-RPS-290CD C/U",
-    "precio": 1200,
+    "id": "55755",
+    "descripcion": "CAJA C/JUEGO DE PLASTICOS (ARROZ/YERBA/PAN RALLADO/PIMENTERO/QUESERA/JARRA)",
+    "precio": 500,
     "imagenes": [
-      "https://fotos.tele-remate.com.uy/50170_1.jpg",
-      "https://fotos.tele-remate.com.uy/50170_2.jpg",
-      "https://fotos.tele-remate.com.uy/50170_3.jpg"
+      "https://fotos.tele-remate.com.uy/55755_1.jpg",
+      "https://fotos.tele-remate.com.uy/55755_2.jpg",
+      "https://fotos.tele-remate.com.uy/55755_3.jpg"
     ],
     "vendido": false
   },
   {
     "numero": "157",
-    "id": "54361",
-    "descripcion": "SET DE MECHAS MOLLER (62) C/U",
-    "precio": 580,
+    "id": "55806",
+    "descripcion": "LOTE 5 ASADERAS ESMALTADAS",
+    "precio": 400,
     "imagenes": [
-      "https://fotos.tele-remate.com.uy/54361_1.jpg",
-      "https://fotos.tele-remate.com.uy/54361_2.jpg",
-      "https://fotos.tele-remate.com.uy/54361_3.jpg"
+      "https://fotos.tele-remate.com.uy/55806_1.jpg",
+      "https://fotos.tele-remate.com.uy/55806_2.jpg",
+      "https://fotos.tele-remate.com.uy/55806_3.jpg"
     ],
     "vendido": false
   },
   {
     "numero": "158",
-    "id": "54365",
-    "descripcion": "TERMOFUSORA EN CAJA C/U",
-    "precio": 750,
+    "id": "55805",
+    "descripcion": "LOTE 4 ASADERA DE ALUMINIO",
+    "precio": 500,
     "imagenes": [
-      "https://fotos.tele-remate.com.uy/54365_1.jpg",
-      "https://fotos.tele-remate.com.uy/54365_2.jpg",
-      "https://fotos.tele-remate.com.uy/54365_3.jpg"
+      "https://fotos.tele-remate.com.uy/55805_1.jpg",
+      "https://fotos.tele-remate.com.uy/55805_2.jpg",
+      "https://fotos.tele-remate.com.uy/55805_3.jpg"
     ],
     "vendido": false
   },
   {
     "numero": "159",
-    "id": "47672",
-    "descripcion": "PISTOLA IMPACTO POWTECH 700 WATT BT3402 P/DADOS",
-    "precio": 1000,
+    "id": "55758",
+    "descripcion": "CAJA C/VARIOS (CALDERA DE ALUMINIO/2 TERMOS/2 YERBERAS/MATE DE LOZA)",
+    "precio": 500,
     "imagenes": [
-      "https://fotos.tele-remate.com.uy/47672_1.jpg",
-      "https://fotos.tele-remate.com.uy/47672_2.jpg",
-      "https://fotos.tele-remate.com.uy/47672_3.jpg"
+      "https://fotos.tele-remate.com.uy/55758_1.jpg",
+      "https://fotos.tele-remate.com.uy/55758_2.jpg",
+      "https://fotos.tele-remate.com.uy/55758_3.jpg"
     ],
     "vendido": false
   },
   {
     "numero": "160",
-    "id": "54396",
-    "descripcion": "ADAPTADOR CORTA CHAPA P/TALADRO",
-    "precio": 400,
+    "id": "55760",
+    "descripcion": "CAJA C/VARIOS (VASOS/YERBERA/BOLLON C/TAPA/BOMBONERA)",
+    "precio": 500,
     "imagenes": [
-      "https://fotos.tele-remate.com.uy/54396_1.jpg",
-      "https://fotos.tele-remate.com.uy/54396_2.jpg",
-      "https://fotos.tele-remate.com.uy/54396_3.jpg"
+      "https://fotos.tele-remate.com.uy/55760_1.jpg",
+      "https://fotos.tele-remate.com.uy/55760_2.jpg",
+      "https://fotos.tele-remate.com.uy/55760_3.jpg"
     ],
     "vendido": false
   },
   {
     "numero": "161",
-    "id": "53135",
-    "descripcion": "2 CAJAS C/VARIOS (PINCHOS P/PAPELES + TACHUELAS + GRAMPAS)",
-    "precio": 400,
+    "id": "55753",
+    "descripcion": "CAJA C/VARIOS (VIANDA DE NIÑO/ SOPORTE C/CUBIERTOS/BANDEJA REDONDA/VASOS/JARRA AZUL)",
+    "precio": 500,
     "imagenes": [
-      "https://fotos.tele-remate.com.uy/53135_1.jpg",
-      "https://fotos.tele-remate.com.uy/53135_2.jpg",
-      "https://fotos.tele-remate.com.uy/53135_3.jpg"
+      "https://fotos.tele-remate.com.uy/55753_1.jpg",
+      "https://fotos.tele-remate.com.uy/55753_2.jpg",
+      "https://fotos.tele-remate.com.uy/55753_3.jpg"
     ],
     "vendido": false
   },
   {
     "numero": "162",
-    "id": "53142",
-    "descripcion": "7 CAJAS C/50 CLAVITOS C/U P/PIZARRA",
-    "precio": 400,
+    "id": "55754",
+    "descripcion": "CAJA C/VARIOS (CARAMELERA/JARRA DE VIDRIO/TAZON GRANDE C/PLATO/UTENSILLOS DE COCINA)",
+    "precio": 500,
     "imagenes": [
-      "https://fotos.tele-remate.com.uy/53142_1.jpg",
-      "https://fotos.tele-remate.com.uy/53142_2.jpg",
-      "https://fotos.tele-remate.com.uy/53142_3.jpg"
+      "https://fotos.tele-remate.com.uy/55754_1.jpg",
+      "https://fotos.tele-remate.com.uy/55754_2.jpg",
+      "https://fotos.tele-remate.com.uy/55754_3.jpg"
     ],
     "vendido": false
   },
   {
     "numero": "163",
-    "id": "53182",
-    "descripcion": "9 ORGANIZADORES DE ESCRITORIO AZUL",
-    "precio": 400,
+    "id": "55750",
+    "descripcion": "CAJA C/VARIOS (BANDEJA ACERO INOX./5 VASOS DE COCA DE VIDRIO/2 VASOS DE PLASTICO DE COCA /BOWLS)",
+    "precio": 500,
     "imagenes": [
-      "https://fotos.tele-remate.com.uy/53182_1.jpg",
-      "https://fotos.tele-remate.com.uy/53182_2.jpg",
-      "https://fotos.tele-remate.com.uy/53182_3.jpg"
+      "https://fotos.tele-remate.com.uy/55750_1.jpg",
+      "https://fotos.tele-remate.com.uy/55750_2.jpg",
+      "https://fotos.tele-remate.com.uy/55750_3.jpg"
     ],
     "vendido": false
   },
   {
     "numero": "164",
-    "id": "54357",
-    "descripcion": "PRISMATICOS",
-    "precio": 800,
+    "id": "55759",
+    "descripcion": "CAJA C/VARIOS (4 VASOS DE CRISTAL/JUEGO DE CAFE/TERMO LUMILAGRO/2 MATES/PLATILLOS)",
+    "precio": 500,
     "imagenes": [
-      "https://fotos.tele-remate.com.uy/54357_1.jpg",
-      "https://fotos.tele-remate.com.uy/54357_2.jpg",
-      "https://fotos.tele-remate.com.uy/54357_3.jpg"
+      "https://fotos.tele-remate.com.uy/55759_1.jpg",
+      "https://fotos.tele-remate.com.uy/55759_2.jpg",
+      "https://fotos.tele-remate.com.uy/55759_3.jpg"
     ],
     "vendido": false
   },
   {
     "numero": "165",
-    "id": "53143",
-    "descripcion": "9 CINTEROS P/ROLLO DE CINTA CHICO",
-    "precio": 300,
+    "id": "55802",
+    "descripcion": "2 SARGENTOS 1.30 DE LARGO TODO HIERRO",
+    "precio": 1000,
     "imagenes": [
-      "https://fotos.tele-remate.com.uy/53143_1.jpg",
-      "https://fotos.tele-remate.com.uy/53143_2.jpg",
-      "https://fotos.tele-remate.com.uy/53143_3.jpg"
+      "https://fotos.tele-remate.com.uy/55802_1.jpg",
+      "https://fotos.tele-remate.com.uy/55802_2.jpg",
+      "https://fotos.tele-remate.com.uy/55802_3.jpg"
     ],
     "vendido": false
   },
   {
     "numero": "166",
-    "id": "53108",
-    "descripcion": "5 PORTARETRATOS 10X15 BORDE ANCHO C/LOTE",
-    "precio": 250,
+    "id": "55777",
+    "descripcion": "TARRINA DE 100 LTS",
+    "precio": 400,
     "imagenes": [
-      "https://fotos.tele-remate.com.uy/53108_1.jpg",
-      "https://fotos.tele-remate.com.uy/53108_2.jpg",
-      "https://fotos.tele-remate.com.uy/53108_3.jpg"
+      "https://fotos.tele-remate.com.uy/55777_1.jpg",
+      "https://fotos.tele-remate.com.uy/55777_2.jpg",
+      "https://fotos.tele-remate.com.uy/55777_3.jpg"
     ],
     "vendido": false
   },
   {
     "numero": "167",
-    "id": "53278",
-    "descripcion": "8 CENTROS DE MESA ROJOS DE PLASTICO",
-    "precio": 300,
+    "id": "55706",
+    "descripcion": "TURBO VENTILADOR JAMES",
+    "precio": 200,
     "imagenes": [
-      "https://fotos.tele-remate.com.uy/53278_1.jpg",
-      "https://fotos.tele-remate.com.uy/53278_2.jpg",
-      "https://fotos.tele-remate.com.uy/53278_3.jpg"
+      "https://fotos.tele-remate.com.uy/55706_1.jpg",
+      "https://fotos.tele-remate.com.uy/55706_2.jpg",
+      "https://fotos.tele-remate.com.uy/55706_3.jpg"
     ],
     "vendido": false
   },
   {
     "numero": "168",
-    "id": "53107",
-    "descripcion": "5 PORTARETRATOS 10X15 C/LOTE",
-    "precio": 250,
+    "id": "55821",
+    "descripcion": "BAJO ELECTRICO CORT AJUSTADO PASIVO EN CAJA MUY POCO USO",
+    "precio": 8000,
     "imagenes": [
-      "https://fotos.tele-remate.com.uy/53107_1.jpg",
-      "https://fotos.tele-remate.com.uy/53107_2.jpg",
-      "https://fotos.tele-remate.com.uy/53107_3.jpg"
+      "https://fotos.tele-remate.com.uy/55821_1.jpg",
+      "https://fotos.tele-remate.com.uy/55821_2.jpg",
+      "https://fotos.tele-remate.com.uy/55821_3.jpg"
     ],
     "vendido": false
   },
@@ -2017,6 +2029,18 @@
   },
   {
     "numero": "170",
+    "id": "47759",
+    "descripcion": "RADIO RECORDER EUROMAX EM5460 AM FM",
+    "precio": 320,
+    "imagenes": [
+      "https://fotos.tele-remate.com.uy/47759_1.jpg",
+      "https://fotos.tele-remate.com.uy/47759_2.jpg",
+      "https://fotos.tele-remate.com.uy/47759_3.jpg"
+    ],
+    "vendido": false
+  },
+  {
+    "numero": "171",
     "id": "55206",
     "descripcion": "TV PHILIPS LCD 32¨ S/CONTROL S/SOPORTE",
     "precio": 800,
@@ -2028,82 +2052,58 @@
     "vendido": false
   },
   {
-    "numero": "171",
-    "id": "55540",
-    "descripcion": "TV COLOR SONY 32¨ LCD C/CONTROL",
-    "precio": 3000,
-    "imagenes": [
-      "https://fotos.tele-remate.com.uy/55540_1.jpg",
-      "https://fotos.tele-remate.com.uy/55540_2.jpg",
-      "https://fotos.tele-remate.com.uy/55540_3.jpg"
-    ],
-    "vendido": false
-  },
-  {
     "numero": "172",
-    "id": "55331",
-    "descripcion": "TV LED C/CONTROL UNIVERSAL 32¨JAMES",
-    "precio": 1000,
+    "id": "55620",
+    "descripcion": "2 FRUTEROS DE ALAMBRE (2 CANASTOS 60X24 - 52 ALTO ** 3 CANASTOS 60X26 - 72 ALTO)",
+    "precio": 400,
     "imagenes": [
-      "https://fotos.tele-remate.com.uy/55331_1.jpg",
-      "https://fotos.tele-remate.com.uy/55331_2.jpg",
-      "https://fotos.tele-remate.com.uy/55331_3.jpg"
+      "https://fotos.tele-remate.com.uy/55620_1.jpg",
+      "https://fotos.tele-remate.com.uy/55620_2.jpg",
+      "https://fotos.tele-remate.com.uy/55620_3.jpg"
     ],
     "vendido": false
   },
   {
     "numero": "173",
-    "id": "45789",
-    "descripcion": "MONITOR SAMSUNG 19 PULGADAS SIN LA FUENTE C/TECLADO",
-    "precio": 300,
+    "id": "55425",
+    "descripcion": "CAJA C/ 9 PIEDRAS DE BANCO VARIAS MEDIDAS",
+    "precio": 500,
     "imagenes": [
-      "https://fotos.tele-remate.com.uy/45789_1.jpg",
-      "https://fotos.tele-remate.com.uy/45789_2.jpg",
-      "https://fotos.tele-remate.com.uy/45789_3.jpg"
+      "https://fotos.tele-remate.com.uy/55425_1.jpg",
+      "https://fotos.tele-remate.com.uy/55425_2.jpg",
+      "https://fotos.tele-remate.com.uy/55425_3.jpg"
     ],
     "vendido": false
   },
   {
     "numero": "174",
-    "id": "55325",
-    "descripcion": "2 CUADROS MARCO MADERA ARTE ABSTRACTO",
-    "precio": 1200,
+    "id": "55790",
+    "descripcion": "ALFOMBRA ROJA MARCA DINASTY 1.90 X 2.85",
+    "precio": 2500,
     "imagenes": [
-      "https://fotos.tele-remate.com.uy/55325_1.jpg",
-      "https://fotos.tele-remate.com.uy/55325_2.jpg",
-      "https://fotos.tele-remate.com.uy/55325_3.jpg"
+      "https://fotos.tele-remate.com.uy/55790_1.jpg",
+      "https://fotos.tele-remate.com.uy/55790_2.jpg",
+      "https://fotos.tele-remate.com.uy/55790_3.jpg"
     ],
     "vendido": false
   },
   {
     "numero": "175",
-    "id": "55222",
-    "descripcion": "LOTE (MURAL PINTURA C/ MARCO Y 2 TELAS C/PINTURA + 2 CUADROS DECORATIVOS)",
-    "precio": 400,
+    "id": "55676",
+    "descripcion": "ALFOMBRA DE MADERITAS DE BAMBU POCO USO 1.40 X 1.90",
+    "precio": 800,
     "imagenes": [
-      "https://fotos.tele-remate.com.uy/55222_1.jpg",
-      "https://fotos.tele-remate.com.uy/55222_2.jpg",
-      "https://fotos.tele-remate.com.uy/55222_3.jpg"
+      "https://fotos.tele-remate.com.uy/55676_1.jpg",
+      "https://fotos.tele-remate.com.uy/55676_2.jpg",
+      "https://fotos.tele-remate.com.uy/55676_3.jpg"
     ],
     "vendido": false
   },
   {
     "numero": "176",
-    "id": "52125",
-    "descripcion": "ALFOMBRA AZUL 2 X 1.20",
-    "precio": 500,
-    "imagenes": [
-      "https://fotos.tele-remate.com.uy/52125_1.jpg",
-      "https://fotos.tele-remate.com.uy/52125_2.jpg",
-      "https://fotos.tele-remate.com.uy/52125_3.jpg"
-    ],
-    "vendido": false
-  },
-  {
-    "numero": "177",
     "id": "54935",
     "descripcion": "4 ALFOMBRAS BEIGE (1.20X1.70 ** 1.10X1.20 - 2 DE 0.60X1.10))",
-    "precio": 800,
+    "precio": 600,
     "imagenes": [
       "https://fotos.tele-remate.com.uy/54935_1.jpg",
       "https://fotos.tele-remate.com.uy/54935_2.jpg",
@@ -2112,55 +2112,19 @@
     "vendido": false
   },
   {
+    "numero": "177",
+    "id": "54695",
+    "descripcion": "JUEGO DE ALFOMBRAS (1.50 X 1) 2 - (90 X 60)",
+    "precio": 500,
+    "imagenes": [
+      "https://fotos.tele-remate.com.uy/54695_1.jpg",
+      "https://fotos.tele-remate.com.uy/54695_2.jpg",
+      "https://fotos.tele-remate.com.uy/54695_3.jpg"
+    ],
+    "vendido": false
+  },
+  {
     "numero": "178",
-    "id": "52831",
-    "descripcion": "ALFOMBRA RIBETE BORDO (1.60X2.25)",
-    "precio": 1000,
-    "imagenes": [
-      "https://fotos.tele-remate.com.uy/52831_1.jpg",
-      "https://fotos.tele-remate.com.uy/52831_2.jpg",
-      "https://fotos.tele-remate.com.uy/52831_3.jpg"
-    ],
-    "vendido": false
-  },
-  {
-    "numero": "179",
-    "id": "51625",
-    "descripcion": "ALFOMBRA ARABESCOS AZUL 1.95 X 2.45",
-    "precio": 800,
-    "imagenes": [
-      "https://fotos.tele-remate.com.uy/51625_1.jpg",
-      "https://fotos.tele-remate.com.uy/51625_2.jpg",
-      "https://fotos.tele-remate.com.uy/51625_3.jpg"
-    ],
-    "vendido": false
-  },
-  {
-    "numero": "180",
-    "id": "54889",
-    "descripcion": "ALFOMBRA BORDO 2.50 X 1.65",
-    "precio": 2000,
-    "imagenes": [
-      "https://fotos.tele-remate.com.uy/54889_1.jpg",
-      "https://fotos.tele-remate.com.uy/54889_2.jpg",
-      "https://fotos.tele-remate.com.uy/54889_3.jpg"
-    ],
-    "vendido": false
-  },
-  {
-    "numero": "181",
-    "id": "55314",
-    "descripcion": "ALFOMBRA SHAFGY 1.60 X 2.35",
-    "precio": 3000,
-    "imagenes": [
-      "https://fotos.tele-remate.com.uy/55314_1.jpg",
-      "https://fotos.tele-remate.com.uy/55314_2.jpg",
-      "https://fotos.tele-remate.com.uy/55314_3.jpg"
-    ],
-    "vendido": false
-  },
-  {
-    "numero": "182",
     "id": "55515",
     "descripcion": "ALFOMBRA AZUL RAYADA (1.90X1.40)",
     "precio": 500,
@@ -2172,14 +2136,50 @@
     "vendido": false
   },
   {
-    "numero": "183",
-    "id": "54695",
-    "descripcion": "JUEGO DE ALFOMBRAS (1.50 X 1) 2 - (90 X 60)",
+    "numero": "179",
+    "id": "52125",
+    "descripcion": "ALFOMBRA AZUL 2 X 1.20",
     "precio": 500,
     "imagenes": [
-      "https://fotos.tele-remate.com.uy/54695_1.jpg",
-      "https://fotos.tele-remate.com.uy/54695_2.jpg",
-      "https://fotos.tele-remate.com.uy/54695_3.jpg"
+      "https://fotos.tele-remate.com.uy/52125_1.jpg",
+      "https://fotos.tele-remate.com.uy/52125_2.jpg",
+      "https://fotos.tele-remate.com.uy/52125_3.jpg"
+    ],
+    "vendido": false
+  },
+  {
+    "numero": "180",
+    "id": "55314",
+    "descripcion": "ALFOMBRA SHAFGY 1.60 X 2.35",
+    "precio": 2000,
+    "imagenes": [
+      "https://fotos.tele-remate.com.uy/55314_1.jpg",
+      "https://fotos.tele-remate.com.uy/55314_2.jpg",
+      "https://fotos.tele-remate.com.uy/55314_3.jpg"
+    ],
+    "vendido": false
+  },
+  {
+    "numero": "181",
+    "id": "55366",
+    "descripcion": "CAJA C/VARIOS (ARTEFACTOS DE LUZ AZUL C/BLANCO 1 TECHO /1 PARED/BEIGE TECHO/PORTA PAPEL H.)",
+    "precio": 700,
+    "imagenes": [
+      "https://fotos.tele-remate.com.uy/55366_1.jpg",
+      "https://fotos.tele-remate.com.uy/55366_2.jpg",
+      "https://fotos.tele-remate.com.uy/55366_3.jpg"
+    ],
+    "vendido": false
+  },
+  {
+    "numero": "182",
+    "id": "55340",
+    "descripcion": "ENCERADORA ARNO POCO USO",
+    "precio": 800,
+    "imagenes": [
+      "https://fotos.tele-remate.com.uy/55340_1.jpg",
+      "https://fotos.tele-remate.com.uy/55340_2.jpg",
+      "https://fotos.tele-remate.com.uy/55340_3.jpg"
     ],
     "vendido": false
   }

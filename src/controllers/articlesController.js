@@ -15,6 +15,7 @@ const getArticles = async (req, res) => {
     maxPrice,
     search,
     featured,
+    auctionDate,
     page = 1,
     limit = 12,
   } = req.query;
@@ -27,6 +28,7 @@ const getArticles = async (req, res) => {
   }
   if (status) filter.status = status;
   if (featured === "true") filter.featured = true;
+  if (auctionDate) filter.auctionDate = new Date(auctionDate);
   if (minPrice || maxPrice) {
     filter.estimatedPrice = {};
     if (minPrice) filter.estimatedPrice.$gte = Number(minPrice);

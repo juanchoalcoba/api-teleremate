@@ -24,11 +24,11 @@ const MONGODB_URI =
 const CATALOGS = [
   {
     file: "catalogo1.json",
-    date: new Date("2026-04-11T00:00:00.000Z"),
+    date: new Date("2026-04-25T00:00:00.000Z"),
   },
   {
     file: "catalogo2.json",
-    date: new Date("2026-04-12T00:00:00.000Z"),
+    date: new Date("2026-04-26T00:00:00.000Z"),
   },
 ];
 
@@ -45,7 +45,9 @@ async function importCatalogo() {
   // ── 2. Limpieza previa (Opcional pero solicitado) ────────────────────────
   console.log('🧹 Limpiando artículos de categoría "remate" existentes...');
   const deleted = await Article.deleteMany({ category: "remate" });
-  console.log(`🗑️  Se eliminaron ${deleted.deletedCount} artículos antiguos.\n`);
+  console.log(
+    `🗑️  Se eliminaron ${deleted.deletedCount} artículos antiguos.\n`,
+  );
 
   let totalUpserted = 0;
   let totalErrored = 0;
@@ -115,8 +117,9 @@ async function importCatalogo() {
     }
 
     console.log(`  ✅ ${fileUpserted} artículos importados de ${catInfo.file}`);
-    if (fileErrored > 0) console.log(`  ⚠️  ${fileErrored} errores en este archivo.`);
-    
+    if (fileErrored > 0)
+      console.log(`  ⚠️  ${fileErrored} errores en este archivo.`);
+
     totalUpserted += fileUpserted;
     totalErrored += fileErrored;
   }
@@ -125,8 +128,9 @@ async function importCatalogo() {
   console.log("\n-------------------------------------------");
   console.log("📋 IMPORTACIÓN COMPLETADA");
   console.log(`   ✅ Total Procesados OK : ${totalUpserted}`);
-  if (totalErrored > 0) console.log(`   ⚠️  Total Con Errores  : ${totalErrored}`);
-  
+  if (totalErrored > 0)
+    console.log(`   ⚠️  Total Con Errores  : ${totalErrored}`);
+
   const finalCount = await Article.countDocuments({ category: "remate" });
   console.log(`   📊 Total "remate" en BD: ${finalCount}`);
   console.log("-------------------------------------------\n");
@@ -140,4 +144,3 @@ importCatalogo().catch((err) => {
   console.error("❌ Error crítico:", err);
   process.exit(1);
 });
-
