@@ -38,6 +38,16 @@ router.post(
     }
 
     const existing = await PushSubscription.findOne({ endpoint: subscription.endpoint });
+    
+    // Cleanup: Eliminar suscripciones antiguas asociadas a este email que tengan endpoints diferentes
+    // Esto evita acumular "tokens muertos" de instalaciones previas en el mismo equipo
+    if (userEmail) {
+      await PushSubscription.deleteMany({ 
+        userEmail, 
+        endpoint: { $ne: subscription.endpoint } 
+      });
+    }
+
     if (existing) {
       existing.isAdmin = true;
       existing.userEmail = userEmail || existing.userEmail;
