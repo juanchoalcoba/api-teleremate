@@ -8,6 +8,10 @@ const articleSchema = new mongoose.Schema(
       unique: true,
       trim: true,
     },
+    auctionLot: {
+      type: String,
+      default: "",
+    },
     title: {
       type: String,
       required: true,
