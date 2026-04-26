@@ -24,7 +24,8 @@ const getArticles = async (req, res) => {
 
   if (category) {
     const categories = category.split(",");
-    filter.category = categories.length > 1 ? { $in: categories } : categories[0];
+    filter.category =
+      categories.length > 1 ? { $in: categories } : categories[0];
   }
   if (status) filter.status = status;
   if (featured === "true") filter.featured = true;
@@ -39,8 +40,8 @@ const getArticles = async (req, res) => {
     filter.$or = [
       { title: { $regex: searchRegex, $options: "i" } },
       { description: { $regex: searchRegex, $options: "i" } },
-      { lotNumber: { $regex: search, $options: "i" } }, 
-      { auctionLot: { $regex: search, $options: "i" } }, 
+      { lotNumber: { $regex: search, $options: "i" } },
+      { auctionLot: { $regex: search, $options: "i" } },
     ];
   }
 
@@ -75,21 +76,29 @@ const getArticleById = async (req, res) => {
 
   // Get active reservations and purchases for this article
   // Only count as active if article is not sold
-  const activeReservation = article.status !== "sold" ? await Reservation.findOne({
-    articleId: req.params.id,
-    status: "pending",
-  }).sort({ createdAt: -1 }) : null;
+  const activeReservation =
+    article.status !== "sold"
+      ? await Reservation.findOne({
+          articleId: req.params.id,
+          status: "pending",
+        }).sort({ createdAt: -1 })
+      : null;
 
-  const activePurchases = article.status !== "sold" ? await Purchase.countDocuments({
-    articleId: req.params.id,
-    status: "pending",
-  }) : 0;
+  const activePurchases =
+    article.status !== "sold"
+      ? await Purchase.countDocuments({
+          articleId: req.params.id,
+          status: "pending",
+        })
+      : 0;
 
   // Include reservation/purchase counts in response
   const articleWithStatus = {
     ...article.toObject(),
     hasActiveReservation: !!activeReservation || article.status === "reserved",
-    reservedUntil: activeReservation ? activeReservation.reservedUntil : article.reservedUntil,
+    reservedUntil: activeReservation
+      ? activeReservation.reservedUntil
+      : article.reservedUntil,
     hasActivePurchase: activePurchases > 0,
   };
 

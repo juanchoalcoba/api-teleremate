@@ -122,14 +122,22 @@ const updateArticle = async (req, res) => {
     if (status === "sold" && article.status !== "sold") {
       await Reservation.updateMany(
         { articleId: req.params.id, status: "pending" },
-        { status: "cancelled", cancelledAt: new Date(), cancelReason: "Artículo vendido por administrador" }
+        {
+          status: "cancelled",
+          cancelledAt: new Date(),
+          cancelReason: "Artículo vendido por administrador",
+        },
       );
       await Purchase.updateMany(
         { articleId: req.params.id, status: "pending" },
-        { status: "cancelled", cancelledAt: new Date(), cancelReason: "Artículo vendido por administrador" }
+        {
+          status: "cancelled",
+          cancelledAt: new Date(),
+          cancelReason: "Artículo vendido por administrador",
+        },
       );
     }
-    
+
     article.status = status;
     if (status === "sold" && !article.soldAt) {
       article.soldAt = new Date();
@@ -141,7 +149,8 @@ const updateArticle = async (req, res) => {
   if (featured !== undefined)
     article.featured = featured === "true" || featured === true;
   if (auctionDate !== undefined) article.auctionDate = auctionDate || null;
-  if (reservedUntil !== undefined) article.reservedUntil = reservedUntil || null;
+  if (reservedUntil !== undefined)
+    article.reservedUntil = reservedUntil || null;
   if (currency) article.currency = currency;
 
   await article.save();
@@ -160,7 +169,9 @@ const deleteArticle = async (req, res) => {
   try {
     for (const img of article.images) {
       if (img.filename) {
-        await cloudinary.uploader.destroy(img.filename).catch(err => console.error("Cloudinary delete error:", err));
+        await cloudinary.uploader
+          .destroy(img.filename)
+          .catch((err) => console.error("Cloudinary delete error:", err));
       }
     }
   } catch (err) {
@@ -186,7 +197,7 @@ const uploadImage = async (req, res) => {
   // Con multer-storage-cloudinary, req.file.path tiene la URL y req.file.filename el public_id
   const newImages = req.files.map((file) => ({
     filename: file.filename, // public_id de Cloudinary
-    url: file.path,         // URL absoluta segura
+    url: file.path, // URL absoluta segura
   }));
 
   article.images.push(...newImages);
@@ -206,7 +217,7 @@ const deleteImage = async (req, res) => {
     return res.status(404).json({ message: "Artículo no encontrado." });
 
   const { filename } = req.params;
-  
+
   try {
     await cloudinary.uploader.destroy(filename);
   } catch (err) {
