@@ -20,6 +20,7 @@ const getAllArticles = async (req, res) => {
     filter.$or = [
       { title: { $regex: searchRegex, $options: "i" } },
       { lotNumber: { $regex: search, $options: "i" } }, // lotNumber stays exact (numeric)
+      { auctionLot: { $regex: search, $options: "i" } }, // new auctionLot search
       { description: { $regex: searchRegex, $options: "i" } },
     ];
   }

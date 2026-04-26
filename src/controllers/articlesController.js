@@ -39,7 +39,8 @@ const getArticles = async (req, res) => {
     filter.$or = [
       { title: { $regex: searchRegex, $options: "i" } },
       { description: { $regex: searchRegex, $options: "i" } },
-      { lotNumber: { $regex: search, $options: "i" } }, // Keep lotNumber exact
+      { lotNumber: { $regex: search, $options: "i" } }, 
+      { auctionLot: { $regex: search, $options: "i" } }, 
     ];
   }
 
