@@ -46,11 +46,18 @@ const getArticles = async (req, res) => {
   }
 
   const skip = (Number(page) - 1) * Number(limit);
+  
+  let query = Article.find(filter);
+  if (auctionDate) {
+    query = query.sort({ auctionLot: 1 }).collation({ locale: "en_US", numericOrdering: true });
+  } else {
+    query = query.sort({ createdAt: -1 });
+  }
+  
+  query = query.skip(skip).limit(Number(limit));
+
   const [articles, total] = await Promise.all([
-    Article.find(filter)
-      .sort({ createdAt: -1 })
-      .skip(skip)
-      .limit(Number(limit)),
+    query,
     Article.countDocuments(filter),
   ]);
 

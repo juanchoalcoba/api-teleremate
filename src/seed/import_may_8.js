@@ -1,14 +1,15 @@
 /**
- * importCatalogo.js
+ * import_may_8.js
  *
- * Importa los artículos de catalogo1.json y catalogo2.json a MongoDB como artículos "remate".
+ * Importa los artículos de catalogo1.json a MongoDB como artículos "remate"
+ * para el Viernes 8 de Mayo.
  *
  * ESTRATEGIA:
- *   1. Limpiar todos los artículos de categoría "remate".
- *   2. Iterar sobre los archivos JSON definidos.
- *   3. Upsert por lotNumber.
+ *   1. NO limpia ni borra artículos existentes.
+ *   2. Genera un lotNumber único agregando el prefijo "MAY08-" para evitar pisar artículos antiguos.
+ *   3. Guarda el número original en `auctionLot`.
  *
- * USO: node src/seed/importCatalogo.js
+ * USO: node src/seed/import_may_8.js
  */
 
 require("dotenv").config();
@@ -20,19 +21,16 @@ const Article = require("../models/Article");
 const MONGODB_URI =
   process.env.MONGODB_URI || "mongodb://localhost:27017/teleremate";
 
-// Definición de catálogos y sus fechas
+// Definición exclusiva de la importación del Viernes 8 de Mayo
 const CATALOGS = [
   {
     file: "catalogo1.json",
     date: new Date("2026-05-08T00:00:00.000Z"),
-  },
-  {
-    file: "catalogo2.json",
-    date: new Date("2026-04-26T00:00:00.000Z"),
+    prefix: "MAY08",
   },
 ];
 
-async function importCatalogo() {
+async function importMay8() {
   // ── 1. Conectar a MongoDB ────────────────────────────────────────────────
   try {
     await mongoose.connect(MONGODB_URI, { dbName: "teleremate-db" });
@@ -42,17 +40,13 @@ async function importCatalogo() {
     process.exit(1);
   }
 
-  // ── 2. Limpieza previa (Opcional pero solicitado) ────────────────────────
-  console.log('🧹 Limpiando artículos de categoría "remate" existentes...');
-  const deleted = await Article.deleteMany({ category: "remate" });
-  console.log(
-    `🗑️  Se eliminaron ${deleted.deletedCount} artículos antiguos.\n`,
-  );
+  // NO HACEMOS LIMPIEZA PREVIA PARA NO BORRAR ARTÍCULOS VIEJOS
+  console.log('🚀 Iniciando importación SEGURA (sin borrar) para Viernes 8 de Mayo...');
 
   let totalUpserted = 0;
   let totalErrored = 0;
 
-  // ── 3. Procesar cada catálogo ─────────────────────────────────────────────
+  // ── 2. Procesar el catálogo ─────────────────────────────────────────────
   for (const catInfo of CATALOGS) {
     const jsonPath = path.join(__dirname, "../../", catInfo.file);
 
@@ -75,11 +69,19 @@ async function importCatalogo() {
       continue;
     }
 
+    // LIMPIEZA DE LA IMPORTACIÓN INCORRECTA (sólo prefijo MAY08-)
+    console.log('🧹 Limpiando importación previa incorrecta...');
+    const deleted = await Article.deleteMany({ lotNumber: { $regex: "^MAY08-" } });
+    console.log(`🗑️  Se eliminaron ${deleted.deletedCount} artículos con prefijo MAY08-.\n`);
+
     let fileUpserted = 0;
     let fileErrored = 0;
 
     for (const item of catalog) {
+      // USAR item.id para lotNumber (Ref) y item.numero para auctionLot (Lote 1 al 83)
       const lotNumber = String(item.id || item.numero);
+      const auctionLot = String(item.numero || item.id);
+      
       const description = (item.descripcion || "").trim();
       const title =
         description.length > 80
@@ -91,7 +93,8 @@ async function importCatalogo() {
         .map((url) => ({ url }));
 
       const articleData = {
-        lotNumber,
+        lotNumber,            // Ej. 55854 (Ref)
+        auctionLot,           // Ej. 1, 2, 3... (Lote)
         title,
         description,
         category: "remate",
@@ -124,15 +127,15 @@ async function importCatalogo() {
     totalErrored += fileErrored;
   }
 
-  // ── 4. Resumen Final ──────────────────────────────────────────────────────
+  // ── 3. Resumen Final ──────────────────────────────────────────────────────
   console.log("\n-------------------------------------------");
   console.log("📋 IMPORTACIÓN COMPLETADA");
   console.log(`   ✅ Total Procesados OK : ${totalUpserted}`);
   if (totalErrored > 0)
     console.log(`   ⚠️  Total Con Errores  : ${totalErrored}`);
 
-  const finalCount = await Article.countDocuments({ category: "remate" });
-  console.log(`   📊 Total "remate" en BD: ${finalCount}`);
+  const finalCount = await Article.countDocuments({ auctionDate: CATALOGS[0].date });
+  console.log(`   📊 Total artículos del 8 de Mayo en BD: ${finalCount}`);
   console.log("-------------------------------------------\n");
 
   await mongoose.disconnect();
@@ -140,7 +143,7 @@ async function importCatalogo() {
   process.exit(0);
 }
 
-importCatalogo().catch((err) => {
+importMay8().catch((err) => {
   console.error("❌ Error crítico:", err);
   process.exit(1);
 });
