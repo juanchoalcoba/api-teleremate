@@ -1,16 +1,20 @@
 const webPush = require("web-push");
 const PushSubscription = require("../models/PushSubscription");
 
-if (!process.env.VAPID_PUBLIC_KEY || !process.env.VAPID_PRIVATE_KEY) {
-  console.error("❌ ERROR: VAPID keys are missing in environment variables!");
+const vapidEmail = (process.env.VAPID_EMAIL || "mailto:admin@teleremate.org").trim();
+const vapidPublic = (process.env.VAPID_PUBLIC_KEY || "").trim();
+const vapidPrivate = (process.env.VAPID_PRIVATE_KEY || "").trim();
+
+if (!vapidPublic || !vapidPrivate) {
+  console.error("❌ ERROR: VAPID keys are missing or empty in environment variables!");
 } else {
-  console.log("[PUSH] Configurando VAPID con Public Key:", process.env.VAPID_PUBLIC_KEY.substring(0, 10) + "...");
+  console.log("[PUSH] Configurando VAPID con Public Key:", vapidPublic.substring(0, 10) + "...");
 }
 
 webPush.setVapidDetails(
-  process.env.VAPID_EMAIL || "mailto:admin@teleremate.org",
-  process.env.VAPID_PUBLIC_KEY,
-  process.env.VAPID_PRIVATE_KEY,
+  vapidEmail,
+  vapidPublic,
+  vapidPrivate,
 );
 
 /**
