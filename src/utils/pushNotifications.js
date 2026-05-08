@@ -1,6 +1,12 @@
 const webPush = require("web-push");
 const PushSubscription = require("../models/PushSubscription");
 
+if (!process.env.VAPID_PUBLIC_KEY || !process.env.VAPID_PRIVATE_KEY) {
+  console.error("❌ ERROR: VAPID keys are missing in environment variables!");
+} else {
+  console.log("[PUSH] Configurando VAPID con Public Key:", process.env.VAPID_PUBLIC_KEY.substring(0, 10) + "...");
+}
+
 webPush.setVapidDetails(
   process.env.VAPID_EMAIL || "mailto:admin@teleremate.org",
   process.env.VAPID_PUBLIC_KEY,
@@ -27,7 +33,9 @@ const sendPushToSubscriptions = async (subscriptions, payload) => {
         },
       );
     } catch (error) {
+      console.error(`[PUSH] Error enviando a ${subscription.endpoint}:`, error.message);
       if (error.statusCode === 410 || error.statusCode === 404) {
+        console.log(`[PUSH] Eliminando suscripción inválida/expirada: ${subscription._id}`);
         await PushSubscription.deleteOne({ _id: subscription._id });
       }
     }
@@ -55,6 +63,13 @@ const notifyPublic = async (payload) => {
 
 const notifySpecific = async (subscriptionData, payload) => {
   try {
+    if (!subscriptionData || !subscriptionData.endpoint) {
+      throw new Error("Datos de suscripción incompletos (falta endpoint).");
+    }
+    if (!subscriptionData.keys || !subscriptionData.keys.p256dh || !subscriptionData.keys.auth) {
+      throw new Error("Datos de suscripción incompletos (faltan llaves p256dh/auth).");
+    }
+
     const response = await webPush.sendNotification(
       {
         endpoint: subscriptionData.endpoint,
@@ -68,7 +83,8 @@ const notifySpecific = async (subscriptionData, payload) => {
     );
     return response;
   } catch (error) {
-    console.error(`[PUSH] Error en envío específico: ${error.message}`);
+    console.error(`[PUSH] Error crítico en envío específico: ${error.message}`);
+    if (error.body) console.error(`[PUSH] Detalle del proveedor: ${error.body}`);
     throw error;
   }
 };

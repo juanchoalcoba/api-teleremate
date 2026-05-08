@@ -75,13 +75,20 @@ router.post(
       return res.status(400).json({ message: "Se requiere la suscripción del equipo." });
     }
 
-    await notifySpecific(subscription, {
-      title: title || "TeleRemate Admin 🔔",
-      body: body || "¡Test Exitoso! Las notificaciones están activas al 100%.",
-      url: url || "/backoffice/compras"
-    });
-
-    res.json({ message: "Notificación enviada al equipo." });
+    try {
+      await notifySpecific(subscription, {
+        title: title || "TeleRemate Admin 🔔",
+        body: body || "¡Test Exitoso! Las notificaciones están activas al 100%.",
+        url: url || "/backoffice/compras"
+      });
+      res.json({ message: "Notificación enviada al equipo." });
+    } catch (error) {
+      console.error("[NOTIFY-DEVICE] Error:", error.message);
+      res.status(error.statusCode || 500).json({ 
+        message: `Error al enviar: ${error.message}`,
+        detail: error.body || null
+      });
+    }
   }),
 );
 
