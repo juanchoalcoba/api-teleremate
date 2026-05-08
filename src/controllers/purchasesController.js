@@ -80,6 +80,7 @@ exports.createPurchase = asyncHandler(async (req, res) => {
     title: "Nueva Compra 🛍️",
     body: `${fullName} ha comprado: ${article?.title || "Artículo"}`,
     url: "/backoffice/compras",
+    tag: `purchase-${purchase._id}`, // Tag único por transacción
   }).catch((err) => console.error("Error sending push notification:", err));
 
   res.status(201).json({

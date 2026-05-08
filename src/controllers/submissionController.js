@@ -46,6 +46,7 @@ const createSubmission = async (req, res) => {
       title: "Nuevo Pedido de Ingreso 📥",
       body: `De: ${sellerName} - Artículo: ${title}`,
       url: "/backoffice/pedidos",
+      tag: `submission-${submission._id}`, // Tag único
     }).catch((err) => console.error("Error sending push notification:", err));
 
     res.status(201).json({

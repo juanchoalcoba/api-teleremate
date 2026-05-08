@@ -71,6 +71,7 @@ exports.createReservation = asyncHandler(async (req, res) => {
     title: "Nueva Reserva 🗓️",
     body: `${fullName} reservó: ${article?.title || "Artículo"}`,
     url: "/backoffice/reservas",
+    tag: `reserva-${reservation._id}`, // Tag único
   }).catch((err) => console.error("Error sending push notification:", err));
 
   res.status(201).json({
