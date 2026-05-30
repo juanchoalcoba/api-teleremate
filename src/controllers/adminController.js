@@ -51,6 +51,7 @@ const getAllArticles = async (req, res) => {
  */
 const createArticle = async (req, res) => {
   const {
+    auctionLot,
     lotNumber,
     title,
     description,
@@ -71,6 +72,7 @@ const createArticle = async (req, res) => {
   }
 
   const article = new Article({
+    auctionLot: auctionLot || "",
     lotNumber,
     title,
     description,
@@ -98,6 +100,7 @@ const updateArticle = async (req, res) => {
     return res.status(404).json({ message: "Artículo no encontrado." });
 
   const {
+    auctionLot,
     lotNumber,
     title,
     description,
@@ -112,6 +115,7 @@ const updateArticle = async (req, res) => {
     currency,
   } = req.body;
 
+  if (auctionLot !== undefined) article.auctionLot = auctionLot;
   if (lotNumber) article.lotNumber = lotNumber;
   if (title) article.title = title;
   if (description !== undefined) article.description = description;
@@ -144,6 +148,12 @@ const updateArticle = async (req, res) => {
       if (salePrice) article.salePrice = Number(salePrice);
     }
   }
+
+  // Clear auctionLot if it's no longer a remate article
+  if (article.category === "deposito" || article.status === "depot") {
+    article.auctionLot = "";
+  }
+
   if (estimatedPrice !== undefined)
     article.estimatedPrice = Number(estimatedPrice);
   if (featured !== undefined)
