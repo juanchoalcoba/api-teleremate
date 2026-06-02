@@ -44,7 +44,8 @@ async function run() {
 
     if (unsoldStats > 0) {
         // Pasar categoría a 'deposito' (Venta Directa) y limpiar datos de subasta
-        const resultCategory = await Article.updateMany(
+        // Usamos Article.collection.updateMany para poder sobrescribir createdAt (que por defecto es inmutable en Mongoose)
+        const resultCategory = await Article.collection.updateMany(
             { category: 'remate' },
             { 
                 $set: { 

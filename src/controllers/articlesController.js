@@ -51,7 +51,7 @@ const getArticles = async (req, res) => {
   if (auctionDate) {
     query = query.sort({ auctionLot: 1 }).collation({ locale: "en_US", numericOrdering: true });
   } else {
-    query = query.sort({ createdAt: -1 });
+    query = query.sort({ createdAt: -1, _id: -1 });
   }
   
   query = query.skip(skip).limit(Number(limit));
