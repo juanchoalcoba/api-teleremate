@@ -64,6 +64,7 @@ const createArticle = async (req, res) => {
     auctionDate,
     reservedUntil,
     currency,
+    isNewCondition,
   } = req.body;
 
   const exists = await Article.findOne({ lotNumber });
@@ -85,6 +86,7 @@ const createArticle = async (req, res) => {
     auctionDate: auctionDate || null,
     reservedUntil: reservedUntil || null,
     currency: currency || "UYU",
+    isNewCondition: isNewCondition === "true" || isNewCondition === true,
   });
 
   await article.save();
@@ -113,6 +115,7 @@ const updateArticle = async (req, res) => {
     auctionDate,
     reservedUntil,
     currency,
+    isNewCondition,
   } = req.body;
 
   if (auctionLot !== undefined) article.auctionLot = auctionLot;
@@ -162,6 +165,8 @@ const updateArticle = async (req, res) => {
   if (reservedUntil !== undefined)
     article.reservedUntil = reservedUntil || null;
   if (currency) article.currency = currency;
+  if (isNewCondition !== undefined)
+    article.isNewCondition = isNewCondition === "true" || isNewCondition === true;
 
   await article.save();
   res.json(article);

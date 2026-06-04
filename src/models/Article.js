@@ -34,6 +34,10 @@ const articleSchema = new mongoose.Schema(
       enum: ["Excelente", "Muy bueno", "Bueno", "Regular"],
       default: "Bueno",
     },
+    isNewCondition: {
+      type: Boolean,
+      default: false,
+    },
     status: {
       type: String,
       enum: ["depot", "upcoming", "reserved", "sold"],
