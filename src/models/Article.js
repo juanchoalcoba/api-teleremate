@@ -29,6 +29,20 @@ const articleSchema = new mongoose.Schema(
       enum: ["deposito", "remate", "inmueble", "vehiculo"],
       default: "deposito",
     },
+    subcategory: {
+      type: String,
+      enum: [
+        "Electrodomésticos y Climatización",
+        "Muebles y Hogar",
+        "Bazar y Cocina",
+        "Herramientas y Ferretería",
+        "Deportes y Tiempo Libre",
+        "Bebés y Niños",
+        "Vehículos y Accesorios",
+        "Varios / Otros"
+      ],
+      default: "Varios / Otros",
+    },
     condition: {
       type: String,
       enum: ["Excelente", "Muy bueno", "Bueno", "Regular"],

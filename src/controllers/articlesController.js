@@ -16,6 +16,8 @@ const getArticles = async (req, res) => {
     search,
     featured,
     auctionDate,
+    isNewCondition,
+    subcategory,
     page = 1,
     limit = 12,
   } = req.query;
@@ -26,6 +28,14 @@ const getArticles = async (req, res) => {
     const categories = category.split(",");
     filter.category =
       categories.length > 1 ? { $in: categories } : categories[0];
+  }
+  if (subcategory) {
+    const subcategories = subcategory.split(",");
+    filter.subcategory =
+      subcategories.length > 1 ? { $in: subcategories } : subcategories[0];
+  }
+  if (isNewCondition !== undefined && isNewCondition !== "") {
+    filter.isNewCondition = isNewCondition === "true";
   }
   if (status) filter.status = status;
   if (featured === "true") filter.featured = true;
