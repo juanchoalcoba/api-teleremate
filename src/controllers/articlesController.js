@@ -22,6 +22,12 @@ const getArticles = async (req, res) => {
     limit = 12,
   } = req.query;
 
+  // Auto-cleanup expired reservations globally
+  await Article.updateMany(
+    { status: "reserved", reservedUntil: { $lt: new Date() } },
+    { $set: { status: "depot", reservedUntil: null } }
+  );
+
   const filter = {};
 
   if (category) {
@@ -86,6 +92,12 @@ const getArticles = async (req, res) => {
  * GET /api/articles/:id
  */
 const getArticleById = async (req, res) => {
+  // Auto-cleanup expired reservations globally
+  await Article.updateMany(
+    { status: "reserved", reservedUntil: { $lt: new Date() } },
+    { $set: { status: "depot", reservedUntil: null } }
+  );
+
   const article = await Article.findById(req.params.id);
   if (!article) {
     return res.status(404).json({ message: "Artículo no encontrado." });

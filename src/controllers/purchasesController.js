@@ -2,13 +2,14 @@ const Purchase = require("../models/Purchase");
 const Article = require("../models/Article");
 const asyncHandler = require("express-async-handler");
 const cloudinary = require("../config/cloudinary");
+const { MercadoPagoConfig, Preference, Payment } = require('mercadopago');
 const { notifyAdmin } = require("../utils/pushNotifications");
 
 // @desc    Create a new purchase
 // @route   POST /api/purchases
 // @access  Public
 exports.createPurchase = asyncHandler(async (req, res) => {
-  const { articleId, fullName, phone, deliveryMethod, deliveryAddress } =
+  const { articleId, fullName, phone, deliveryMethod, deliveryAddress, paymentMethod } =
     req.body;
 
   // Validation
@@ -66,28 +67,132 @@ exports.createPurchase = asyncHandler(async (req, res) => {
     phone: phone.trim(),
     deliveryMethod,
     deliveryAddress: deliveryAddress ? deliveryAddress.trim() : null,
+    paymentMethod: paymentMethod === 'mercadopago' ? 'mercadopago' : 'deposit',
   });
 
-  // mark article sold
-  if (article) {
-    article.status = "sold";
-    article.soldAt = new Date();
-    await article.save();
+  // Calculate final price
+  const finalPrice = article.category === 'deposito' 
+    ? Math.round((article.price || article.estimatedPrice) * 1.2) 
+    : (article.price || article.estimatedPrice);
+
+  let init_point = null;
+
+  if (paymentMethod === 'mercadopago') {
+    const client = new MercadoPagoConfig({ accessToken: process.env.MP_ACCESS_TOKEN });
+    const preference = new Preference(client);
+
+    try {
+      const result = await preference.create({
+        body: {
+          items: [
+            {
+              id: article._id.toString(),
+              title: article.title,
+              quantity: 1,
+              unit_price: finalPrice,
+              currency_id: article.currency === 'USD' ? 'USD' : 'UYU'
+            }
+          ],
+          back_urls: {
+            success: `${process.env.FRONTEND_URL || 'http://localhost:5173'}/pago-exitoso`,
+            failure: `${process.env.FRONTEND_URL || 'http://localhost:5173'}/catalogo`,
+            pending: `${process.env.FRONTEND_URL || 'http://localhost:5173'}/pago-exitoso`
+          },
+          auto_return: 'approved',
+          external_reference: purchase._id.toString(),
+        }
+      });
+      
+      purchase.preferenceId = result.id;
+      await purchase.save();
+      init_point = result.init_point;
+    } catch (error) {
+      console.error("Error creating MercadoPago preference:", error);
+      // Fallback or delete purchase? We will just keep it and let frontend know it failed?
+      // Better to throw error and delete purchase to allow retry
+      await purchase.deleteOne();
+      return res.status(500).json({
+        success: false,
+        message: "Error al generar el pago con MercadoPago"
+      });
+    }
   }
 
-  // Notify Admin
-  notifyAdmin({
-    title: "Nueva Compra 🛍️",
-    body: `${fullName} ha comprado: ${article?.title || "Artículo"}`,
-    url: "/backoffice/compras",
-    tag: `purchase-${purchase._id}`, // Tag único por transacción
-  }).catch((err) => console.error("Error sending push notification:", err));
+  // mark article sold or reserved
+  if (article) {
+    if (paymentMethod === 'mercadopago') {
+      // Reserving for 15 minutes to give time to pay
+      article.status = "reserved";
+      article.reservedUntil = new Date(Date.now() + 15 * 60 * 1000);
+      await article.save();
+    } else {
+      // Deposit -> Sold immediately
+      article.status = "sold";
+      article.soldAt = new Date();
+      await article.save();
+
+      // Notify Admin immediately for Deposit
+      notifyAdmin({
+        title: "Nueva Compra 🛍️",
+        body: `${fullName} ha comprado (Depósito): ${article?.title || "Artículo"}`,
+        url: "/backoffice/compras",
+        tag: `purchase-${purchase._id}`,
+      }).catch((err) => console.error("Error sending push notification:", err));
+    }
+  }
 
   res.status(201).json({
     success: true,
     message: "Compra creada exitosamente",
     data: purchase,
+    init_point: init_point
   });
+});
+
+// @desc    MercadoPago Webhook
+// @route   POST /api/purchases/webhook
+// @access  Public
+exports.webhookMercadoPago = asyncHandler(async (req, res) => {
+  const { type, 'data.id': dataId } = req.query;
+  
+  if (type === 'payment' && dataId) {
+    try {
+      const client = new MercadoPagoConfig({ accessToken: process.env.MP_ACCESS_TOKEN });
+      const paymentClient = new Payment(client);
+      const payment = await paymentClient.get({ id: dataId });
+      
+      if (payment.status === 'approved') {
+        const purchaseId = payment.external_reference;
+        const purchase = await Purchase.findById(purchaseId);
+        
+        if (purchase && purchase.paymentStatus !== 'approved') {
+           purchase.paymentStatus = 'approved';
+           purchase.status = 'processed'; // Optionally mark as processed directly
+           await purchase.save();
+           
+           // Notify admin about successful payment
+           const article = await Article.findById(purchase.articleId);
+           if (article) {
+             article.status = "sold";
+             article.soldAt = new Date();
+             article.reservedUntil = null;
+             await article.save();
+           }
+
+           notifyAdmin({
+             title: "Pago Recibido 💰",
+             body: `${purchase.fullName} ha pagado vía MP: ${article?.title || "Artículo"}`,
+             url: "/backoffice/compras",
+             tag: `payment-${purchase._id}`,
+           }).catch((err) => console.error("Error sending push notification:", err));
+        }
+      }
+    } catch (error) {
+      console.error("Error processing MercadoPago webhook:", error);
+    }
+  }
+  
+  res.status(200).send('OK');
 });
 
 // @desc    Get all purchases (admin)

@@ -34,6 +34,19 @@ const purchaseSchema = new mongoose.Schema(
       enum: ["pending", "processed", "cancelled"],
       default: "pending",
     },
+    paymentMethod: {
+      type: String,
+      enum: ["deposit", "mercadopago"],
+      default: "deposit",
+    },
+    paymentStatus: {
+      type: String,
+      enum: ["pending", "approved", "rejected"],
+      default: "pending",
+    },
+    preferenceId: {
+      type: String,
+    },
     createdAt: {
       type: Date,
       default: Date.now,

@@ -23,13 +23,13 @@ const MONGODB_URI =
 // Definición de catálogos y sus fechas
 const CATALOGS = [
   {
-    file: "catalogo1.json",
-    date: new Date("2026-05-08T00:00:00.000Z"),
+    file: "13dejunio.json",
+    date: new Date("2026-06-13T00:00:00.000Z"),
   },
   {
-    file: "catalogo2.json",
-    date: new Date("2026-05-09T00:00:00.000Z"),
-  },
+    file: "14dejunio.json",
+    date: new Date("2026-06-14T00:00:00.000Z"),
+  }
 ];
 
 async function importCatalogo() {
@@ -42,12 +42,12 @@ async function importCatalogo() {
     process.exit(1);
   }
 
-  // ── 2. Limpieza previa (Opcional pero solicitado) ────────────────────────
-  console.log('🧹 Limpiando artículos de categoría "remate" existentes...');
-  const deleted = await Article.deleteMany({ category: "remate" });
-  console.log(
-    `🗑️  Se eliminaron ${deleted.deletedCount} artículos antiguos.\n`,
-  );
+  // ── 2. Limpieza previa (Comentado para no borrar días anteriores al agregar nuevos) ────────────────────────
+  // console.log('🧹 Limpiando artículos de categoría "remate" existentes...');
+  // const deleted = await Article.deleteMany({ category: "remate" });
+  // console.log(
+  //   `🗑️  Se eliminaron ${deleted.deletedCount} artículos antiguos.\n`,
+  // );
 
   let totalUpserted = 0;
   let totalErrored = 0;
@@ -92,6 +92,7 @@ async function importCatalogo() {
 
       const articleData = {
         lotNumber,
+        auctionLot: String(item.numero),
         title,
         description,
         category: "remate",

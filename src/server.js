@@ -67,7 +67,7 @@ app.use(
     origin: (origin, callback) => {
       // Allow requests with no origin (like mobile apps or curl)
       // but in production we might want to be more strict.
-      if (!origin || allowedOrigins.includes(origin)) {
+      if (!origin || allowedOrigins.includes(origin) || origin.startsWith("http://localhost:")) {
         callback(null, true);
       } else {
         console.warn(`[CORS BLOCKED] Origin: ${origin}`);
@@ -134,7 +134,7 @@ connectDB()
     app.listen(PORT, "0.0.0.0", () => {
       console.log(`🚀 Servidor corriendo en el puerto ${PORT}`);
       console.log(`   Health: /api/health`);
-    });
+    });.0
   })
   .catch((err) => {
     console.error("❌ Fallo crítico al iniciar el servidor:", err.message);
