@@ -12,8 +12,8 @@ const clearReservations = async () => {
     console.log('Connected to DB');
 
     const result = await Article.updateMany(
-      { status: 'reserved' },
-      { $set: { status: 'depot', reservedUntil: null } }
+      { status: { $ne: 'reserved' }, reservedUntil: { $ne: null } },
+      { $set: { reservedUntil: null } }
     );
 
     console.log(`Successfully cleared reservations. Modified ${result.modifiedCount} articles.`);

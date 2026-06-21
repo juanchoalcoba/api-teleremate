@@ -256,10 +256,12 @@ exports.updatePurchaseStatus = asyncHandler(async (req, res) => {
   if (article) {
     if (status === "cancelled") {
       article.status = "depot";
+      article.reservedUntil = null;
       await article.save();
     } else if (status === "processed") {
       // keep sold
       article.status = "sold";
+      article.reservedUntil = null;
       await article.save();
     }
   }
@@ -300,6 +302,7 @@ exports.deletePurchase = asyncHandler(async (req, res) => {
     // If it was PENDING, we return the article to depot status
     if (article) {
       article.status = "depot";
+      article.reservedUntil = null;
       await article.save();
     }
   }
