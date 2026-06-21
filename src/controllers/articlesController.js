@@ -23,10 +23,18 @@ const getArticles = async (req, res) => {
   } = req.query;
 
   // Auto-cleanup expired reservations globally
-  await Article.updateMany(
-    { status: "reserved", reservedUntil: { $lt: new Date() } },
-    { $set: { status: "depot", reservedUntil: null } }
-  );
+  const expiredArticles = await Article.find({ status: "reserved", reservedUntil: { $lt: new Date() } });
+  if (expiredArticles.length > 0) {
+    const expiredIds = expiredArticles.map(a => a._id);
+    await Article.updateMany(
+      { _id: { $in: expiredIds } },
+      { $set: { status: "depot", reservedUntil: null } }
+    );
+    await Purchase.updateMany(
+      { articleId: { $in: expiredIds }, status: "pending" },
+      { $set: { status: "cancelled" } }
+    );
+  }
 
   const filter = {};
 
@@ -93,10 +101,18 @@ const getArticles = async (req, res) => {
  */
 const getArticleById = async (req, res) => {
   // Auto-cleanup expired reservations globally
-  await Article.updateMany(
-    { status: "reserved", reservedUntil: { $lt: new Date() } },
-    { $set: { status: "depot", reservedUntil: null } }
-  );
+  const expiredArticlesById = await Article.find({ status: "reserved", reservedUntil: { $lt: new Date() } });
+  if (expiredArticlesById.length > 0) {
+    const expiredIds = expiredArticlesById.map(a => a._id);
+    await Article.updateMany(
+      { _id: { $in: expiredIds } },
+      { $set: { status: "depot", reservedUntil: null } }
+    );
+    await Purchase.updateMany(
+      { articleId: { $in: expiredIds }, status: "pending" },
+      { $set: { status: "cancelled" } }
+    );
+  }
 
   const article = await Article.findById(req.params.id);
   if (!article) {

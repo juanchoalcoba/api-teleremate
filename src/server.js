@@ -146,12 +146,22 @@ connectDB()
 setInterval(async () => {
   try {
     const now = new Date();
-    const result = await Article.updateMany(
-      { status: 'reserved', reservedUntil: { $lte: now } },
-      { $set: { status: 'depot', reservedUntil: null } }
-    );
-    if (result.modifiedCount > 0) {
-      console.log(`[JOB] Liberados ${result.modifiedCount} artículos con reserva expirada.`);
+    const expiredArticles = await Article.find({ status: 'reserved', reservedUntil: { $lte: now } });
+    if (expiredArticles.length > 0) {
+      const expiredIds = expiredArticles.map(a => a._id);
+      
+      await Article.updateMany(
+        { _id: { $in: expiredIds } },
+        { $set: { status: 'depot', reservedUntil: null } }
+      );
+      
+      const Purchase = require("./models/Purchase");
+      await Purchase.updateMany(
+        { articleId: { $in: expiredIds }, status: "pending" },
+        { $set: { status: "cancelled" } }
+      );
+      
+      console.log(`[JOB] Liberados ${expiredIds.length} artículos con reserva expirada.`);
     }
   } catch (error) {
     console.error("[JOB] Error liberando reservas expiradas:", error);
