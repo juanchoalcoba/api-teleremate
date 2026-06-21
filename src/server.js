@@ -16,6 +16,7 @@ const adminSubmissionsRoutes = require("./routes/adminSubmissions");
 const notificationRoutes = require("./routes/notifications"); // Web Push Notifications
 const residencesRoutes = require("./routes/residencesRoutes");
 const { createAnnotation } = require("./controllers/annotationController");
+const Article = require("./models/Article");
 
 const app = express();
 const PORT = process.env.PORT || 5000;
@@ -134,12 +135,28 @@ connectDB()
     app.listen(PORT, "0.0.0.0", () => {
       console.log(`🚀 Servidor corriendo en el puerto ${PORT}`);
       console.log(`   Health: /api/health`);
-    });.0
+    });
   })
   .catch((err) => {
     console.error("❌ Fallo crítico al iniciar el servidor:", err.message);
     process.exit(1);
   });
+
+// Start background job to release expired reservations
+setInterval(async () => {
+  try {
+    const now = new Date();
+    const result = await Article.updateMany(
+      { status: 'reserved', reservedUntil: { $lte: now } },
+      { $set: { status: 'depot', reservedUntil: null } }
+    );
+    if (result.modifiedCount > 0) {
+      console.log(`[JOB] Liberados ${result.modifiedCount} artículos con reserva expirada.`);
+    }
+  } catch (error) {
+    console.error("[JOB] Error liberando reservas expiradas:", error);
+  }
+}, 5 * 60 * 1000); // Ejecutar cada 5 minutos
 
 module.exports = app;
 
