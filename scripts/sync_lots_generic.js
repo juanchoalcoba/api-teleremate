@@ -2,7 +2,7 @@ require("dotenv").config();
 const mongoose = require("mongoose");
 const fs = require("fs");
 const path = require("path");
-const Article = require("./src/models/Article");
+const Article = require("../src/models/Article");
 
 const MONGODB_URI = process.env.MONGODB_URI;
 
@@ -20,7 +20,9 @@ async function syncLots(filename) {
       process.exit(1);
     }
 
-    console.log(`\n📦 Sincronizando ${catalog.length} artículos del archivo ${filename}...`);
+    console.log(
+      `\n📦 Sincronizando ${catalog.length} artículos del archivo ${filename}...`,
+    );
 
     await mongoose.connect(MONGODB_URI);
     console.log("✅ Conectado a MongoDB");
@@ -35,7 +37,7 @@ async function syncLots(filename) {
       // Solo actualizamos el auctionLot, sin tocar el estado ni nada más
       const result = await Article.updateOne(
         { lotNumber: lotNumber },
-        { $set: { auctionLot: auctionLot } }
+        { $set: { auctionLot: auctionLot } },
       );
 
       if (result.matchedCount > 0) {

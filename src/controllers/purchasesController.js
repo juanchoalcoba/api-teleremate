@@ -136,7 +136,6 @@ exports.createPurchase = asyncHandler(async (req, res) => {
         title: "Nueva Compra 🛍️",
         body: `${fullName} ha comprado (Depósito): ${article?.title || "Artículo"}`,
         url: "/backoffice/compras",
-        tag: `purchase-${purchase._id}`,
       }).catch((err) => console.error("Error sending push notification:", err));
     }
   }
@@ -183,7 +182,6 @@ exports.webhookMercadoPago = asyncHandler(async (req, res) => {
              title: "Pago Recibido 💰",
              body: `${purchase.fullName} ha pagado vía MP: ${article?.title || "Artículo"}`,
              url: "/backoffice/compras",
-             tag: `payment-${purchase._id}`,
            }).catch((err) => console.error("Error sending push notification:", err));
         }
       }

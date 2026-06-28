@@ -2,7 +2,7 @@ require("dotenv").config();
 const mongoose = require("mongoose");
 const fs = require("fs");
 const path = require("path");
-const Article = require("./src/models/Article");
+const Article = require("../src/models/Article");
 
 const MONGODB_URI = process.env.MONGODB_URI;
 
@@ -20,7 +20,9 @@ async function syncAuctionLots() {
       process.exit(1);
     }
 
-    console.log(`\n📦 Sincronizando ${catalog.length} artículos del catálogo...`);
+    console.log(
+      `\n📦 Sincronizando ${catalog.length} artículos del catálogo...`,
+    );
 
     await mongoose.connect(MONGODB_URI);
     console.log("✅ Conectado a MongoDB");
@@ -36,8 +38,8 @@ async function syncAuctionLots() {
 
       const updateData = {
         $set: {
-          auctionLot: auctionLot
-        }
+          auctionLot: auctionLot,
+        },
       };
 
       // Si en el JSON dice que está vendido, aseguramos el estado en BD
@@ -50,13 +52,13 @@ async function syncAuctionLots() {
         // SOLO si pertenece a la categoría de remate (para no romper artículos de depósito)
         const article = await Article.findOne({ lotNumber });
         if (article && article.category === "remate") {
-           updateData.$set.status = "upcoming";
+          updateData.$set.status = "upcoming";
         }
       }
 
       const result = await Article.updateOne(
         { lotNumber: lotNumber },
-        updateData
+        updateData,
       );
 
       if (result.matchedCount > 0) {

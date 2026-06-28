@@ -1,10 +1,11 @@
 require("dotenv").config();
 const mongoose = require("mongoose");
-const Article = require("./src/models/Article");
+const Article = require("../src/models/Article");
 
 async function migrate() {
   try {
-    const MONGODB_URI = process.env.MONGODB_URI || "mongodb://localhost:27017/teleremate";
+    const MONGODB_URI =
+      process.env.MONGODB_URI || "mongodb://localhost:27017/teleremate";
     await mongoose.connect(MONGODB_URI);
     console.log("Connected to MongoDB.");
 

@@ -19,7 +19,6 @@ router.post(
 );
 */
 
-
 /**
  * @desc    Subscribe to push notifications (Admin)
  */

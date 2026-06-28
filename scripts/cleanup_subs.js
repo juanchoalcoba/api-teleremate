@@ -1,7 +1,7 @@
 require("dotenv").config();
 const mongoose = require("mongoose");
-const connectDB = require("./src/config/db");
-const PushSubscription = require("./src/models/PushSubscription");
+const connectDB = require("../src/config/db");
+const PushSubscription = require("../src/models/PushSubscription");
 
 async function cleanup() {
   try {
