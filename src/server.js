@@ -68,7 +68,11 @@ app.use(
     origin: (origin, callback) => {
       // Allow requests with no origin (like mobile apps or curl)
       // but in production we might want to be more strict.
-      if (!origin || allowedOrigins.includes(origin) || origin.startsWith("http://localhost:")) {
+      if (
+        !origin ||
+        allowedOrigins.includes(origin) ||
+        origin.startsWith("http://localhost:")
+      ) {
         callback(null, true);
       } else {
         console.warn(`[CORS BLOCKED] Origin: ${origin}`);
@@ -143,31 +147,39 @@ connectDB()
   });
 
 // Start background job to release expired reservations
-setInterval(async () => {
-  try {
-    const now = new Date();
-    const expiredArticles = await Article.find({ status: 'reserved', reservedUntil: { $lte: now } });
-    if (expiredArticles.length > 0) {
-      const expiredIds = expiredArticles.map(a => a._id);
-      
-      await Article.updateMany(
-        { _id: { $in: expiredIds } },
-        { $set: { status: 'depot', reservedUntil: null } }
-      );
-      
-      const Purchase = require("./models/Purchase");
-      await Purchase.updateMany(
-        { articleId: { $in: expiredIds }, status: "pending" },
-        { $set: { status: "cancelled" } }
-      );
-      
-      console.log(`[JOB] Liberados ${expiredIds.length} artículos con reserva expirada.`);
+setInterval(
+  async () => {
+    try {
+      const now = new Date();
+      const expiredArticles = await Article.find({
+        status: "reserved",
+        reservedUntil: { $lte: now },
+      });
+      if (expiredArticles.length > 0) {
+        const expiredIds = expiredArticles.map((a) => a._id);
+
+        await Article.updateMany(
+          { _id: { $in: expiredIds } },
+          { $set: { status: "depot", reservedUntil: null } },
+        );
+
+        const Purchase = require("./models/Purchase");
+        await Purchase.updateMany(
+          { articleId: { $in: expiredIds }, status: "pending" },
+          { $set: { status: "cancelled" } },
+        );
+
+        console.log(
+          `[JOB] Liberados ${expiredIds.length} artículos con reserva expirada.`,
+        );
+      }
+    } catch (error) {
+      console.error("[JOB] Error liberando reservas expiradas:", error);
     }
-  } catch (error) {
-    console.error("[JOB] Error liberando reservas expiradas:", error);
-  }
-}, 5 * 60 * 1000); // Ejecutar cada 5 minutos
+  },
+  5 * 60 * 1000,
+); // Ejecutar cada 5 minutos
 
 module.exports = app;
 
-// Cambios
+// Cambio
