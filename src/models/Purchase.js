@@ -47,6 +47,9 @@ const purchaseSchema = new mongoose.Schema(
     preferenceId: {
       type: String,
     },
+    paymentId: {
+      type: String,
+    },
     createdAt: {
       type: Date,
       default: Date.now,

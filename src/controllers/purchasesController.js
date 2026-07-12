@@ -100,6 +100,7 @@ exports.createPurchase = asyncHandler(async (req, res) => {
           },
           auto_return: 'approved',
           external_reference: purchase._id.toString(),
+          notification_url: `${process.env.BACKEND_URL || 'https://teleremate-production.up.railway.app'}/api/purchases/webhook`,
         }
       });
       
@@ -121,9 +122,9 @@ exports.createPurchase = asyncHandler(async (req, res) => {
   // mark article sold or reserved
   if (article) {
     if (paymentMethod === 'mercadopago') {
-      // Reserving for 15 minutes to give time to pay
+      // Reserving for 24 hours to give time to pay (e.g. Abitab/Redpagos)
       article.status = "reserved";
-      article.reservedUntil = new Date(Date.now() + 15 * 60 * 1000);
+      article.reservedUntil = new Date(Date.now() + 24 * 60 * 60 * 1000);
       await article.save();
     } else {
       // Deposit -> Sold immediately
@@ -152,7 +153,8 @@ exports.createPurchase = asyncHandler(async (req, res) => {
 // @route   POST /api/purchases/webhook
 // @access  Public
 exports.webhookMercadoPago = asyncHandler(async (req, res) => {
-  const { type, 'data.id': dataId } = req.query;
+  const type = req.query.type || req.body?.type;
+  const dataId = req.query['data.id'] || req.body?.data?.id;
   
   if (type === 'payment' && dataId) {
     try {
@@ -166,7 +168,9 @@ exports.webhookMercadoPago = asyncHandler(async (req, res) => {
         
         if (purchase && purchase.paymentStatus !== 'approved') {
            purchase.paymentStatus = 'approved';
-           purchase.status = 'processed'; // Optionally mark as processed directly
+           purchase.paymentId = payment.id.toString();
+           // No cambiamos purchase.status, sigue logísticamente pendiente
+
            await purchase.save();
            
            // Notify admin about successful payment
