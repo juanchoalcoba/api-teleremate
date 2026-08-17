@@ -4,6 +4,7 @@ const asyncHandler = require("express-async-handler");
 const cloudinary = require("../config/cloudinary");
 const { MercadoPagoConfig, Preference, Payment } = require('mercadopago');
 const { notifyAdmin } = require("../utils/pushNotifications");
+const crypto = require("crypto");
 
 // @desc    Create a new purchase
 // @route   POST /api/purchases
@@ -70,10 +71,10 @@ exports.createPurchase = asyncHandler(async (req, res) => {
     paymentMethod: paymentMethod === 'mercadopago' ? 'mercadopago' : 'deposit',
   });
 
-  // Calculate final price
-  const finalPrice = article.category === 'deposito' 
-    ? Math.round((article.price || article.estimatedPrice) * 1.2) 
-    : (article.price || article.estimatedPrice);
+  // Calculate final price (1.20 for deposit, 1.26 for MercadoPago due to 6% MP fee)
+  const basePrice = article.price || article.estimatedPrice || 0;
+  const commissionMultiplier = paymentMethod === 'mercadopago' ? 1.26 : 1.20;
+  const finalPrice = Math.round(basePrice * commissionMultiplier);
 
   let init_point = null;
 
@@ -153,23 +154,38 @@ exports.createPurchase = asyncHandler(async (req, res) => {
 // @route   POST /api/purchases/webhook
 // @access  Public
 exports.webhookMercadoPago = asyncHandler(async (req, res) => {
-  const type = req.query.type || req.body?.type;
-  const dataId = req.query['data.id'] || req.body?.data?.id;
+  const rawType = req.query.type || req.body?.type || req.query.topic || (req.body?.action?.startsWith('payment') ? 'payment' : null);
+  const dataId = req.query['data.id'] || req.body?.data?.id || req.query.id || req.body?.id;
   
-  if (type === 'payment' && dataId) {
+  if ((rawType === 'payment' || rawType === 'payment.created' || rawType === 'payment.updated') && dataId) {
     try {
       const client = new MercadoPagoConfig({ accessToken: process.env.MP_ACCESS_TOKEN });
       const paymentClient = new Payment(client);
-      const payment = await paymentClient.get({ id: dataId });
+      const payment = await paymentClient.get({ id: dataId.toString() });
       
       if (payment.status === 'approved') {
         const purchaseId = payment.external_reference;
-        const purchase = await Purchase.findById(purchaseId);
+        let purchase = null;
+        if (purchaseId) {
+          try {
+            purchase = await Purchase.findById(purchaseId);
+          } catch (e) {
+            // invalid ObjectId
+          }
+        }
         
+        if (!purchase) {
+          purchase = await Purchase.findOne({
+            $or: [
+              { preferenceId: payment.preference_id },
+              { paymentId: payment.id.toString() }
+            ]
+          });
+        }
+
         if (purchase && purchase.paymentStatus !== 'approved') {
            purchase.paymentStatus = 'approved';
            purchase.paymentId = payment.id.toString();
-           // No cambiamos purchase.status, sigue logísticamente pendiente
 
            await purchase.save();
            
@@ -195,6 +211,128 @@ exports.webhookMercadoPago = asyncHandler(async (req, res) => {
   }
   
   res.status(200).send('OK');
+});
+
+// @desc    Verify/Sync MercadoPago payment status
+// @route   POST /api/purchases/verify-payment
+// @route   POST /api/backoffice/purchases/:id/verify-mp
+// @access  Public / Private Admin
+exports.verifyPurchasePayment = asyncHandler(async (req, res) => {
+  const { id } = req.params;
+  const { purchaseId, paymentId, external_reference } = req.body;
+
+  const targetPurchaseId = id || purchaseId || external_reference;
+
+  let purchase = null;
+
+  if (targetPurchaseId) {
+    try {
+      purchase = await Purchase.findById(targetPurchaseId);
+    } catch (e) {
+      // not a valid ObjectId
+    }
+  }
+
+  if (!purchase && paymentId) {
+    purchase = await Purchase.findOne({ paymentId });
+  }
+
+  if (!purchase && targetPurchaseId) {
+    purchase = await Purchase.findOne({ preferenceId: targetPurchaseId });
+  }
+
+  if (!purchase) {
+    return res.status(404).json({
+      success: false,
+      message: "Compra no encontrada",
+    });
+  }
+
+  if (purchase.paymentStatus === 'approved') {
+    const article = await Article.findById(purchase.articleId);
+    return res.json({
+      success: true,
+      message: "El pago ya está aprobado",
+      paymentStatus: "approved",
+      purchase,
+      article,
+    });
+  }
+
+  if (!process.env.MP_ACCESS_TOKEN) {
+    return res.status(500).json({
+      success: false,
+      message: "MP_ACCESS_TOKEN no está configurado en el servidor",
+    });
+  }
+
+  try {
+    const client = new MercadoPagoConfig({ accessToken: process.env.MP_ACCESS_TOKEN });
+    const paymentClient = new Payment(client);
+
+    let mpPayment = null;
+
+    if (paymentId || purchase.paymentId) {
+      try {
+        mpPayment = await paymentClient.get({ id: (paymentId || purchase.paymentId).toString() });
+      } catch (err) {
+        console.warn("MercadoPago get payment failed, fallback to search...", err.message);
+      }
+    }
+
+    if (!mpPayment) {
+      const searchResult = await paymentClient.search({
+        options: {
+          external_reference: purchase._id.toString(),
+        },
+      });
+
+      if (searchResult.results && searchResult.results.length > 0) {
+        mpPayment = searchResult.results.find((p) => p.status === "approved") || searchResult.results[0];
+      }
+    }
+
+    if (mpPayment && mpPayment.status === "approved") {
+      purchase.paymentStatus = "approved";
+      purchase.paymentId = mpPayment.id.toString();
+      await purchase.save();
+
+      const article = await Article.findById(purchase.articleId);
+      if (article) {
+        article.status = "sold";
+        article.soldAt = new Date();
+        article.reservedUntil = null;
+        await article.save();
+      }
+
+      notifyAdmin({
+        title: "Pago Confirmado 💰",
+        body: `${purchase.fullName} ha pagado vía MP: ${article?.title || "Artículo"}`,
+        url: "/backoffice/compras",
+      }).catch((err) => console.error("Error sending push notification:", err));
+
+      return res.json({
+        success: true,
+        message: "Pago verificado y aprobado con éxito en MercadoPago",
+        paymentStatus: "approved",
+        purchase,
+        article,
+      });
+    } else {
+      return res.json({
+        success: true,
+        message: mpPayment ? `El pago en MercadoPago aún figura como: ${mpPayment.status}` : "No se encontró pago aprobado registrado en MercadoPago aún",
+        paymentStatus: purchase.paymentStatus,
+        purchase,
+      });
+    }
+  } catch (error) {
+    console.error("Error en verifyPurchasePayment:", error);
+    return res.status(500).json({
+      success: false,
+      message: "Error al consultar estado en MercadoPago: " + error.message,
+    });
+  }
 });
 
 // @desc    Get all purchases (admin)

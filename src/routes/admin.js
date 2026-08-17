@@ -21,6 +21,7 @@ const {
   getAllPurchases,
   updatePurchaseStatus,
   deletePurchase,
+  verifyPurchasePayment,
 } = require("../controllers/purchasesController");
 const {
   getAllAnnotations,
@@ -56,6 +57,7 @@ router.delete("/reservations/:id", asyncHandler(deleteReservation));
 // Purchases CRUD
 router.get("/purchases", asyncHandler(getAllPurchases));
 router.put("/purchases/:id", asyncHandler(updatePurchaseStatus));
+router.post("/purchases/:id/verify-mp", asyncHandler(verifyPurchasePayment));
 router.delete("/purchases/:id", asyncHandler(deletePurchase));
 
 // Annotations CRUD
