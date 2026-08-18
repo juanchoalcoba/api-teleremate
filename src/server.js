@@ -181,5 +181,3 @@ setInterval(
 ); // Ejecutar cada 5 minutos
 
 module.exports = app;
-
-// Cambiox

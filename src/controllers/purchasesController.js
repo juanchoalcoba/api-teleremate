@@ -219,7 +219,7 @@ exports.webhookMercadoPago = asyncHandler(async (req, res) => {
 // @access  Public / Private Admin
 exports.verifyPurchasePayment = asyncHandler(async (req, res) => {
   const { id } = req.params;
-  const { purchaseId, paymentId, external_reference } = req.body;
+  const { purchaseId, paymentId, external_reference } = req.body || {};
 
   const targetPurchaseId = id || purchaseId || external_reference;
 
