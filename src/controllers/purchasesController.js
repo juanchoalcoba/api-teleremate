@@ -345,7 +345,7 @@ exports.getAllPurchases = asyncHandler(async (req, res) => {
   const query = { status };
 
   const purchases = await Purchase.find(query)
-    .populate("articleId", "lotNumber title")
+    .populate("articleId", "lotNumber title images currentPrice")
     .sort({ createdAt: -1 })
     .skip(skip)
     .limit(parseInt(limit));
@@ -383,7 +383,7 @@ exports.updatePurchaseStatus = asyncHandler(async (req, res) => {
       processedAt: status === "processed" ? new Date() : null,
     },
     { new: true }
-  ).populate("articleId", "lotNumber title");
+  ).populate("articleId", "lotNumber title images currentPrice");
 
   if (!purchase) {
     return res.status(404).json({
