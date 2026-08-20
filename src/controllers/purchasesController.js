@@ -71,9 +71,9 @@ exports.createPurchase = asyncHandler(async (req, res) => {
     paymentMethod: paymentMethod === 'mercadopago' ? 'mercadopago' : 'deposit',
   });
 
-  // Calculate final price (1.20 for deposit, 1.26 for MercadoPago due to 6% MP fee)
+  // Calculate final price (1.20 for deposit, 1.295 for MercadoPago to absorb 7.31% MP fee + IVA)
   const basePrice = article.price || article.estimatedPrice || 0;
-  const commissionMultiplier = paymentMethod === 'mercadopago' ? 1.26 : 1.20;
+  const commissionMultiplier = paymentMethod === 'mercadopago' ? 1.295 : 1.20;
   const finalPrice = Math.round(basePrice * commissionMultiplier);
 
   let init_point = null;
