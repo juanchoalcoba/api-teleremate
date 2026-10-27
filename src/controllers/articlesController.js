@@ -72,7 +72,12 @@ const getArticles = async (req, res) => {
   const skip = (Number(page) - 1) * Number(limit);
   
   let query = Article.find(filter);
-  if (auctionDate) {
+  const isRemate =
+    category === "remate" ||
+    filter.category === "remate" ||
+    (Array.isArray(filter.category?.$in) && filter.category.$in.includes("remate"));
+
+  if (isRemate || auctionDate) {
     query = query.sort({ auctionLot: 1 }).collation({ locale: "en_US", numericOrdering: true });
   } else {
     query = query.sort({ createdAt: -1, _id: -1 });
